@@ -4,7 +4,7 @@ title: Community Outreach Program
 description: Expanding access to high-performance computing education in underserved communities
 img: assets/img/6.jpg
 carousel: true
-importance: 2
+order: 2
 category: outreach
 ---
 

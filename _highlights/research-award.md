@@ -4,7 +4,7 @@ title: Research Excellence Award
 description: Our lab received the prestigious Research Excellence Award for innovative computing solutions
 img: assets/img/5.jpg
 carousel: true
-importance: 1
+order: 1
 category: award
 ---
 

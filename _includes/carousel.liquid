@@ -8,7 +8,7 @@
   - interval: auto-advance interval in ms (default: 5000)
 {% endcomment %}
 
-{% assign carousel_items = include.items | where: 'carousel', true %}
+{% assign carousel_items = include.items | where: 'carousel', true | sort: 'order' %}
 {% assign auto_advance = include.auto_advance | default: false %}
 {% assign interval = include.interval | default: 5000 %}
 

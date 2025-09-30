@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Taskvine
-description: A distributed computing framework for high-throughput computing
-img: assets/img/12.jpg
+title: TaskVine
+description: TaskVine is our third-generation workflow system for building scalable data intensive applications that run on HPC clusters, cloud services, and other clusters.
+img: assets/img/software/taskvine-logo.png
 carousel: true
-importance: 1
+order: 1
 category: work
 ---
 

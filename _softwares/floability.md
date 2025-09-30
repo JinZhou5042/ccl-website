@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Floability
-description: A workflow management system for scientific computing
-img: assets/img/3.jpg
+description: Floability is an NSF funded research project to enable the rapid and portable deployment of notebooks expressing complex scientific workflows across a wide range of cyberinfrastructure.
+img: assets/img/software/floability-logo-4x3.png
 carousel: true
-importance: 2
+order: 2
 category: work
 ---
 
