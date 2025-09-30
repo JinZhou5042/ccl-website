@@ -1,10 +1,13 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-order: 4
-category: fun
+title: "SADE: A Safety-Aware Ecosystem of Reputable sUAS"
+description: The overall goal of the project is to develop technology for safety zones that permit only trusted drones to operate in congested or sensitive airspace.
+img: assets/img/projects/sade-1-1.png
+redirect: https://sites.nd.edu/uli-drone-reputations/
+order: 1
+category: work
+carousel: true
+giscus_comments: true
 ---
 
 Every project has a beautiful feature showcase page.

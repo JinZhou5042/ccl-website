@@ -1,10 +1,11 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-order: 3
-category: fun
+title: "TaskVine: A User Level Framework for Data Intensive Scientific Applications (CSSI Element)"
+description: "TaskVine is open source software for building large scale data intensive dynamic workflows that run on HPC clusters, GPU clusters, and commercial clouds. "
+img: assets/img/dummy/dummy-logo.png
+order: 4
+category: work
+carousel: true
 ---
 
 Every project has a beautiful feature showcase page.

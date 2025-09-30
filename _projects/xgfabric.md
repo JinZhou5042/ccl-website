@@ -1,12 +1,12 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
-order: 3
+title: "XGFabric : Coupling Sensor Networks and HPC Facilities with Advanced Wireless Networks for Near Real-Time Simulation of Digital Agriculture (DOE ASCR)"
+description: This project will explore the design of systems for connecting remote wireless sensor networks with high performance computing systems.
+img: assets/img/dummy/dummy-logo.png
+order: 2
 category: work
 carousel: true
+related_publications: true
 ---
 
 Every project has a beautiful feature showcase page.
@@ -45,8 +45,8 @@ To give your project a background in the portfolio page, just add the img tag to
     This image can also have a caption. It's like magic.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
+You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
+Say you wanted to write a bit about your project before you posted the rest of the images.
 You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
 <div class="row justify-content-sm-center">

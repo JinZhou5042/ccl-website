@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 8
-description: an other project with a background image and giscus comments
-img: assets/img/9.jpg
-order: 2
+title: "NBFlow: From Notebook to Workflow and Back Again (CSSI Framework)"
+description: "NBFlow brings together interactive notebook technologies (Jupyter), reproducibility tools (SciUnit), and distributed workflows (TaskVine) to enable easy execution of large-scale notebook workflows on heterogeneous HPC clusters."
+img: assets/img/dummy/dummy-logo.png
+order: 4
 category: work
-giscus_comments: true
+carousel: true
 ---
 
 Every project has a beautiful feature showcase page.
