@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+{% if page._styles %}
+  <!-- Page/Post style -->
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post software-page">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+    
+    {% if page.links and page.links.size > 0 %}
+      <div class="software-badges mb-4">
+        {% for item in page.links %}
+          {% if item.name and item.url %}
+            {% comment %} Array of objects format: [{name: "...", url: "..."}, ...] {% endcomment %}
+            <a class="software-badge" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+          {% else %}
+            {% comment %} Map format: {"Label": "url", ...} {% endcomment %}
+            <a class="software-badge" href="{{ item[1] }}" target="_blank" rel="noopener noreferrer">{{ item[0] }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if page.img %}
+      <div class="software-hero my-3 text-center">
+        <img src="{{ page.img | relative_url }}" alt="{{ page.title }} logo" class="img-fluid" style="max-height: 180px; width: auto;">
+      </div>
+    {% endif %}
+  </header>
+
+  <article>
+    {{ content }}
+
+    {% if page.publication_keywords %}
+      <div class="mt-5">
+        {% assign taglist = page.publication_keywords | join: ',' %}
+        {% include related_publications.liquid tags=taglist title="Related Publications" %}
+      </div>
+    {% endif %}
+
+    {% if page.acknowledgement %}
+      <div class="mt-4">
+        <h2>Acknowledgement</h2>
+        <p class="acknowledgement-text">{{ page.acknowledgement }}</p>
+      </div>
+    {% endif %}
+  </article>
+
+  {% if site.giscus and page.giscus_comments %}
+    {% include giscus.liquid %}
+  {% endif %}
+</div>
+
+<style>
+  .software-page .software-hero img { 
+    object-fit: contain; 
+  }
+  
+  .software-page .software-badges { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 0.5rem; 
+    margin-top: 1rem; 
+  }
+  
+  .software-page .software-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: white !important;
+    background-color: var(--global-theme-color, #007bff) !important;
+    border: 1px solid var(--global-theme-color, #007bff) !important;
+    border-radius: 0.375rem;
+    text-decoration: none !important;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+  }
+  
+  .software-page .software-badge:hover {
+    background-color: var(--global-hover-color, #0056b3) !important;
+    border-color: var(--global-hover-color, #0056b3) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .software-page .acknowledgement-text {
+    font-style: italic;
+    color: var(--global-text-color-light, #666);
+    margin-bottom: 0;
+  }
+</style>

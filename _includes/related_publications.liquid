@@ -1,0 +1,31 @@
+{% comment %}
+  Usage:
+    {% include related_publications.liquid tags="taskvine, workflows" title="Related Publications" %}
+  Notes:
+    - Filters BibTeX entries by the `keywords` field (comma-separated in .bib).
+    - Matching is case-insensitive; entries that contain ANY of the provided tags are shown.
+{% endcomment %}
+
+{% assign section_title = include.title | default: 'Related Publications' %}
+{% assign tags_str = include.tags | default: '' %}
+{% assign tags_arr = tags_str | split: ',' %}
+
+{% assign pattern = '' %}
+{% for t in tags_arr %}
+  {% assign tag = t | strip %}
+  {% if tag != '' %}
+    {% if pattern == '' %}
+      {% assign pattern = tag %}
+    {% else %}
+      {% assign pattern = pattern | append: '|' | append: tag %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if pattern != '' %}
+  <h2>{{ section_title }}</h2>
+  <div class="publications">
+    {% capture query %}@*[keywords~=(?i)({{ pattern }})]*{% endcapture %}
+    {% bibliography --group_by none --query {{ query }} %}
+  </div>
+{% endif %}
