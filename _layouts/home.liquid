@@ -42,13 +42,15 @@ layout: default
 
     <!-- Lab Carousels -->
     <div class="lab-carousels my-5">
-      <!-- Software Carousel -->
+      <!-- Software List (replaces carousel) -->
       {%
-        include carousel.liquid
-        id="softwareCarousel"
+        include thumbnailed_list.liquid
         title="Open Source Software"
-        auto_advance=true
+        title_url="/softwares/"
         items=site.softwares
+        featured_only=true
+        more_url="/softwares/"
+        more_label="See all software"
       %}
 
       <!-- Projects Carousel with auto-advance -->
@@ -56,8 +58,10 @@ layout: default
         include carousel.liquid
         id="projectsCarousel"
         title="Research Projects"
+        title_url="/projects/"
         items=site.projects
-        interval=5000
+        auto_advance=false
+        interval=10
       %}
 
       <!-- Community Highlights Carousel -->
@@ -65,6 +69,7 @@ layout: default
         include carousel.liquid
         id="highlightsCarousel"
         title="Community Highlights"
+        title_url="/highlights/"
         items=site.highlights
       %}
     </div>

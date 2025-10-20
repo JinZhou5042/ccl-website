@@ -9,22 +9,39 @@
 {% endcomment %}
 
 {% assign carousel_items = include.items | where: 'carousel', true | sort: 'order' %}
-{% assign auto_advance = include.auto_advance | default: false %}
+
+{%- comment -%}
+  Robust boolean parsing for auto_advance to handle string values like "false"/"true"
+{%- endcomment -%}
+{% assign auto_advance_raw = include.auto_advance %}
+{% assign auto_advance_str = auto_advance_raw | downcase %}
+{% if auto_advance_raw == true or auto_advance_str == 'true' or auto_advance_str == '1' %}
+  {% assign auto_advance = true %}
+{% else %}
+  {% assign auto_advance = false %}
+{% endif %}
+
 {% assign interval = include.interval | default: 5000 %}
 
 {% if carousel_items.size > 0 %}
   <div class="lab-carousel mb-5">
     {% if include.title %}
-      <h2 class="mb-3" style="text-align: left;">{{ include.title }}</h2>
+      <h2 class="mb-3" style="text-align: left;">
+        {% if include.title_url %}
+          <a href="{{ include.title_url | relative_url }}" style="color: inherit; text-decoration: none;">{{ include.title }}</a>
+        {% else %}
+          {{ include.title }}
+        {% endif %}
+      </h2>
     {% endif %}
 
     <div
       id="{{ include.id }}"
       class="carousel slide"
-      data-ride="{% if auto_advance %}carousel{% else %}false{% endif %}"
-      {% if auto_advance %}
-        data-interval="{{ interval }}"
-      {% endif %}
+      data-ride="carousel"
+      data-interval="{% if auto_advance %}{{ interval }}{% else %}false{% endif %}"
+      data-touch="false"
+      data-keyboard="false"
     >
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -74,3 +91,43 @@
     </div>
   </div>
 {% endif %}
+
+{% comment %}
+  Randomize starting slide on each page load without enabling auto-advance.
+  Uses Bootstrap's jQuery carousel API when available; otherwise falls back to
+  toggling the active classes manually.
+{% endcomment %}
+<script>
+  (function () {
+    var id = '{{ include.id | escape }}';
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (!el) return;
+    var items = el.querySelectorAll('.carousel-item');
+    if (!items || items.length <= 1) return;
+
+    var randomIndex = Math.floor(Math.random() * items.length);
+
+    // Prefer Bootstrap/jQuery API if available
+    if (window.jQuery && typeof window.jQuery(el).carousel === 'function') {
+      try {
+        window.jQuery(el).carousel({ interval: false, keyboard: false, touch: false });
+        window.jQuery(el).carousel(randomIndex);
+        return;
+      } catch (e) {
+        // fall through to manual toggle
+      }
+    }
+
+    // Fallback: manually set active slide and indicator
+    var activeItem = el.querySelector('.carousel-item.active');
+    if (activeItem) activeItem.classList.remove('active');
+    var indicators = el.querySelectorAll('.carousel-indicators li');
+    var activeInd = el.querySelector('.carousel-indicators li.active');
+    if (activeInd) activeInd.classList.remove('active');
+    items[randomIndex].classList.add('active');
+    if (indicators && indicators.length > randomIndex) {
+      indicators[randomIndex].classList.add('active');
+    }
+  })();
+</script>

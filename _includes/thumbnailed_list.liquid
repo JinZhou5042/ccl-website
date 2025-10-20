@@ -1,0 +1,68 @@
+{% comment %}
+  Thumbnailed list component
+  Parameters:
+  - title: Section heading
+  - items: Collection to render
+  - more_url: Optional link target for "See more"
+  - more_label: Optional label for the link (default: See more)
+  - featured_only: If true, only include items with carousel: true (default: true)
+{% endcomment %}
+
+{% assign source_items = include.items | default: site.softwares %}
+{%- assign _featured_param = include.featured_only | default: 'false' | downcase -%}
+{%- assign _is_featured = true -%}
+{%- if _featured_param == 'false' or _featured_param == false or _featured_param == '0' or _featured_param == 'no' -%}
+  {%- assign _is_featured = false -%}
+{%- endif -%}
+
+{% if _is_featured %}
+  {% assign list_items = source_items | where: 'carousel', true %}
+{% else %}
+  {% assign list_items = source_items %}
+{% endif %}
+
+{% assign list_items = list_items | sort: 'order' %}
+
+{% if list_items.size > 0 %}
+  <div class="lab-thumb-list mb-5">
+    {% if include.title %}
+      <h2 class="mb-3" style="text-align: left;">
+        {% if include.title_url %}
+          <a href="{{ include.title_url | relative_url }}" style="color: inherit; text-decoration: none;">{{ include.title }}</a>
+        {% else %}
+          {{ include.title }}
+        {% endif %}
+      </h2>
+    {% endif %}
+
+    <div class="row">
+      {% for item in list_items %}
+        <div class="col-12 mb-3">
+          <a href="{{ item.url | relative_url }}" class="text-decoration-none d-block h-100">
+            <div class="thumb-list-card p-3 h-100">
+              <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
+              <div class="thumb-list-content">
+                {% if item.img %}
+                  <div class="thumb-list-thumb">
+                    <img src="{{ item.img | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded">
+                  </div>
+                {% endif %}
+                {% if item.description %}
+                  <p class="thumb-list-desc mb-0">{{ item.description }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if include.more_url %}
+      <div class="mt-2">
+        <a class="btn btn-sm btn-primary" href="{{ include.more_url | relative_url }}">
+          {{- include.more_label | default: 'See all our software' -}}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

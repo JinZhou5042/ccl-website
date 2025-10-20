@@ -1,3 +1,78 @@
+// Thumbnailed list styles
+.lab-thumb-list {
+  .thumb-list-card {
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid var(--global-divider-color);
+    transition: background-color 0.15s ease;
+  }
+
+  .thumb-list-card:hover {
+    background: var(--global-bg-color);
+  }
+
+  .thumb-list-title {
+    color: var(--global-text-color);
+  }
+
+  .thumb-list-content {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: 0.75rem;
+    align-items: start;
+  }
+
+  .thumb-list-thumb img {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+  }
+
+  .thumb-list-desc {
+    color: var(--global-text-color-light);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 576px) {
+    .thumb-list-content {
+      grid-template-columns: 1fr;
+      grid-gap: 0.5rem;
+    }
+    .thumb-list-thumb {
+      order: 2;
+    }
+    .thumb-list-thumb img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .thumb-list-desc {
+      order: 3;
+      margin-top: 0.25rem;
+    }
+  }
+
+  // Button uses global theme color (override Bootstrap defaults)
+  a.btn.btn-primary,
+  button.btn.btn-primary,
+  .btn.btn-primary {
+    background-color: var(--global-theme-color) !important;
+    border-color: var(--global-theme-color) !important;
+    color: var(--global-bg-color) !important;
+  }
+  a.btn.btn-primary:hover,
+  a.btn.btn-primary:focus,
+  button.btn.btn-primary:hover,
+  button.btn.btn-primary:focus,
+  .btn.btn-primary:hover,
+  .btn.btn-primary:focus {
+    background-color: var(--global-hover-color) !important;
+    border-color: var(--global-hover-color) !important;
+    color: var(--global-hover-text-color) !important;
+  }
+}
+
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
@@ -735,8 +810,7 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      .preview {
-      }
+      // (removed empty .preview ruleset)
 
       .abbr {
         margin-bottom: 0.5rem;

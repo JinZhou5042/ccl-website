@@ -2,8 +2,8 @@
 layout: page
 title: Makeflow
 description: Makeflow is a workflow system for executing large complex workflows on clusters, clouds, and grids.
-img: assets/img/dummy/dummy-logo.png
-carousel: true
+img: assets/img/software/makeflow-4x3.png
+carousel: false
 order: 4
 category: work
 ---

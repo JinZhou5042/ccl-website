@@ -6,7 +6,7 @@ nav_order: 2
 dropdown: true
 children:
   - title: All Softwares
-    permalink: /Softwares/
+    permalink: /softwares/
   - title: divider
   - title: Manuals
     permalink: https://cctools.readthedocs.io/en/stable/

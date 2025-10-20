@@ -2,7 +2,7 @@
 layout: page
 title: Work Queue
 description: Work Queue is an application framework for creating and managing dynamic manager-worker style programs that scale up to tens of thousands of machines on clusters, clouds, and grids.
-img: assets/img/dummy/dummy-logo.png
+img: assets/img/software/work-queue-4x3.png
 carousel: true
 order: 3
 category: work
