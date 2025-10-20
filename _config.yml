@@ -6,8 +6,7 @@ title: The Cooperative Computing Lab # the website title (if blank, full name wi
 first_name: FN_PLACEHOLDER
 middle_name: MN_PLACEHOLDER
 last_name: LN_PLACEHOLDER
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note: #add notes under contact information
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
