@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Grad student Saiful Islam presented our paper on Shepherd at the 19th Workshop on Workflows in Support of Large-Scale Science at Supercomputing 2024 in Atlanta, Georgia.
 
 <p>Shepherd is a local workflow manager that enables a fleet of actions and services to functionally behave as a single task. This allows us to seamlessly deploy these local workflows into HPC clusters at large scale. For example, consider a workflow for large-scale distributed drone simulation. This workflow includes steps such as preprocessing, creating a configuration, running simulations, and post-processing. We aim to deploy the "run simulation" step in HPC clusters at large scale. However, each "run simulation" step includes a local workflow that needs to perform specific actions and start services like Gazebo, PX4, and Pose Sender. These services and actions depend on each other’s internal states. For example, when Gazebo reaches the "ready" state, the nth PX4 service is started. Without Shepherd, the workflow becomes as shown in the following figure:<!-- notionvc: acfc6454-a9c8-40eb-924b-784c01a50bb2 --></p>

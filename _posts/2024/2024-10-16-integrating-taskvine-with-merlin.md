@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>Graduate student, <a href="https://barryslydelgado.github.io/">Barry Sly-Delgado</a>, completed a summer internship onsite at Lawrence Livermore National Laboratory where he worked on integrating TaskVine with <a href="https://merlin.readthedocs.io/en/latest/">Merlin</a>, an executor for machine learning workflows. Barry worked as a member of the WEAVE team under Brian Gunnarson and Charles Doutriaux.</p>
 
 <p>Previously, Merlin used <a href="https://docs.celeryq.dev/en/stable/index.html">Celery</a> to distribute tasks across a compute cluster. With TaskVine's addition, utilization of in-cluster resources (bandwidth, disk) is available for workflow execution. Existing Merlin specifiacations can use TaskVine as a task scheduler with little change to the specification itself.</p>

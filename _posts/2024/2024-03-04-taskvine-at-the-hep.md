@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p><span>Barry Sly-Delgado and Ben Tovar </span><a href="https://indico.cern.ch/event/1367741/contributions/5805540/attachments/2811626/4907353/Reshaping%20High%20Energy%20Physics%20Applications%20for%20Near-Interactive%20Execution%20Using%20TaskVine.pdf">recently presented</a> our work on transforming high energy physics data analysis applications into near-interactive execution at the IRIS-HEP <a href="https://indico.cern.ch/event/1367741/">Analysis Grand Challenge Demo Day</a>.</p>
 
 <p><div><div>By using the <a href="http://ccl.cse.nd.edu/software/taskvine">TaskVine</a> framework, we have enabled the transformation of a production physics data analysis application (DV3), reducing execution time from <b>over an hour</b> to just over <b>three minutes </b></div><div>on about <b>four thousand cores </b>of a campus HPC cluster.</div></div></p>

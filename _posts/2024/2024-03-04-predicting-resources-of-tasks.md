@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>Thanh Son Phung will present <a href="http://ccl.cse.nd.edu/research/papers/adaptive-ipdps-2024.pdf" target="_blank">Adaptive Task-Oriented Resource Allocation for Large Dynamic Workflows on Opportunistic Resources</a> at the <a href="https://www.ipdps.org/ipdps2024/2024-call-for-papers.html" target="_blank">International Parallel and Distributed Processing Symposium</a> 2024.</p>
 
 <p>Non-technical users running dynamic workflows usually have no knowledge of resource (e.g., cores, memory, disk, GPUs) consumption of tasks within a given workflow. However, this omission of information can bring substantial performance degradation as it is important for workflow execution engines to know the exact amount of resources each task takes and make scheduling decisions accordingly.</p>

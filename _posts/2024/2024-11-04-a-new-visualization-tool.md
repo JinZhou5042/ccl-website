@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>We released a web-based tool to visualize runtime logs produced by TaskVine, available on <a href="https://github.com/cooperative-computing-lab/taskvine-report-tool.git" target="_blank">Github</a>. Using this tool involves two main steps. First, the required data in CSV format must be generated for the manager, workers, tasks, and input/output files. After saving the generated data in the directory, users can start a port on their workstation to view detailed information about the run. This approach offers two key advantages: the generated data can be reused multiple times, minimizing the overhead of regeneration, and users can also develop custom code to analyze the structured data and extract relevant insights.</p>
 
 <p>For example, the first section describes the general information of this run, including the start/end time of the manager, how many tasks are submitted, how many of them succeeded or failed, etc.</p>

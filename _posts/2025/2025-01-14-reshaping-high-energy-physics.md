@@ -4,11 +4,12 @@ title: "Reshaping High Energy Physics Applications Using TaskVine  @ SC24"
 date: 2025-01-14T15:47:00+00:00
 author: "Barry Sly-Delgado"
 image: "/assets/blog/2025/reshaping-high-energy-physics/AGV_vUfBotGGPZtiJm1_9ZZOexiiQotBHzeq6YDr3dSAa0itaYiVpev9oGdD-5676230a1f.png"
-description: "Barry Sly-Delgado presented our paper titled: \" Reshaping High Energy Physics Applications for Near-Interactive Execution Using TaskVine \" at the 2024 Superc…"
+description: 'Barry Sly-Delgado presented our paper titled: " Reshaping High Energy Physics Applications for Near-Interactive Execution Using TaskVine " at the 2024 Superc…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <p><a href="https://barryslydelgado.github.io/">Barry Sly-Delgado</a> presented our paper titled: "<a href="https://dl.acm.org/doi/abs/10.1109/SC41406.2024.00068">Reshaping High Energy Physics Applications for Near-Interactive Execution Using TaskVine</a>" at the 2024 Supercomputing Conference in Atlanta, Georgia. This paper investigates the necessary steps to convert long-running high-throughput high energy physics applications to high concurrency. This included incorporating new functionality within TaskVine.  The paper presents the speedup gained as changes were incorporated to the workflow execution stack for application DV3. We eventually achieve a speedup of 13X.</p>
 
 <div class="row justify-content-sm-center">

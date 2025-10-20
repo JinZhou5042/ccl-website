@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>On September 26-27 members of the CCL team attended <a href="https://parsl-project.org/parslfest.html">ParslFest 2024</a> in Chicago, Illinois to speak about TaskVine and connect with our ongoing collaborators at the Parsl Project.</p>
 
 <p>Grad student Colin Thomas delivered a talk titled "Parsl/TaskVine: Interactions between DAG Manager and Workflow Executor."<span id="docs-internal-guid-7ec7efed-7fff-e2fb-3219-bcb57980c975"> </span></p>

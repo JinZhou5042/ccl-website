@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>The Cooperative Computing Lab team has an ongoing collaboration with the <a href="https://parsl-project.org/">Parsl Project</a>, maintaining the TaskVine Executor for use with the Parsl workflow system. Using the TaskVine executor involves expressing an application using the Parsl API, where tasks are created and managed using the Parsl Data Flow Kernel. Tasks are passed to the executor which makes final scheduling decisions.</p>
 
 <p>The TaskVine executor offers a number of features involving data management and locality scheduling. The distinction between the TaskVine executor and other available executors is largely the awareness of data dependencies and the use of node-local storage. There are a number of features to the TaskVine executor that have been recently added or are in progress.</p>
