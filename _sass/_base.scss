@@ -1551,7 +1551,11 @@ figure.cover {
       right: 0;
       width: 100px;
       height: 100%;
-      background: linear-gradient(90deg, transparent 0%, rgba(var(--global-theme-color-rgb), 0.03) 100%);
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(var(--global-theme-color-rgb), 0.03) 100%
+      );
       pointer-events: none;
     }
 

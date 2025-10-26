@@ -8,7 +8,7 @@ order: 1
 category: work
 publication_keywords:
   - taskvine
-acknowledgement: "This work was supported in part by grant OAC #1931348 \"CSSI Elements: Data Swarm: A User-Level Framework for Data Intensive Scientific Computing\"."
+acknowledgement: 'This work was supported in part by grant OAC #1931348 "CSSI Elements: Data Swarm: A User-Level Framework for Data Intensive Scientific Computing".'
 links:
   - name: Install
     url: https://cctools.readthedocs.io/en/latest/install/
