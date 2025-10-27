@@ -5,6 +5,13 @@
 (function () {
   if (typeof window === "undefined") return;
 
+  function darkModeAvailable() {
+    return !(
+      typeof window.__ENABLE_DARKMODE__ === "boolean" &&
+      window.__ENABLE_DARKMODE__ === false
+    );
+  }
+
   function safeMatchDark() {
     try {
       return (
@@ -19,6 +26,9 @@
   // Read the user's theme preference from localStorage.
   // Returns one of: "dark", "light", or "system" (default).
   function determineThemeSetting() {
+    if (!darkModeAvailable()) {
+      return "light";
+    }
     try {
       var themeSetting = localStorage.getItem("theme");
       if (
@@ -36,6 +46,9 @@
 
   // Compute the current theme: "dark" or "light".
   function determineComputedTheme() {
+    if (!darkModeAvailable()) {
+      return "light";
+    }
     try {
       var setting = determineThemeSetting();
       if (setting === "system") {
