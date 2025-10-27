@@ -5,7 +5,7 @@ nav: true
 nav_order: 1
 dropdown: true
 children:
-  - title: Papers
+  - title: Publications
     permalink: /publications/
   - title: divider
   - title: Projects
