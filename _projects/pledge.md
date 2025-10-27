@@ -2,7 +2,7 @@
 layout: project
 title: "Pledge: Accelerating Data Intensive Scientific Workflows with Consistency Contracts"
 description: Expresses workflow I/O intentions using consistency contracts to enable efficient, cluster-wide storage and execution optimizations.
-img: assets/img/dummy/dummy-logo.png
+img: assets/img/projects/pledge-small.png
 order: 3
 category: work
 carousel: true

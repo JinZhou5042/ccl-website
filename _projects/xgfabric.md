@@ -2,7 +2,7 @@
 layout: project
 title: "XGFabric : Coupling Sensor Networks and HPC Facilities with Advanced Wireless Networks for Near Real-Time Simulation of Digital Agriculture (DOE ASCR)"
 description: This project will explore the design of systems for connecting remote wireless sensor networks with high performance computing systems.
-img: assets/img/dummy/dummy-logo.png
+img: assets/img/projects/xgfabric-4x3.png
 order: 2
 category: work
 carousel: true

@@ -2,7 +2,7 @@
 layout: project
 title: "NBFlow: From Notebook to Workflow and Back Again (CSSI Framework)"
 description: "NBFlow brings together interactive notebook technologies (Jupyter), reproducibility tools (SciUnit), and distributed workflows (TaskVine) to enable easy execution of large-scale notebook workflows on heterogeneous HPC clusters."
-img: assets/img/dummy/dummy-logo.png
+img: assets/img/projects/nbflow-small.png
 order: 4
 category: work
 carousel: true

@@ -2,7 +2,7 @@
 layout: project
 title: "TaskVine: A User Level Framework for Data Intensive Scientific Applications (CSSI Element)"
 description: "TaskVine is open source software for building large scale data intensive dynamic workflows that run on HPC clusters, GPU clusters, and commercial clouds. "
-img: assets/img/dummy/dummy-logo.png
+img: assets/img/projects/taskvine-4x3.png
 order: 4
 category: work
 publication_keywords:
