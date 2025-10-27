@@ -37,6 +37,7 @@ people:
     website: https://ryanhartung.github.io/
   - name: Laxminarayana Vadnala
     image: assets/img/people/lvadnala.jpg
+    website: https://laxminarayanav7416.github.io/
     designation: Ph.D. Student
   - name: Abby Kapocious
     image: assets/img/people/unknown.jpg
