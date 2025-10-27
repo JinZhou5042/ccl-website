@@ -4,6 +4,10 @@ let echartsTheme = determineComputedTheme();
        this is done to enable retrieving the code again when changing theme between light/dark */
 document.addEventListener("readystatechange", () => {
   if (document.readyState === "complete") {
+    if (typeof echarts === "undefined") {
+      // ECharts not loaded; skip gracefully
+      return;
+    }
     document.querySelectorAll("pre>code.language-echarts").forEach((elem) => {
       const jsonData = elem.textContent;
       const backup = elem.parentElement;

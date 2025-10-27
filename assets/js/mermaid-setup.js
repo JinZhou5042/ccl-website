@@ -4,6 +4,10 @@ let mermaidTheme = determineComputedTheme();
     this is done to enable retrieving the code again when changing theme between light/dark */
 document.addEventListener("readystatechange", () => {
   if (document.readyState === "complete") {
+    if (typeof mermaid === "undefined") {
+      // Mermaid not loaded; skip gracefully
+      return;
+    }
     document.querySelectorAll("pre>code.language-mermaid").forEach((elem) => {
       const svgCode = elem.textContent;
       const backup = elem.parentElement;

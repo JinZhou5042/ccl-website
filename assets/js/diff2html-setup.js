@@ -4,6 +4,10 @@ let diff2HtmlTheme = determineComputedTheme();
     this is done to enable retrieving the code again when changing theme between light/dark */
 document.addEventListener("readystatechange", () => {
   if (document.readyState === "complete") {
+    if (typeof Diff2HtmlUI === "undefined") {
+      // diff2html not loaded; skip gracefully
+      return;
+    }
     document.querySelectorAll("pre>code.language-diff2html").forEach((elem) => {
       const textData = elem.textContent;
       const backup = elem.parentElement;

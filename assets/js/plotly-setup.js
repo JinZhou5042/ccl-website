@@ -3,6 +3,10 @@ let plotlyTheme = determineComputedTheme();
        this is done to enable retrieving the code again when changing theme between light/dark */
 document.addEventListener("readystatechange", () => {
   if (document.readyState === "complete") {
+    if (typeof Plotly === "undefined") {
+      // Plotly not loaded; skip gracefully
+      return;
+    }
     document.querySelectorAll("pre>code.language-plotly").forEach((elem) => {
       const jsonCode = elem.textContent;
       const backup = elem.parentElement;
