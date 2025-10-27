@@ -13,16 +13,44 @@ horizontal: false
 
 ## Completed Research Projects
 
- <ul class="completed-projects-list" style="margin-top:2rem;">
-	 <li><a href="">VC3: Virtual Clusters for Community Computation</a></li>
-	 <li><a href="">DASPOS: Data and Software Preservation for Open Science</a></li>
-	 <li><a href="">CAREER: Data Intensive Grid Computing on Active Storage Clusters</a></li>
-	 <li><a href="">HECURA: Data Intensive Abstractions for High End Biometric Applications</a></li>
-	 <li><a href="">Filesystems for Grid Computing</a></li>
-	 <li><a href="">Sub Identities: Practical Containment for Distributed Systems</a></li>
-	 <li><a href="">Debugging Grids with Machine Learning Techniques</a></li>
-	 <li><a href="">TeamTrak: A Testbed for Cooperative Mobile Computing</a></li>
- </ul>
+<div class="table-responsive" style="margin-top:2rem;">
+  <table class="table table-sm table-borderless">
+  <tbody style="border-top: none;">
+  <tr style="background: none;">
+        <th scope="row" style="width: 30%"><a href="">VC3</a></th>
+        <td>Virtual Clusters for Community Computation</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">DASPOS</a></th>
+        <td>Data and Software Preservation for Open Science</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">CAREER</a></th>
+        <td>Data Intensive Grid Computing on Active Storage Clusters</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">HECURA</a></th>
+        <td>Data Intensive Abstractions for High End Biometric Applications</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">Filesystems for Grid Computing</a></th>
+        <td>Filesystems for Grid Computing</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">Sub Identities</a></th>
+        <td>Practical Containment for Distributed Systems</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">Debugging Grids</a></th>
+        <td>Debugging Grids with Machine Learning Techniques</td>
+      </tr>
+  <tr style="background: none;">
+        <th scope="row"><a href="">TeamTrak</a></th>
+        <td>A Testbed for Cooperative Mobile Computing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 
