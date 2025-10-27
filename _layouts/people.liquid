@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<div class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  {% if page.people and page.people.size > 0 %}
+    <section aria-labelledby="people-heading" class="mb-4">
+      <h2 id="people-heading" class="mb-3">People in the Cooperative Computing Lab</h2>
+
+      <div class="row">
+        {% for person in page.people %}
+          <div class="col-sm-4 col-md-3 mb-3">
+            <div class="card h-100 hoverable">
+              {% if person.image %}
+
+                {% include figure.liquid
+                  path=person.image
+                  alt=person.name
+                  class="card-img-top"
+                  loading="lazy"
+                  square_crop=true
+                  avoid_scaling=true %}
+
+              {% endif %}
+              <div class="card-body">
+                <h2 class="card-title h5 mb-1">
+                  {% if person.website %}
+                    <a href="{{ person.website }}" target="_blank" rel="noopener noreferrer">{{ person.name }}</a>
+                  {% else %}
+                    {{ person.name }}
+                  {% endif %}
+                </h2>
+                {% if person.designation %}
+                  <p class="card-text">{{ person.designation }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+  <article class="mb-4">
+    {{ content }}
+  </article>
+
+  {% if page.team_photos and page.team_photos.size > 0 %}
+    <section aria-labelledby="team-photos-heading" class="mb-4">
+      <h2 id="team-photos-heading" class="mb-3">Team Photos</h2>
+      <div class="row">
+        {% for photo in page.team_photos %}
+          <div class="col-12 mb-4">
+            {% include figure.liquid path=photo.name class="img-fluid rounded" alt=photo.caption caption=photo.caption zoomable=true %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</div>

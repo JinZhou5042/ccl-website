@@ -6,7 +6,9 @@
   {% if include.slot %}
     slot="{{ include.slot }}"
   {% endif %}
->
+  {% if include.square_crop %}
+    class="figure--square"
+  {% endif %}>
   <picture>
     <!-- Auto scaling with imagemagick -->
     <!--
@@ -43,6 +45,8 @@
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
+      {% elsif include.square_crop %}
+        height="100%"
       {% else %}
         height="auto"
       {% endif %}
