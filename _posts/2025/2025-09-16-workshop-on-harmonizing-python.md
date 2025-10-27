@@ -7,6 +7,7 @@ image: "/assets/blog/2025/workshop-on-harmonizing-python/AVvXsEiUZGt6uyBjhHAiaNW
 description: "We helped host the Workshop on Harmonizing Python Workflows at IEEE International Conference on e-Science on Monday, 15 Sep 2025. This workshop is one compon…"
 toc: false
 related_posts: true
+pinned_to_home: true
 tags: []
 ---
 

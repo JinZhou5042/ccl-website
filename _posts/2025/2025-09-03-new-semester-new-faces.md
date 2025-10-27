@@ -7,6 +7,7 @@ image: "/assets/blog/2025/new-semester-new-faces/AVvXsEjWVRvJTl1qiOv4Px92n_oC7sC
 description: "The new semester is here, and we’re excited to welcome three new colleagues and roll out a clear plan for the months ahead. New faces. Lax joins as a first-y…"
 toc: false
 related_posts: true
+pinned_to_home: true
 tags: []
 ---
 
