@@ -2,7 +2,7 @@
 layout: software
 title: Makeflow
 description: Makeflow is a workflow system for executing large complex workflows on clusters, clouds, and grids.
-long_description: 'Makeflow is a production-ready workflow system for executing large, complex scientific applications on clusters, clouds, and grids. Its language is similar to Make, allowing users to easily define workflows as directed acyclic graphs (DAGs) of tasks, from simple chains to thousands of jobs. Makeflow is portable across local machines, public clouds, batch systems, and container environments, enabling seamless migration between platforms. It is highly scalable and fault-tolerant, capable of running millions of jobs for extended periods, and provides analysis tools for monitoring and visualizing workflow performance. Makeflow is widely used in fields such as data mining, physics, image processing, and bioinformatics.'
+long_description: "Makeflow is a production-ready workflow system for executing large, complex scientific applications on clusters, clouds, and grids. Its language is similar to Make, allowing users to easily define workflows as directed acyclic graphs (DAGs) of tasks, from simple chains to thousands of jobs. Makeflow is portable across local machines, public clouds, batch systems, and container environments, enabling seamless migration between platforms. It is highly scalable and fault-tolerant, capable of running millions of jobs for extended periods, and provides analysis tools for monitoring and visualizing workflow performance. Makeflow is widely used in fields such as data mining, physics, image processing, and bioinformatics."
 img: assets/img/software/makeflow-4x3.png
 carousel: false
 order: 4
@@ -25,7 +25,6 @@ Makeflow is easy to use. The Makeflow language is similar to traditional Make, s
         {% include figure.liquid path="assets/img/software/makeflow-banner.png" class="img-fluid rounded z-depth-0" zoomable=true %}
     </div>
 </div>
-
 
 Makeflow is production-ready. Makeflow is used on a daily basis to execute complex scientific applications in fields such as data mining, high energy physics, image processing, and bioinformatics. It has run on campus clusters, the Open Science Grid, NSF XSEDE machines, NCSA Blue Waters, and Amazon Web Services. Here are some real examples of workflows used in production systems:
 
