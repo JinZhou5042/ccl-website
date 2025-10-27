@@ -21,7 +21,6 @@ We are currently recruiting for a **postdoctoral scholar** with expertise in **c
 
 Contact [Prof. Thain](http://dthain.github.io) for more information.
 
-
 ### Ph.D. Students (2)
 
 **We have openings for 2 new Ph.D. students in the CCL in academic year 2024-2025.**
@@ -32,14 +31,11 @@ Candidates must be proficient in the C programming language, comfortable working
 
 Current ND CSE graduate students looking to join a research group should contact [Prof. Thain](http://dthain.github.io) directly.
 
-
-
 ### M.S. Students (2)
 
 **We have openings for 1-2 M.S. students every year.** The typical M.S. program takes 1-2 years beyond the B.S. degree and focuses on advanced coursework and a research project. M.S. students in the CCL build and analyze new software capabilities that become part of our open source software suite.
 
 Candidates must be proficient in the C programming language and comfortable working in the Unix environment. Prospective M.S. students must apply to the [CSE MS Program](https://cse.nd.edu/graduate). Current M.S. students looking for a research group should contact [Prof. Thain](http://dthain.github.io) directly.
-
 
 ### Undergraduate Students
 

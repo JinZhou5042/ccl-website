@@ -1,12 +1,12 @@
 /* Square, center-cropped images when figure.liquid is called with square_crop=true */
-.figure--square{
+.figure--square {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: #f8f9fa;    /* optional */
+  background: #f8f9fa; /* optional */
 }
-.figure--square picture{
+.figure--square picture {
   position: absolute !important;
   inset: 0;
   margin: 0 !important;
@@ -14,11 +14,11 @@
   height: 100% !important;
   display: block !important;
 }
-.figure--square img{
+.figure--square img {
   position: absolute !important;
   inset: 0;
   width: 100% !important;
-  height: 100% !important;   /* key override vs height:auto */
+  height: 100% !important; /* key override vs height:auto */
   max-width: none !important;
   object-fit: cover;
   object-position: center;
