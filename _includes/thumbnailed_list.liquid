@@ -69,7 +69,7 @@
             </div>
             {% endif %}
 
-              <div class="thumb-list-content"{% unless _is_compact %} g>
+              <div class="thumb-list-content"{% unless _is_compact %} style="padding-top: 0.75rem;"{% endunless %}>
                 {% if item.img %}
                   <div class="thumb-list-thumb">
                     <img src="{{ item.img | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded">

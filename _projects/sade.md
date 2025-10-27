@@ -8,6 +8,8 @@ img: assets/img/projects/sade-1-1.png
 order: 2
 category: work
 carousel: true
+publication_keywords:
+  - shepherd
 links:
   - name: Project Website
     url: https://sites.nd.edu/uli-drone-reputations/
