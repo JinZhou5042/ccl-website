@@ -21,7 +21,11 @@
   function determineThemeSetting() {
     try {
       var themeSetting = localStorage.getItem("theme");
-      if (themeSetting === "dark" || themeSetting === "light" || themeSetting === "system") {
+      if (
+        themeSetting === "dark" ||
+        themeSetting === "light" ||
+        themeSetting === "system"
+      ) {
         return themeSetting;
       }
     } catch (e) {
