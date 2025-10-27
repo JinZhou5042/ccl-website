@@ -34,6 +34,7 @@ people:
   - name: Ryan Hartung
     image: assets/img/people/rhartung.jpg
     designation: Ph.D. Student
+    website: https://ryanhartung.github.io/
   - name: Laxminarayana Vadnala
     image: assets/img/people/lvadnala.jpg
     designation: Ph.D. Student
