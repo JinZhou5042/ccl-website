@@ -7,6 +7,9 @@ order: 2
 category: work
 carousel: true
 related_publications: true
+links:
+  - name: Currently Hiring
+    url: jobs
 ---
 
 Every project has a beautiful feature showcase page.

@@ -8,11 +8,26 @@
   - featured_only: If true, only include items with carousel: true (default: true)
 {% endcomment %}
 
-{% assign source_items = include.items | default: site.softwares %}
+
+
+{%- assign source_items = include.items | default: site.softwares -%}
 {%- assign _featured_param = include.featured_only | default: 'false' | downcase -%}
+{%- assign _prefer_long_param = include.prefer_long_description | default: 'false' | downcase -%}
+{%- assign _show_links_param = include.include_links | default: 'false' | downcase -%}
+
 {%- assign _is_featured = true -%}
 {%- if _featured_param == 'false' or _featured_param == false or _featured_param == '0' or _featured_param == 'no' -%}
   {%- assign _is_featured = false -%}
+{%- endif -%}
+
+{%- assign _prefer_long = true -%}
+{%- if _prefer_long_param == 'false' or _prefer_long_param == false or _prefer_long_param == '0' or _prefer_long_param == 'no' -%}
+  {%- assign _prefer_long = false -%}
+{%- endif -%}
+
+{%- assign _show_links = true -%}
+{%- if _show_links_param == 'false' or _show_links_param == false or _show_links_param == '0' or _show_links_param == 'no' -%}
+  {%- assign _show_links = false -%}
 {%- endif -%}
 
 {% if _is_featured %}
@@ -38,8 +53,8 @@
     <div class="row">
       {% for item in list_items %}
         <div class="col-12 mb-3">
-          <a href="{{ item.url | relative_url }}" class="text-decoration-none d-block h-100">
-            <div class="thumb-list-card p-3 h-100">
+          <div class="thumb-list-card p-3 h-100">
+            <a href="{{ item.url | relative_url }}" class="text-decoration-none d-block">
               <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
               <div class="thumb-list-content">
                 {% if item.img %}
@@ -47,12 +62,36 @@
                     <img src="{{ item.img | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded">
                   </div>
                 {% endif %}
-                {% if item.description %}
-                  <p class="thumb-list-desc mb-0">{{ item.description }}</p>
+                {% assign desc_text = nil %}
+                {% if _prefer_long and item.long_description %}
+                  {% assign desc_text = item.long_description %}
+                {% elsif item.description %}
+                  {% assign desc_text = item.description %}
+                {% endif %}
+                {% if desc_text %}
+                  <p class="thumb-list-desc mb-0">{{ desc_text }}</p>
                 {% endif %}
               </div>
-            </div>
-          </a>
+            </a>
+
+            {% if _show_links and item.links %}
+              <div class="mt-2">
+                {%- if item.links.first and item.links.first.name and item.links.first.url -%}
+                  {%- comment -%} links: [ { name: ..., url: ... }, ... ] {%- endcomment -%}
+                  {% for link in item.links %}
+                    {% if link.name and link.url %}
+                      <a class="btn btn-sm btn-primary me-2 mb-2" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+                    {% endif %}
+                  {% endfor %}
+                {%- else -%}
+                  {%- comment -%} links: { Label: URL, ... } {%- endcomment -%}
+                  {% for pair in item.links %}
+                    <a class="btn btn-sm btn-primary me-2 mb-2" href="{{ pair[1] }}" target="_blank" rel="noopener noreferrer">{{ pair[0] }}</a>
+                  {% endfor %}
+                {%- endif -%}
+              </div>
+            {% endif %}
+          </div>
         </div>
       {% endfor %}
     </div>
@@ -60,7 +99,7 @@
     {% if include.more_url %}
       <div class="mt-2">
         <a class="btn btn-sm btn-primary" href="{{ include.more_url | relative_url }}">
-          {{- include.more_label | default: 'See all our software' -}}
+          {{- include.more_label | default: 'See all' -}}
         </a>
       </div>
     {% endif %}

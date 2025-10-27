@@ -72,6 +72,15 @@
 <!-- Always-available minimal theme utilities so dependent scripts can safely
   call determineComputedTheme() even when dark mode is disabled. -->
 <script src="{{ '/assets/js/theme-core.js' | relative_url | bust_file_cache }}"></script>
+<!-- Expose baseurl for client-side link normalization -->
+<script>
+  window.__BASEURL__ = {{ site.baseurl | jsonify }};
+  // Ensure it's a string
+  if (typeof window.__BASEURL__ !== 'string') { window.__BASEURL__ = ''; }
+  // Normalize to no trailing slash (we handle slash on compose)
+  if (window.__BASEURL__.endsWith('/')) { window.__BASEURL__ = window.__BASEURL__.slice(0, -1); }
+  // Allow undefined or empty baseurl to remain '' for root sites
+</script>
 
 {% if site.enable_darkmode %}
   <!-- Dark Mode -->

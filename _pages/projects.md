@@ -9,4 +9,4 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
-{% include thumbnailed_list.liquid items=site.projects %}
+{% include thumbnailed_list.liquid items=site.projects prefer_long_description=true include_links=true %}
