@@ -29,7 +29,7 @@ layout: default
       30vw, 95vw"{% endcapture %}
           {%
             include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
+            cache_bust=true zoomable=true 
           %}
         {% endif %}
         {% if page.profile.more_info %}
@@ -40,6 +40,22 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <!-- News Flash -->
+    {% if site.posts.size > 0 %}
+      {% assign latest_post = site.posts.first %}
+      <div class="alert" role="alert" style="margin-top: 2rem; margin-bottom: 2rem; border: 1px solid var(--global-theme-color); background-color: transparent;">
+        <i class="fa-solid fa-bullhorn" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>
+        {% if latest_post.redirect == blank %}
+          <a href="{{ latest_post.url | relative_url }}" style="font-weight: bold;">{{ latest_post.title }}</a>
+        {% elsif latest_post.redirect contains '://' %}
+          <a href="{{ latest_post.redirect }}" style="font-weight: bold;" target="_blank">{{ latest_post.title }}</a>
+        {% else %}
+          <a href="{{ latest_post.redirect | relative_url }}" style="font-weight: bold;">{{ latest_post.title }}</a>
+        {% endif %}
+        <span class="text-muted ms-2">({{ latest_post.date | date: '%b %d, %Y' }})</span>
+      </div>
+    {% endif %}
+    
     <!-- Lab Carousels -->
     <div class="lab-carousels my-5">
       <!-- Software List (replaces carousel) -->
