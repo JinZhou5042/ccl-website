@@ -1,13 +1,19 @@
 ---
 layout: project
 title: "SADE: A Safety-Aware Ecosystem of Reputable sUAS"
+subtitle: "PI: Jane Cleland-Huang (U Notre Dame)"
 description: The overall goal of the project is to develop technology for safety zones that permit only trusted drones to operate in congested or sensitive airspace.
 img: assets/img/projects/sade-1-1.png
 # redirect: https://sites.nd.edu/uli-drone-reputations/
-order: 1
+order: 2
 category: work
 carousel: true
 giscus_comments: true
+links:
+  - name: Project Website
+    url: https://sites.nd.edu/uli-drone-reputations/
+  - name: Currently Hiring
+    url: jobs
 ---
 
 Every project has a beautiful feature showcase page.

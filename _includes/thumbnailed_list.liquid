@@ -56,6 +56,13 @@
           <div class="thumb-list-card p-3 h-100">
             <a href="{{ item.url | relative_url }}" class="text-decoration-none d-block">
               <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
+
+            {% if item.subtitle %}
+            <div class="thumb-list-subtitle mb-2" style="font-size: 0.85rem; font-weight: 300; color: #888; line-height: 1.2; font-style: italic;">
+             {{ item.subtitle }}
+            </div>
+            {% endif %}
+
               <div class="thumb-list-content">
                 {% if item.img %}
                   <div class="thumb-list-thumb">
