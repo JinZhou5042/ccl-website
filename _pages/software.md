@@ -5,7 +5,7 @@ nav: true
 nav_order: 2
 dropdown: true
 children:
-  - title: All Softwares
+  - title: All Software
     permalink: /softwares/
   - title: divider
   - title: Manuals
