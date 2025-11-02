@@ -15,5 +15,5 @@ children:
     permalink: /install/
   - title: divider
   - title: Repositories
-    permalink: /repositories/
+    permalink: https://github.com/cooperative-computing-lab
 ---
