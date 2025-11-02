@@ -46,4 +46,3 @@ nav: false
 {% bibliography %}
 
 </div>
-

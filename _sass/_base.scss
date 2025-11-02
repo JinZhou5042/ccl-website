@@ -843,11 +843,11 @@ footer.sticky-bottom {
       .preview-link {
         display: inline-block;
         transition: transform 0.2s ease-in-out;
-        
+
         &:hover {
           transform: scale(1.2);
         }
-        
+
         img.preview {
           display: block;
         }
