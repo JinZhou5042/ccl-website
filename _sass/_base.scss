@@ -102,6 +102,25 @@
   }
 }
 
+// Global button styles - apply theme colors to all primary buttons
+a.btn.btn-primary,
+button.btn.btn-primary,
+.btn.btn-primary {
+  background-color: var(--global-theme-color) !important;
+  border-color: var(--global-theme-color) !important;
+  color: var(--global-bg-color) !important;
+}
+a.btn.btn-primary:hover,
+a.btn.btn-primary:focus,
+button.btn.btn-primary:hover,
+button.btn.btn-primary:focus,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background-color: var(--global-hover-color) !important;
+  border-color: var(--global-hover-color) !important;
+  color: var(--global-hover-text-color) !important;
+}
+
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
