@@ -839,7 +839,19 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
 
-      // (removed empty .preview ruleset)
+      // Preview image hover effect
+      .preview-link {
+        display: inline-block;
+        transition: transform 0.2s ease-in-out;
+        
+        &:hover {
+          transform: scale(1.2);
+        }
+        
+        img.preview {
+          display: block;
+        }
+      }
 
       .abbr {
         margin-bottom: 0.5rem;
