@@ -36,6 +36,12 @@
   {%- assign _is_compact = true -%}
 {%- endif -%}
 
+{%- assign _show_title_param = include.show_title | default: 'false' | downcase -%}
+{%- assign _show_title = false -%}
+{%- if _show_title_param == 'true' or _show_title_param == true or _show_title_param == '1' or _show_title_param == 'yes' -%}
+  {%- assign _show_title = true -%}
+{%- endif -%}
+
 {% if _is_featured %}
   {% assign list_items = source_items | where: 'carousel', true %}
 {% else %}
@@ -61,7 +67,10 @@
         <div class="col-12 mb-3">
           <div class="thumb-list-card p-3 h-100">
             <a href="{{ item.url | relative_url }}" class="text-decoration-none d-block">
+
+              {% if _show_title and item.title %}
               <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>
+              {% endif %}
 
             {% if item.subtitle %}
             <div class="thumb-list-subtitle mb-2" style="font-size: 0.85rem; font-weight: 300; color: #888; line-height: 1.2; font-style: italic;">

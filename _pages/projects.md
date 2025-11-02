@@ -9,7 +9,7 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
-{% include thumbnailed_list.liquid items=site.projects prefer_long_description=true include_links=true compact=false %}
+{% include thumbnailed_list.liquid items=site.projects prefer_long_description=true include_links=true compact=false show_title=true %}
 
 ## Completed Research Projects
 

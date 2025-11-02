@@ -3,7 +3,7 @@ layout: software
 title: Makeflow
 description: Makeflow is a workflow system for executing large complex workflows on clusters, clouds, and grids.
 long_description: "Makeflow is a production-ready workflow system for executing large, complex scientific applications on clusters, clouds, and grids. Its language is similar to Make, allowing users to easily define workflows as directed acyclic graphs (DAGs) of tasks, from simple chains to thousands of jobs. Makeflow is portable across local machines, public clouds, batch systems, and container environments, enabling seamless migration between platforms. It is highly scalable and fault-tolerant, capable of running millions of jobs for extended periods, and provides analysis tools for monitoring and visualizing workflow performance. Makeflow is widely used in fields such as data mining, physics, image processing, and bioinformatics."
-img: assets/img/software/makeflow-4x3.png
+img: assets/img/software/makeflow-logo.png
 carousel: false
 order: 4
 category: work
