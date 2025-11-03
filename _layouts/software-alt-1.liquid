@@ -11,12 +11,12 @@ layout: default
 
 <div class="post software-page">
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
+    {% comment %} <h1 class="post-title">{{ page.title }}</h1>
     {% if page.description %}
       <p class="post-description">{{ page.description }}</p>
-    {% endif %}
+    {% endif %} {% endcomment %}
     
-    {% if page.links and page.links.size > 0 %}
+    {% comment %} {% if page.links and page.links.size > 0 %}
       <div class="software-badges mb-4">
         {% for item in page.links %}
           {% if item.name and item.url %}
@@ -28,17 +28,31 @@ layout: default
           {% endif %}
         {% endfor %}
       </div>
-    {% endif %}
+    {% endif %} {% endcomment %}
 
     {% if page.img %}
       <div class="software-hero my-3 text-center">
-        <img src="{{ page.img | relative_url }}" alt="{{ page.title }} logo" class="img-fluid page-image"">
+        <img src="{{ page.img | relative_url }}" alt="{{ page.title }} logo" class="img-fluid page-image">
       </div>
     {% endif %}
   </header>
 
   <article>
     {{ content }}
+
+    {% if page.links and page.links.size > 0 %}
+      <div class="software-badges mb-4 mt-4">
+        {% for item in page.links %}
+          {% if item.name and item.url %}
+            {% comment %} Array of objects format: [{name: "...", url: "..."}, ...] {% endcomment %}
+            <a class="software-badge" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a>
+          {% else %}
+            {% comment %} Map format: {"Label": "url", ...} {% endcomment %}
+            <a class="software-badge" href="{{ item[1] }}" target="_blank" rel="noopener noreferrer">{{ item[0] }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
 
     {% if page.publication_keywords %}
       <div class="mt-5">
@@ -76,20 +90,23 @@ layout: default
     flex-wrap: wrap; 
     gap: 0.5rem; 
     margin-top: 1rem; 
+    justify-content: center; /* center badges and center-wrap lines */
   }
   
   .software-page .software-badge {
     display: inline-flex;
     align-items: center;
-    padding: 0.375rem 0.75rem;
+    padding: 30px 20px;
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.5;
+    min-width: 200px;
     color: white !important;
     background-color: var(--global-theme-color, #007bff) !important;
     border: 1px solid var(--global-theme-color, #007bff) !important;
     border-radius: 0.375rem;
     text-decoration: none !important;
+    justify-content: center; /* center content */
     transition: all 0.2s ease-in-out;
     white-space: nowrap;
   }
