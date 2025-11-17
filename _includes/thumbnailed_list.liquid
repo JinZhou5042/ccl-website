@@ -92,9 +92,10 @@
 
               {% if _large_icon %}
                 <div class="thumb-list-content large-icon-mode d-flex flex-column flex-md-row" style="gap:0.75rem;{% unless _is_compact %} padding-top: 0.75rem;{% endunless %}">
-                  {% if item.img %}
+                  {% assign item_image = item.image | default: item.img %}
+                  {% if item_image %}
                     <div class="thumb-list-thumb" style="flex: 0 0 240px; max-width: 240px; min-width: 240px;">
-                      <img src="{{ item.img | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded" style="width:100%; height:auto; object-fit:contain;">
+                      <img src="{{ item_image | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded" style="width:100%; height:auto; object-fit:contain;">
                     </div>
                   {% endif %}
 
@@ -106,9 +107,10 @@
                 </div>
               {% else %}
                 <div class="thumb-list-content"{% unless _is_compact %} style="padding-top: 0.75rem;"{% endunless %}>
-                  {% if item.img %}
+                  {% assign item_image = item.image | default: item.img %}
+                  {% if item_image %}
                     <div class="thumb-list-thumb">
-                      <img src="{{ item.img | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded">
+                      <img src="{{ item_image | relative_url }}" alt="{{ item.title }}" class="img-fluid rounded">
                     </div>
                   {% endif %}
                   {% if desc_text %}

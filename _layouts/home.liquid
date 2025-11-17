@@ -85,12 +85,13 @@ layout: default
       %}
 
       <!-- Community Highlights Carousel -->
+      {% assign highlights_posts = site.posts | where_exp: 'p', 'p.categories contains "highlights"' %}
       {%
         include carousel.liquid
         id="highlightsCarousel"
         title="Community Highlights"
         title_url="/highlights/"
-        items=site.highlights
+        items=highlights_posts
         more_url="/highlights/"
         more_label="See all highlights"
       %}

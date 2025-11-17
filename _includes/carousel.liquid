@@ -62,9 +62,10 @@
           <div class="carousel-item {% if forloop.first %}active{% endif %}">
             <div class="carousel-card mx-auto">
               <a href="{{ item.url | relative_url }}" class="text-decoration-none">
-                {% if item.img %}
+                {% assign item_image = item.image | default: item.img %}
+                {% if item_image %}
                   <div class="carousel-image-container">
-                    <img src="{{ item.img | relative_url }}" class="carousel-image" alt="{{ item.title }}">
+                    <img src="{{ item_image | relative_url }}" class="carousel-image" alt="{{ item.title }}">
                   </div>
                 {% endif %}
                 <div class="carousel-content">

@@ -30,9 +30,10 @@ layout: default
       </div>
     {% endif %}
 
-    {% if page.img %}
+        {% assign hero_image = page.image | default: page.img %}
+        {% if hero_image %}
       <div class="software-hero my-3 text-center">
-        <img src="{{ page.img | relative_url }}" alt="{{ page.title }} logo" class="img-fluid page-image"">
+            <img src="{{ hero_image | relative_url }}" alt="{{ page.title }} logo" class="img-fluid" style="max-height: 180px; width: auto;">
       </div>
     {% endif %}
   </header>

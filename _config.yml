@@ -152,8 +152,6 @@ collections:
     output: true
   softwares:
     output: true
-  highlights:
-    output: true
   alt:
     output: true
 
