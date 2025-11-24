@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Congratulations to Dr. Kyle Wheeler, who successfully defended his dissertation titled
-
-<i>Exploiting Shared Memory Topology with QThreads for Portable Parallel Performance</i>
-
-.  Dr. Wheeler will shortly take a postdoctoral position at Sandia National Labs.
-
-<br/>
-
-<br/>
+  Congratulations to Dr. Kyle Wheeler, who successfully defended his dissertation titled
+  <i>
+   Exploiting Shared Memory Topology with QThreads for Portable Parallel Performance
+  </i>
+  .  Dr. Wheeler will shortly take a postdoctoral position at Sandia National Labs.

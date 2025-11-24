@@ -9,9 +9,4 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-We have received a "Computing in the Cloud" grant from the National Science Foundation to study the possibilities of running large scale applications on the Windows Azure platform.  This grant will support the porting of the Cooperative Computing Tools to Windows Azure, and the development of scalable bioinformatics and molecular dynamics codes on that platform.
-
-<br/>
-
-<br/>
+  We have received a "Computing in the Cloud" grant from the National Science Foundation to study the possibilities of running large scale applications on the Windows Azure platform.  This grant will support the porting of the Cooperative Computing Tools to Windows Azure, and the development of scalable bioinformatics and molecular dynamics codes on that platform.

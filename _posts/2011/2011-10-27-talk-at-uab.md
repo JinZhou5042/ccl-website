@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Prof. Thain gave a talk titled
-
-<a href="http://www.cis.uab.edu/node/5773">High Throughput Scientific Computing with Condor: Computer Science Challenges in Large Scale Parallelism</a>
-
-at the University of Alabama at Birmingham on October 27th, 2011.
-
-<br/>
-
-<br/>
+  Prof. Thain gave a talk titled
+  <a href="http://www.cis.uab.edu/node/5773">
+   High Throughput Scientific Computing with Condor: Computer Science Challenges in Large Scale Parallelism
+  </a>
+  at the University of Alabama at Birmingham on October 27th, 2011.

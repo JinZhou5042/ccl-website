@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Congratulations to Dr. Hoang Bui, who successfully defended his dissertation titled
-
-<i>A Rich Metadata Filesystem for Scientific Data</i>
-
-!
-
-<br/>
-
-<br/>
+  Congratulations to Dr. Hoang Bui, who successfully defended his dissertation titled
+  <i>
+   A Rich Metadata Filesystem for Scientific Data
+  </i>
+  !

@@ -10,15 +10,9 @@ related_posts: true
 tags: []
 ---
 Our summer REU students in the DISC program produced an impressive set of videos describing their summer research projects -- check out the playlist!
-
-<br/>
-
-<br/>
-
-<div class="row justify-content-sm-center">
-  <div class="col-sm-12">
+  <div class="row justify-content-sm-center">
+   <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2018/disc-reu-videos-2018/Screen-Shot-2018-08-20-at-3.26.49-PM-abba0f6ab9.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+   </div>
   </div>
-</div>
-
-<br/>
+  <br/>

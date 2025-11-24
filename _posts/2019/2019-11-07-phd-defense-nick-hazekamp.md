@@ -10,19 +10,9 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Nick Hazekamp successfully defended his Ph.D. dissertation titled "Methods Enabling Portability of Scientific Workflows".  He has recently started a job at Atomic Object in Muskegon, Michigan.  Congratulations, Dr. Hazekamp!
-
-<br/>
-
-<br/>
-
-<div class="row justify-content-sm-center">
-  <div class="col-sm-12">
+  Nick Hazekamp successfully defended his Ph.D. dissertation titled "Methods Enabling Portability of Scientific Workflows".  He has recently started a job at Atomic Object in Muskegon, Michigan.  Congratulations, Dr. Hazekamp!
+  <div class="row justify-content-sm-center">
+   <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2019/phd-defense-nick-hazekamp/IMG_0349-dfc3e3dee1.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+   </div>
   </div>
-</div>
-
-<br/>
-
-<br/>

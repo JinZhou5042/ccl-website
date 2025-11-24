@@ -9,11 +9,4 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Patrick Braga-Henebry successfully defended his B.S. honors thesis title "Biocompute: Providing a Distributed Computing Model for Searching Genome Datasets."  The Biocompute facility that Patrick constructed is used to carry out data intensive genome queries, parallelized across on a 64-core cluster.  Congratulations, Patrick!
-
-<br/>
-
-<br/>
-
-<br/>
+  Patrick Braga-Henebry successfully defended his B.S. honors thesis title "Biocompute: Providing a Distributed Computing Model for Searching Genome Datasets."  The Biocompute facility that Patrick constructed is used to carry out data intensive genome queries, parallelized across on a 64-core cluster.  Congratulations, Patrick!

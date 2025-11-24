@@ -7,8 +7,55 @@ toc: false
 related_posts: true
 tags: []
 ---
-<h2 style="text-align: left;"><span style="text-align: left; text-indent: 36pt;">Continuous Integration for Documentation</span></h2>
-
-<p><span>Consider the following situation: you are desperately looking for a program to accomplish some obscure task, and after a flurry of Googling, you find a GitHub repository which claims to fulfill your exact need. You diligently copy and paste the install instructions into your terminal, and your hopes are dashed as you are greeted with a cryptic error message. Maybe the program requires a dependency you lack, or the code doesn’t compile on your specific machine. </span></p>
-
-<span id="docs-internal-guid-aeeada1e-7fff-8877-589a-5a64258c87bf"><p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;"><span>This is quite perplexing, as someone put in time and effort in an attempt to create instructions so that users could easily run their program, but their directions were not robust enough to ensure that every user would share this accessible experience. Now a possible happy user is turned away before even getting a chance to use the software and report bugs. As a result, it is clear that easy to understand and always replicable instructions are a critical piece of software documentation, as unusable instructions will clamp down on the flow of new users.</span></p><p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;"><span>There are many factors that contribute to successful and usable instructions, but just as many that can drag documentation into ineffective status. Some of causes of inoperable instructions are an out of date manual, automatic tests that do not reflect the current state of the documentation, or a mixture of both. </span></p><p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;"><span>Instructions may be rigorously tested for a certain version of the program, but as soon as new features are added or old ones are tweaked, the validity of the documentation is subject to change. An added or removed argument to a function or an added dependency may render a previously working example unable to compile. work_queue suffered from a case of this in the documentation of the TopEFT program, which featured a section with a sample program running work_queue. Several updates to both TopEFT and work_queue rendered this example with no less than 13 separate errors, which presented a tall hurdle to the majority of  TopEFT users who are likely inexperienced with work_queue. </span></p><p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;"><span>One solution to the problem presented above might be to create a daily or weekly test of the example in the documentation, providing security in the knowledge that once the example goes out of date, the automated testing will reveal the need to update. However, this insurance might create a false feeling of surety. The daily test is only as useful as the installation instructions and examples it is testing. In the case of work_queue, our daily test was incorrectly reporting that the documentation for TopEFT was working perfectly for a matter of months. This was due to a disparity in the code between the example on the TopEFT documentation and the code tested daily. Daily tests are an excellent notifier if something is incredibly wrong with a previously working example or instruction set, but can also be a red herring in deciding whether instructions are still up to date and working.</span></p><p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;"><span>The solution to creating instructions that won’t break (or at least are much more resilient to not working than static tests) is to download the current manual steps straight off of the online source it is being hosted on and directly follow the procedure a new user would follow. This provides end to end testing of the software in a manner exactly like a user would (that is to download the example code off the documentation and follow the instructions). This way, any change that breaks this example code and would lead to first time users being stranded is discovered before it has the chance to cause any damage.</span></p><div style="text-align: justify;"><span><br/></span></div><div style="text-align: justify;"><span>- David Simonetti, undergraduate research in the CCL</span></div><div><span><br/></span></div></span>
+<h2 style="text-align: left;">
+   <span style="text-align: left; text-indent: 36pt;">
+    Continuous Integration for Documentation
+   </span>
+  </h2>
+  <p style="text-align: justify; text-indent: 0px;">
+   <span>
+    Consider the following situation: you are desperately looking for a program to accomplish some obscure task, and after a flurry of Googling, you find a GitHub repository which claims to fulfill your exact need. You diligently copy and paste the install instructions into your terminal, and your hopes are dashed as you are greeted with a cryptic error message. Maybe the program requires a dependency you lack, or the code doesn’t compile on your specific machine.
+   </span>
+  </p>
+  <span id="docs-internal-guid-aeeada1e-7fff-8877-589a-5a64258c87bf">
+   <p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;">
+    <span>
+     This is quite perplexing, as someone put in time and effort in an attempt to create instructions so that users could easily run their program, but their directions were not robust enough to ensure that every user would share this accessible experience. Now a possible happy user is turned away before even getting a chance to use the software and report bugs. As a result, it is clear that easy to understand and always replicable instructions are a critical piece of software documentation, as unusable instructions will clamp down on the flow of new users.
+    </span>
+   </p>
+   <p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;">
+    <span>
+     There are many factors that contribute to successful and usable instructions, but just as many that can drag documentation into ineffective status. Some of causes of inoperable instructions are an out of date manual, automatic tests that do not reflect the current state of the documentation, or a mixture of both.
+    </span>
+   </p>
+   <p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;">
+    <span>
+     Instructions may be rigorously tested for a certain version of the program, but as soon as new features are added or old ones are tweaked, the validity of the documentation is subject to change. An added or removed argument to a function or an added dependency may render a previously working example unable to compile. work_queue suffered from a case of this in the documentation of the TopEFT program, which featured a section with a sample program running work_queue. Several updates to both TopEFT and work_queue rendered this example with no less than 13 separate errors, which presented a tall hurdle to the majority of  TopEFT users who are likely inexperienced with work_queue.
+    </span>
+   </p>
+   <p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;">
+    <span>
+     One solution to the problem presented above might be to create a daily or weekly test of the example in the documentation, providing security in the knowledge that once the example goes out of date, the automated testing will reveal the need to update. However, this insurance might create a false feeling of surety. The daily test is only as useful as the installation instructions and examples it is testing. In the case of work_queue, our daily test was incorrectly reporting that the documentation for TopEFT was working perfectly for a matter of months. This was due to a disparity in the code between the example on the TopEFT documentation and the code tested daily. Daily tests are an excellent notifier if something is incredibly wrong with a previously working example or instruction set, but can also be a red herring in deciding whether instructions are still up to date and working.
+    </span>
+   </p>
+   <p dir="ltr" style="line-height: 1.38; margin-bottom: 0pt; margin-top: 0pt; text-align: justify; text-indent: 36pt;">
+    <span>
+     The solution to creating instructions that won’t break (or at least are much more resilient to not working than static tests) is to download the current manual steps straight off of the online source it is being hosted on and directly follow the procedure a new user would follow. This provides end to end testing of the software in a manner exactly like a user would (that is to download the example code off the documentation and follow the instructions). This way, any change that breaks this example code and would lead to first time users being stranded is discovered before it has the chance to cause any damage.
+    </span>
+   </p>
+   <div style="text-align: justify;">
+    <span>
+     <br/>
+    </span>
+   </div>
+   <div style="text-align: justify;">
+    <span>
+     - David Simonetti, undergraduate research in the CCL
+    </span>
+   </div>
+   <div>
+    <span>
+     <br/>
+    </span>
+   </div>
+  </span>

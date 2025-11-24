@@ -9,19 +9,12 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Dinesh Rajan will present a tutorial on
-
-<a href="http://www3.nd.edu/~ccl/software/tutorials/ccgrid13">Building Elastic Applications with Makeflow and Work Queue</a>
-
-as part of
-
-<a href="http://www.pds.ewi.tudelft.nl/ccgrid2013">CCGrid 2013</a>
-
-in Delft, the Netherlands on May 13th.  Come join us and learn how to write applications that scale up to hundreds or thousands of nodes running on clusters, clouds, and grids.
-
-<br/>
-
-<br/>
-
-<br/>
+  Dinesh Rajan will present a tutorial on
+  <a href="http://www3.nd.edu/~ccl/software/tutorials/ccgrid13">
+   Building Elastic Applications with Makeflow and Work Queue
+  </a>
+  as part of
+  <a href="http://www.pds.ewi.tudelft.nl/ccgrid2013">
+   CCGrid 2013
+  </a>
+  in Delft, the Netherlands on May 13th.  Come join us and learn how to write applications that scale up to hundreds or thousands of nodes running on clusters, clouds, and grids.

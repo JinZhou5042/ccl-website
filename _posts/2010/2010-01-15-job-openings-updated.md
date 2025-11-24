@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-See the
-
-<a href="research/jobs">jobs page</a>
-
-for new openings for undergraduate researchers as well as postdocs and professionals.
-
-<br/>
-
-<br/>
+  See the
+  <a href="research/jobs">
+   jobs page
+  </a>
+  for new openings for undergraduate researchers as well as postdocs and professionals.

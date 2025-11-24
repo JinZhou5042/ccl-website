@@ -9,13 +9,8 @@ related_posts: true
 tags: [work queue, bioinformatics]
 ---
 <br/>
-
-Our
-
-<a href="http://www.nd.edu/~ccl/research/papers/maker-wq-ijbra.pdf">paper</a>
-
-on converting the MAKER bioinformatics analysis from MPI to Work Queue, done in collaboration with the Notre Dame Bioinformatics Laboratory was recently accepted for publication in the International Journal of Bioinformatics Research and Applications.
-
-<br/>
-
-<br/>
+  Our
+  <a href="http://www.nd.edu/~ccl/research/papers/maker-wq-ijbra.pdf">
+   paper
+  </a>
+  on converting the MAKER bioinformatics analysis from MPI to Work Queue, done in collaboration with the Notre Dame Bioinformatics Laboratory was recently accepted for publication in the International Journal of Bioinformatics Research and Applications.

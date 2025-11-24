@@ -3,6 +3,7 @@ layout: "post"
 title: "Teaching Distributed Computing with Work Queue"
 date: 2013-01-15T15:12:00+00:00
 author: "Douglas Thain"
+image: "/assets/blog/2013/teaching-distributed-computing-with-work-queue/planets-4c175dfd2f.gif"
 description: "The undergraduate Programming Paradigms class at the University of Notre Dame
 introduces undergraduate students to a variety of parallel and distributed
 prog…"
@@ -10,15 +11,18 @@ toc: false
 related_posts: true
 tags: [work queue, highlights]
 ---
-<a href="http://ccl.cse.nd.edu/community/stories/planets.gif" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;"><img border="0" height="180" src="http://ccl.cse.nd.edu/community/stories/planets.gif" width="320"/></a>
-
-The undergraduate Programming Paradigms class at the University of Notre Dame
+<div class="row justify-content-sm-center">
+   <div class="col-sm-12">
+    {% include figure.liquid path="/assets/blog/2013/teaching-distributed-computing-with-work-queue/planets-4c175dfd2f.gif" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+   </div>
+  </div>
+  The undergraduate Programming Paradigms class at the University of Notre Dame
 introduces undergraduate students to a variety of parallel and distributed
 programming models.
-
-<a href="http://www.nd.edu/%7Eccl/software/workqueue">Work Queue</a>
-
-is used as an example of large scale distributed computing.
+  <a href="http://www.nd.edu/%7Eccl/software/workqueue">
+   Work Queue
+  </a>
+  is used as an example of large scale distributed computing.
 Using a solar system simulator developed in a previous assignment,
 students were tasked with splitting a trajectory
 of the planets' positions into individual frames, populating POVRay
@@ -32,10 +36,7 @@ animating the movement of the camera.  The students really enjoyed the
 assignment while learning about the advantages and pitfalls
 of distributed computing.
 
-<br/>
-
-<br/>
-
 -
-
-<i>Ronald J. Nowling and Jesus A. Izaguirre, University of Notre Dame</i>
+  <i>
+   Ronald J. Nowling and Jesus A. Izaguirre, University of Notre Dame
+  </i>

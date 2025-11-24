@@ -10,13 +10,8 @@ related_posts: true
 tags: []
 ---
 Congrads to Nate Kremer-Herman who passed his Ph.D. proposal, titled "Troubleshooting Distributed Applications Using a Graph Representation"
-
-<br/>
-
-<br/>
-
-<div class="row justify-content-sm-center">
-  <div class="col-sm-12">
+  <div class="row justify-content-sm-center">
+   <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2019/phd-proposal-nate-kremer-herman/Nate-Proposal-d81a7f21f3.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+   </div>
   </div>
-</div>

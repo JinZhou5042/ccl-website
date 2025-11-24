@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Congratulations to Dr. Jeffrey Hemmes, who successfully defended his dissertation titled
-
-<i>Improving Data Availability in Mobile Applications Through Enhanced Cooperative Localization</i>
-
-.  Dr. Hemmes will return to a faculty position at the Air Force Institute of Technology.
-
-<br/>
-
-<br/>
+  Congratulations to Dr. Jeffrey Hemmes, who successfully defended his dissertation titled
+  <i>
+   Improving Data Availability in Mobile Applications Through Enhanced Cooperative Localization
+  </i>
+  .  Dr. Hemmes will return to a faculty position at the Air Force Institute of Technology.

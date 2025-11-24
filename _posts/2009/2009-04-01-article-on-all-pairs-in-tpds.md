@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Our most recent
-
-<a href="http://www.cse.nd.edu/~ccl/research/pubs/allpairs-tpds.pdf">article on All-Pairs</a>
-
-has been accepted to the IEEE Transactions on Parallel and Distributed Computing.  This article presents new developments in data distribution, output management using really large matrices (60k by 60k elements), and a record breaking biometrics experiment.
-
-<br/>
-
-<br/>
+  Our most recent
+  <a href="http://www.cse.nd.edu/~ccl/research/pubs/allpairs-tpds.pdf">
+   article on All-Pairs
+  </a>
+  has been accepted to the IEEE Transactions on Parallel and Distributed Computing.  This article presents new developments in data distribution, output management using really large matrices (60k by 60k elements), and a record breaking biometrics experiment.

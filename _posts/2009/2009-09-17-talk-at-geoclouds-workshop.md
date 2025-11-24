@@ -9,15 +9,13 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Prof. Thain gave the opening talk,
-
-<a href="http://www.nd.edu/~dthain/talks/thain-geoclouds09.ppt">Science in the Clouds: History, Challenges, and Opportunities</a>
-
-, at the
-
-<a href="http://www.dataandsearch.org/dsi/events/geoclouds.html">GeoClouds Workshop</a>
-
-in Indianapolis.
-
-<br/>
+  Prof. Thain gave the opening talk,
+  <a href="http://www.nd.edu/~dthain/talks/thain-geoclouds09.ppt">
+   Science in the Clouds: History, Challenges, and Opportunities
+  </a>
+  , at the
+  <a href="http://www.dataandsearch.org/dsi/events/geoclouds.html">
+   GeoClouds Workshop
+  </a>
+  in Indianapolis.
+  <br/>

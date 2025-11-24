@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Prof. Thain gave a guest lecture at Clemson University titled
-
-<a href="http://www.nd.edu/~dthain/talks/scaling-clemson.ppt">Scaling up Data Intensive Science to Campus Grids</a>
-
-.
-
-<br/>
-
-<br/>
+  Prof. Thain gave a guest lecture at Clemson University titled
+  <a href="http://www.nd.edu/~dthain/talks/scaling-clemson.ppt">
+   Scaling up Data Intensive Science to Campus Grids
+  </a>
+  .

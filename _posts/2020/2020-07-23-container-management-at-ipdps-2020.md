@@ -10,12 +10,8 @@ related_posts: true
 tags: []
 ---
 CCL grad student Tim Shaffer recently presented his recent work on container management at IPDPS 2020:
-
-<br/>
-
-<br/>
-
-<span class="style-scope yt-formatted-string" dir="auto">Container technologies are seeing wider use at
+  <span class="style-scope yt-formatted-string" dir="auto">
+   Container technologies are seeing wider use at
  advanced computing facilities for managing highly complex
  applications that must execute at multiple sites. However, in a
  distributed high throughput computing setting, the unrestricted 
@@ -30,23 +26,28 @@ use of containers can result in the container explosion problem.
  used to strategically combine and share container images. We
  develop LANDLORD to exploit this property and evaluate its
  performance through a combination of simulation studies and
-empirical measurement of high energy physics applications.</span>
+empirical measurement of high energy physics applications.
+  </span>
+  <ul>
+   <li>
+    <span class="style-scope yt-formatted-string" dir="auto">
+     Tim Shaffer, Nicholas Hazekamp, Jakob Blomer, and Douglas Thain,
+"
+     <a href="https://ccl.cse.nd.edu/research/papers/explosion-ipdps20.pdf" target="_blank">
+      <b>
+       Solving the Container Explosion Problem for Distributed High Throughput Computing
+      </b>
+     </a>
+     "
 
-<br/>
-
-<br/>
-
-<ul>
-<li><span class="style-scope yt-formatted-string" dir="auto">Tim Shaffer, Nicholas Hazekamp, Jakob Blomer, and Douglas Thain,
-"<a href="https://ccl.cse.nd.edu/research/papers/explosion-ipdps20.pdf" target="_blank"><b>Solving the Container Explosion Problem for Distributed High Throughput Computing</b></a>"
-
-International Parallel and Distributed Processing Symposium, May, 2020. 
-
-</span></li>
-</ul>
-
-<br/>
-
-<br/>
-
-<p><span class="style-scope yt-formatted-string" dir="auto"><br/></span></p>
+International Parallel and Distributed Processing Symposium, May, 2020.
+    </span>
+   </li>
+  </ul>
+  <div style="text-align: justify;">
+   <span class="style-scope yt-formatted-string" dir="auto">
+    <br/>
+   </span>
+  </div>
+  <div style="text-align: justify;">
+  </div>

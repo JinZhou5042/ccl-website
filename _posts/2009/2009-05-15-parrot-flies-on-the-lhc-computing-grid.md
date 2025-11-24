@@ -9,17 +9,12 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-In
-
-<a href="http://www.cse.nd.edu/~ccl/research/pubs/parrot-chep09.pdf">a paper presented at CHEP 2009</a>
-
-, a group of physicists describes how
-
-<a href="http://www.cse.nd.edu/~ccl/software/parrot">Parrot</a>
-
-is used to distribute a large software package hosted at Fermilab in the United States to thousands of CPUs harnessed via the LHC Computing Grid across Europe.
-
-<br/>
-
-<br/>
+  In
+  <a href="http://www.cse.nd.edu/~ccl/research/pubs/parrot-chep09.pdf">
+   a paper presented at CHEP 2009
+  </a>
+  , a group of physicists describes how
+  <a href="http://www.cse.nd.edu/~ccl/software/parrot">
+   Parrot
+  </a>
+  is used to distribute a large software package hosted at Fermilab in the United States to thousands of CPUs harnessed via the LHC Computing Grid across Europe.

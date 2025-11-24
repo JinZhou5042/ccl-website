@@ -7,22 +7,20 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
-<p>We have created a new Makeflow visualization module which exports a workflow into an <i>xgmml</i> file compatible with Cytoscape.  Cytoscape is a powerful network graphing
+<html><body><div class="MsoNormal" style="text-indent: .5in;">
+We have created a new Makeflow visualization module which exports a workflow into an <i>xgmml</i> file compatible with Cytoscape.  Cytoscape is a powerful network graphing
 application with support for custom styles, layouts, annotations, and more. While
 this program is known more for visualizing molecular networks in biology, it
 can be used for any purpose, and we believe it is a powerful tool for
 visualizing makeflow tasks.  Our
-visualization module was designed for and tested on Cytoscape 3.2. The following picture is a Cytoscape visualization of the example makeflow script provided in the User’s Manual (<a href="http://ccl.cse.nd.edu/software/manuals/makeflow.html">http://ccl.cse.nd.edu/software/manuals/makeflow.html</a>):</p>
+visualization module was designed for and tested on Cytoscape 3.2. The following picture is a Cytoscape visualization of the example makeflow script provided in the User’s Manual (<a href="http://ccl.cse.nd.edu/software/manuals/makeflow.html">http://ccl.cse.nd.edu/software/manuals/makeflow.html</a>):</div>
+<span id="goog_785988799"></span><br/>
+<div class="MsoNormal" style="text-indent: .5in;">
 
-<span id="goog_785988799"></span>
-
-<br/>
-
-<span id="goog_785988800"></span>
-
-<br/>
-
-<p>To generate a Cytoscape graph from
+<br/></div>
+<span id="goog_785988800"></span><br/>
+<div class="MsoNormal" style="text-indent: .5in;">
+To generate a Cytoscape graph from
 your makeflow script, simply run:<br/>
 <blockquote class="tr_bq">
 <br/>
@@ -33,9 +31,11 @@ working directory when you run <span>makeflow_viz</span>. To apply the style in 
 select File -&gt; Import -&gt; Style, and select the style.xml file.  Next,
 right-click the imported network and select “Apply Style…”.  Select “makeflow” from the dropdown menu and
 our style will be applied.  This will add
-the proper colors, edges, arrows, and shapes for processes and files.</p>
-
-<p>Cytoscape also has a built in
+the proper colors, edges, arrows, and shapes for processes and files. </div>
+<div class="MsoNormal" style="text-indent: .5in;">
+<br/></div>
+<div class="MsoNormal" style="text-indent: .5in;">
+Cytoscape also has a built in
 layout function which can be used to automatically rearrange nodes according to
 their hierarchy.   To access this, select
 Layout <span style="font-family: Wingdings;">à</span>
@@ -98,7 +98,19 @@ Time to layout nodes</div>
 <td nowrap="" style="border-left: none; border-top: none; height: 15.0pt; padding: 0in 5.4pt 0in 5.4pt; width: 167.55pt;" valign="bottom" width="223"><div class="MsoNormal">
 23 hours</div>
 </td></tr>
-</tbody></table></p>
+</tbody></table>
+</div>
+<div class="MsoNormal" style="text-indent: .5in;">
+<br/>
 
-<p><br/>
-<!--[endif]--></p>
+
+After the layout completes, the
+graph should be visible in a clean fashion, and you can customize the display
+further to your liking with the various options available in Cytoscape.  For more information about Cytoscape, visit <a href="http://cytoscape.org/">http://cytoscape.org</a></div>
+<div class="MsoNormal" style="text-indent: .5in;">
+</div>
+<div class="MsoNormal" style="text-indent: .5in;">
+<br/></div>
+<div class="MsoNormal" style="text-indent: .5in;">
+<br/>
+<!--[endif]--></div></body></html>

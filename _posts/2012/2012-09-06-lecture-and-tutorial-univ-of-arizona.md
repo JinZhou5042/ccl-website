@@ -9,15 +9,13 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-We are doing a guest lecture and tutorial titled
-
-<a href="http://www.nd.edu/~ccl/software/tutorials/acic12/index.php">Building Scalable Data Intensive Applications with Makeflow and Work Queue</a>
-
-at the University of Arizona as part of the
-
-<a href="https://sites.google.com/site/appliedciconcepts/home">Applied CI Concepts</a>
-
-class on September 11 and 13, 2012.
-
-<br/>
+  We are doing a guest lecture and tutorial titled
+  <a href="http://www.nd.edu/~ccl/software/tutorials/acic12/index.php">
+   Building Scalable Data Intensive Applications with Makeflow and Work Queue
+  </a>
+  at the University of Arizona as part of the
+  <a href="https://sites.google.com/site/appliedciconcepts/home">
+   Applied CI Concepts
+  </a>
+  class on September 11 and 13, 2012.
+  <br/>

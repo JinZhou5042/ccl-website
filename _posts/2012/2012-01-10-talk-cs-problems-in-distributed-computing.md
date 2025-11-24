@@ -9,17 +9,12 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Prof. Thain gave a talk titled
-
-<a href="http://www.nd.edu/~dthain/talks/unsolved-grid12.pptx">Unsolved Computer Science Problems in Distributed Computing</a>
-
-at
-
-<a href="https://gridlab.man.poznan.pl/Meetings/Zakopane2012/indexman.html">Grid Computing: The Next Decade</a>
-
-in Zakopane, Poland.
-
-<br/>
-
-<br/>
+  Prof. Thain gave a talk titled
+  <a href="http://www.nd.edu/~dthain/talks/unsolved-grid12.pptx">
+   Unsolved Computer Science Problems in Distributed Computing
+  </a>
+  at
+  <a href="https://gridlab.man.poznan.pl/Meetings/Zakopane2012/indexman.html">
+   Grid Computing: The Next Decade
+  </a>
+  in Zakopane, Poland.

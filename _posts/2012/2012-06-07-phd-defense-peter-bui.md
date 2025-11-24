@@ -9,7 +9,5 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Congratulations to Dr. Peter Bui, who successfully defended his dissertation titled "A Compiler Toolchain for Distributed Data Intensive Scientific Workflows" !
-
-<br/>
+  Congratulations to Dr. Peter Bui, who successfully defended his dissertation titled "A Compiler Toolchain for Distributed Data Intensive Scientific Workflows" !
+  <br/>

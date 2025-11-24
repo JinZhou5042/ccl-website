@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Congratulations to Dr. Li Yu, who successfully defended his Ph.D. dissertation,
-
-<a href="http://www.nd.edu/~ccl/research/papers/lyu2-dissertation.pdf">Right-sizing Resource Allocations for Scientific Applications in Clusters, Grids, and Clouds</a>
-
-!
-
-<br/>
-
-<br/>
+  Congratulations to Dr. Li Yu, who successfully defended his Ph.D. dissertation,
+  <a href="http://www.nd.edu/~ccl/research/papers/lyu2-dissertation.pdf">
+   Right-sizing Resource Allocations for Scientific Applications in Clusters, Grids, and Clouds
+  </a>
+  !

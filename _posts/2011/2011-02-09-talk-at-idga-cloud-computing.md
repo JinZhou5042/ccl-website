@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Prof. Thain gave a talk titled
-
-<a href="http://www.nd.edu/~dthain/talks/idga-thain-feb-2011.pptx">Models and Frameworks for Data Intensive Cloud Computing</a>
-
-at the IDGA Cloud Computing Summit in Washington DC.
-
-<br/>
-
-<br/>
+  Prof. Thain gave a talk titled
+  <a href="http://www.nd.edu/~dthain/talks/idga-thain-feb-2011.pptx">
+   Models and Frameworks for Data Intensive Cloud Computing
+  </a>
+  at the IDGA Cloud Computing Summit in Washington DC.

@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Congratulations to Dr. Christopher Moretti, who successfully defended his dissertation titled
-
-<i>Abstractions for Scientific Computing on Campus Grids</i>
-
-!
-
-<br/>
-
-<br/>
+  Congratulations to Dr. Christopher Moretti, who successfully defended his dissertation titled
+  <i>
+   Abstractions for Scientific Computing on Campus Grids
+  </i>
+  !

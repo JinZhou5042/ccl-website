@@ -9,13 +9,8 @@ related_posts: true
 tags: []
 ---
 <br/>
-
-Major
-
-<a href="http://www.nd.edu/~jhemmes">Jeffrey Hemmes</a>
-
-, USAF, recently returned to the United States from duty in Iraq.  He is currently a PhD candidate in the CCL, and will assume teaching duties at the Air Force Institute of Technology in the fall.  Welcome home, Jeff!
-
-<br/>
-
-<br/>
+  Major
+  <a href="http://www.nd.edu/~jhemmes">
+   Jeffrey Hemmes
+  </a>
+  , USAF, recently returned to the United States from duty in Iraq.  He is currently a PhD candidate in the CCL, and will assume teaching duties at the Air Force Institute of Technology in the fall.  Welcome home, Jeff!

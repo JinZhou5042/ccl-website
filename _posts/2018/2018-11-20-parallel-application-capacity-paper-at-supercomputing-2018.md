@@ -8,23 +8,13 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
-Nate Kremer-Herman presented the paper
-
-<i><a href="http://ccl.cse.nd.edu/research/papers/capacity-sc-2018.pdf"><b>A Lightweight Model for Right-Sizing Master-Worker Applications</b></a></i>
-
-at the ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing) on November 14, 2018 in Dallas, Texas. This year marked the 30th anniversary of the Supercomputing conference.
-
+<html><body>Nate Kremer-Herman presented the paper <i><a href="http://ccl.cse.nd.edu/research/papers/capacity-sc-2018.pdf"><b>A Lightweight Model for Right-Sizing Master-Worker Applications</b></a></i> at the ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing) on November 14, 2018 in Dallas, Texas. This year marked the 30th anniversary of the Supercomputing conference.<br/>
 <br/>
-
-<br/>
-
-[if gte mso 9]><xml>
+<!--[if gte mso 9]><xml>
  <o:OfficeDocumentSettings>
   <o:AllowPNG></o:AllowPNG>
  </o:OfficeDocumentSettings>
-</xml><![endif]
-
-[if gte mso 9]><xml>
+</xml><![endif]--><!--[if gte mso 9]><xml>
  <w:WordDocument>
   <w:View>Normal</w:View>
   <w:Zoom>0</w:Zoom>
@@ -63,9 +53,7 @@ at the ACM/IEEE International Conference for High Performance Computing, Network
    <m:intLim m:val="subSup"/>
    <m:naryLim m:val="undOvr"/>
   </m:mathPr></w:WordDocument>
-</xml><![endif]
-
-[if gte mso 9]><xml>
+</xml><![endif]--><!--[if gte mso 9]><xml>
  <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
   DefSemiHidden="false" DefQFormat="false" DefPriority="99"
   LatentStyleCount="375">
@@ -642,9 +630,7 @@ at the ACM/IEEE International Conference for High Performance Computing, Network
   <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
    Name="Unresolved Mention"/>
  </w:LatentStyles>
-</xml><![endif]
-
-[if gte mso 10]>
+</xml><![endif]--><!--[if gte mso 10]>
 <style>
  /* Style Definitions */
  table.MsoNormalTable
@@ -662,11 +648,10 @@ at the ACM/IEEE International Conference for High Performance Computing, Network
  font-size:12.0pt;
  font-family:"Times New Roman",serif;}
 </style>
-<![endif]
-
+<![endif]-->
 <br/>
-
-<p>In <i>A Lightweight Model for Right-Sizing Master-Worker Applications</i>, we note that when running a parallel application at scale, a resource
+<div class="MsoNormal">
+In <i>A Lightweight Model for Right-Sizing Master-Worker Applications</i>, we note that when running a parallel application at scale, a resource
 provisioning policy should minimize over-commitment (idle resources) and under-commitment
 (resource contention). However, users seldom know the quantity of resources to appropriately
 execute their application. Even with such knowledge, over- and under-commitment
@@ -675,44 +660,29 @@ It shares resources such as network and filesystems.We formally define the <i>ca
 the quantity of resources that may effectively be provisioned for the best execution
 time in an environment. We present a model to compute an estimate of the
 capacity of master-worker applications as they run based on execution and
-data-transfer times.</p>
-
-<p>Although the model for provisioning these applications is important, a key insight from the paper comes from a diagram which demonstrates how a parallel application's scale relates to its total execution time. Let's start with the smallest case first. This graph's x-axis represents the scale of a parallel application (we can assume it is the number of machines utilized for this example). The y-axis represents the total execution time of the application.</p>
-
-<p>Imagine we are domain scientists running some parallel analysis tool. With a scale of 1, our runtime will obviously be the slowest since we are not making use of the parallelism of the application. So we increase our scale to 10. Lo and behold, we see a marked decrease in the total execution time of the application!</p>
-
-<br/>
-
-So we try scaling up again. We go for broke and leap from a scale of 10 to 500. We notice our execution time is still decreasing! So, let's increase our scale one more time.
-
-<br/>
-
-<br/>
+data-transfer times.</div>
+<div class="MsoNormal">
+<br/></div>
+<div class="MsoNormal">
+Although the model for provisioning these applications is important, a key insight from the paper comes from a diagram which demonstrates how a parallel application's scale relates to its total execution time. Let's start with the smallest case first. This graph's x-axis represents the scale of a parallel application (we can assume it is the number of machines utilized for this example). The y-axis represents the total execution time of the application.</div>
+<div class="MsoNormal">
+<br/></div>
+<div class="MsoNormal">
+Imagine we are domain scientists running some parallel analysis tool. With a scale of 1, our runtime will obviously be the slowest since we are not making use of the parallelism of the application. So we increase our scale to 10. Lo and behold, we see a marked decrease in the total execution time of the application!</div>
+<div class="MsoNormal">
+<br/></div>
 
 <br/>
-
-At a scale of 1,000 we see the limit to our scalability. Our total execution time has increased from the 500 scale execution. Why? There is a cost to acquiring and maintaining resources. For instance, we might have to start a virtual machine on every computer we use for our application. Starting up a VM takes time.
-
+So we try scaling up again. We go for broke and leap from a scale of 10 to 500. We notice our execution time is still decreasing! So, let's increase our scale one more time.<br/>
 <br/>
 
 <br/>
-
-<br/>
-
-What we have failed to realize, however, is that we completely missed our optimum scale! The black line of the bottom graph shows the best execution time of this application (which occurs at a scale of 100). This is a key observation from the paper: though it is possible to manually re-run a parallel application with differing scales, it is highly probable we will not find the most appropriate scale to run our application such that our total execution time is minimized (the
-
-<i>capacity</i>
-
-of our application) unless our search for the optimum scale is
-
-<i>exhaustive</i>
-
-. This is an unrealistic expectation for most researchers since what matters most is the results of the analysis/simulation/etc. To make the lives of our users easier, we have implemented a lightweight model which does the heavy lifting of finding that appropriate scale for the user.
-
+At a scale of 1,000 we see the limit to our scalability. Our total execution time has increased from the 500 scale execution. Why? There is a cost to acquiring and maintaining resources. For instance, we might have to start a virtual machine on every computer we use for our application. Starting up a VM takes time.<br/>
 <br/>
 
 <br/>
-
+What we have failed to realize, however, is that we completely missed our optimum scale! The black line of the bottom graph shows the best execution time of this application (which occurs at a scale of 100). This is a key observation from the paper: though it is possible to manually re-run a parallel application with differing scales, it is highly probable we will not find the most appropriate scale to run our application such that our total execution time is minimized (the <i>capacity</i> of our application) unless our search for the optimum scale is <i>exhaustive</i>. This is an unrealistic expectation for most researchers since what matters most is the results of the analysis/simulation/etc. To make the lives of our users easier, we have implemented a lightweight model which does the heavy lifting of finding that appropriate scale for the user.<br/>
+<br/>
 <br/>
 
-<br/>
+<br/></body></html>
