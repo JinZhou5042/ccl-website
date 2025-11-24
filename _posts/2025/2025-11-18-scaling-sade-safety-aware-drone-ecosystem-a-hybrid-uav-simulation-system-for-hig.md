@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    Autonomous drones are moving into increasingly complex, real-world environments where safety, compliance, and reliability have to be built in from the start. That's the motivation behind SADE—the Safety Aware Drone Ecosystem. SADE brings together physics-accurate simulation and photorealistic rendering, paired with PX4-based autonomy, to give researchers and developers a realistic, repeatable space to design, test, and validate UAV behavior before it ever leaves the lab.
   </p>

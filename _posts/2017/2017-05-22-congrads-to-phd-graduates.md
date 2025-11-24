@@ -9,9 +9,11 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Congratulations to all of our 2017 Ph.D. graduates in Computer Science and Engineering,
-  <br/>
-  and especially to Dr. Haiyan Meng who is moving on to a position at Google, Inc.
+<br/>
+and especially to Dr. Haiyan Meng who is moving on to a position at Google, Inc.
+
   <div style="text-align: center;">
    <div class="row justify-content-sm-center">
     <div class="col-sm-12">

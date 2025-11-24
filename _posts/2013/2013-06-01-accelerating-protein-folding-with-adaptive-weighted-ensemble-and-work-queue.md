@@ -4,14 +4,16 @@ title: "Accelerating Protein Folding with Adaptive Weighted Ensemble and Work Qu
 date: 2013-06-01T18:07:00+00:00
 author: "Douglas Thain"
 image: "/assets/blog/2013/accelerating-protein-folding-with-adaptive-weighted-ensemble-and-work-queue/protein-0f7e7703d8.png"
-description: "Computational protein folding has historically relied on long-running
- simulations of single molecules. Although many such simulations can run
- be at once, t…"
+description:
+  "Computational protein folding has historically relied on long-running
+  simulations of single molecules. Although many such simulations can run
+  be at once, t…"
 toc: false
 related_posts: true
 tags: [work queue, highlights, molecular dynamics]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2013/accelerating-protein-folding-with-adaptive-weighted-ensemble-and-work-queue/protein-0f7e7703d8.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

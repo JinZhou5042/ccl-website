@@ -12,6 +12,7 @@ pinned_to_home: true
 categories: [highlights]
 carousel: true
 ---
+
 <p>
    We helped host the
    <a href="https://workflows.community/workshops/harmony-2025/" target="_blank">

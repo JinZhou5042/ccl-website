@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    Prof. Thain gave the afternoon keynote (
    <a href="https://docs.google.com/presentation/d/1mPfXsc9fzWoJMgGGHoYlg4ypsmXFoaF8GpGo_csbx_w/edit">

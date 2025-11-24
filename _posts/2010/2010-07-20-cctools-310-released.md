@@ -8,12 +8,14 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 We are pleased to announce the release of version 3.1.0 of the Cooperative Computing Tools, including Parrot, Chirp, Makeflow, Work Queue, SAND, and other software. The software may be downloaded here:
-  <a href="http://www.cse.nd.edu/~ccl/software/download.shtml">
-   http://www.cse.nd.edu/~ccl/software/download.shtml
-  </a>
-  New features in this release include:
-  <br/>
+<a href="http://www.cse.nd.edu/~ccl/software/download.shtml">
+http://www.cse.nd.edu/~ccl/software/download.shtml
+</a>
+New features in this release include:
+<br/>
+
   <dir>
    <br/>
    <li>

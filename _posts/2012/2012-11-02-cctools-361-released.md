@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   <p>
    The Cooperative Computing Lab is pleased to announce the release of version 3.6.1 of the Cooperative Computing Tools, including Parrot, Chirp, Makeflow, WorkQueue, SAND, All-Pairs, and other software.

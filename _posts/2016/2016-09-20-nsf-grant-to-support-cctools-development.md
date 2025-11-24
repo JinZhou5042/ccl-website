@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2016/nsf-grant-to-support-cctools-development/nsf_logo_bottom-4e77b02973.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

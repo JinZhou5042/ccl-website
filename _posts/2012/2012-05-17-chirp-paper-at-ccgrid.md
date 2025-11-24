@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Patrick Donnelly is presenting his most recent paper,
   <a href="http://www.cse.nd.edu/~ccl/research/papers/chirp-tickets-ccgrid12-camera.pdf">

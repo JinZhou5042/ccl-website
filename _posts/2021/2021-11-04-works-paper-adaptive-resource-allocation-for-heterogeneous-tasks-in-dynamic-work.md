@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    CCL graduate student Thanh Son Phung will be presenting his recent work on managing dynamic tasks at the WORKS workshop at Supercomputing 2021:
   </p>

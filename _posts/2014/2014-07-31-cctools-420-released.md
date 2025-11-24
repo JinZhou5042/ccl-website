@@ -10,22 +10,24 @@ toc: false
 related_posts: true
 tags: [release]
 ---
+
 We are pleased to announce the release of version 4.2.0 of the Cooperative
 Computing Tools including Parrot, Chirp, Makeflow, WorkQueue, SAND, All-Pairs,
 and other software.
-  <br/>
-  The software may be downloaded here:
-  <a href="http://ccl.cse.nd.edu/software/download">
-   Download CCTools 4.2.0
-  </a>
-  <br/>
-  This release is mostly a bug fix release, but introduces changes to the Work
+<br/>
+The software may be downloaded here:
+<a href="http://ccl.cse.nd.edu/software/download">
+Download CCTools 4.2.0
+</a>
+<br/>
+This release is mostly a bug fix release, but introduces changes to the Work
 Queue protocol. Thus, workers from 4.2 do not work with masters pre 4.2.
-  <br/>
-  Among the bug fixes and added capabilities are:
+<br/>
+Among the bug fixes and added capabilities are:
 
 Among the bug fixes and added capabilities are:
-  <br/>
+<br/>
+
   <ul>
    <li>
     [General]   Support for systemd log journal. (Patrick Donelly)

@@ -7,9 +7,9 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body>DeltaDB is a log-structure database and query model designed for time-varying and schema-free data. The following video gives a high level overview of DeltaDB and describes how the model is scalable using MapReduce.<br/>
 <br/>
-
 
 <span id="goog_719630263"></span><br/>
 This database design is implemented within CCTools in two parts. Part 1 (data storage) has been available for over a year and is called the catalog server. Part 2 (data analysis) has recently been implemented and is not yet in a release, but is available in the following commit:<br/>

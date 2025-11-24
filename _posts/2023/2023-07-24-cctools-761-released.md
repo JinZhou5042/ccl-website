@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    <span>
     We are pleased to announce the release of version 7.6.1
@@ -52,6 +53,7 @@ tags: []
     - Add visualization of task graph and documentation. (Douglas Thain)
 
 Work Queue:
+
    </div>
    <div>
     - Fix bug in task scheduling that would result in manager hanging. (Colin Thomas)

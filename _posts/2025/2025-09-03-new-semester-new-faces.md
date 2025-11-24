@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2025/new-semester-new-faces/AVvXsEjWVRvJTl1qiOv4Px92n_oC7sCFwzLHqaxssColS1ctOyW-MCUKSnzw-707d3c96be.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

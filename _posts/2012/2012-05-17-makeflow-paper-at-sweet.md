@@ -8,12 +8,14 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Michael Albrecht will present our paper
-  <a href="http://www.cse.nd.edu/~ccl/research/papers/makeflow-sweet12-camera.pdf">
-   Makeflow: A Portable Abstraction for Data Intensive Computing on Clusters, Clouds, and Grids
-  </a>
-  at the workshop on Scalable Workflow Enactment Engines and Technologies (SWEET), held with the SIGMOD conference.
-  <br/>
+<a href="http://www.cse.nd.edu/~ccl/research/papers/makeflow-sweet12-camera.pdf">
+Makeflow: A Portable Abstraction for Data Intensive Computing on Clusters, Clouds, and Grids
+</a>
+at the workshop on Scalable Workflow Enactment Engines and Technologies (SWEET), held with the SIGMOD conference.
+<br/>
+
   <p>
    This paper gives an overview of the
    <a href="http://www.nd.edu/~ccl/software/makeflow">

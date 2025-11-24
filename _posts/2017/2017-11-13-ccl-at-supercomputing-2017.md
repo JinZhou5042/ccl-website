@@ -3,11 +3,12 @@ layout: "post"
 title: "CCL at Supercomputing 2017"
 date: 2017-11-13T16:58:00+00:00
 author: "Douglas Thain"
-description: "We are well represented at the annual Supercomputing conference this week: Tim Shaffer is presenting \" Taming Metadata Storms in Parallel Filesystems with Me…"
+description: 'We are well represented at the annual Supercomputing conference this week: Tim Shaffer is presenting " Taming Metadata Storms in Parallel Filesystems with Me…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <span style="font-family: inherit;">
    <br/>
   </span>

@@ -4,11 +4,12 @@ title: "ND Leads DOE Grant on Virtual Clusters for Scientific Computing"
 date: 2016-08-10T20:30:00+00:00
 author: "Douglas Thain"
 image: "/assets/blog/2016/nd-leads-doe-grant-on-virtual-clusters-for-scientific-computing/vc-f5c2acd2df.png"
-description: "Prof. Douglas Thain is leading a new $2.2M DOE-funded project titled \" VC3: Virtual Clusters for Community Computation \" in an effort to make our national su…"
+description: 'Prof. Douglas Thain is leading a new $2.2M DOE-funded project titled " VC3: Virtual Clusters for Community Computation " in an effort to make our national su…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <div style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;">
   </div>
   Prof. Douglas Thain is leading a new $2.2M DOE-funded project titled "

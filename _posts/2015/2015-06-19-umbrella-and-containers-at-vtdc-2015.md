@@ -9,13 +9,15 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Two CCL students presented their latest work at the Virtualization Technologies in Distributed Computing (VTDC) at the Symposium on High Performance Distributed Computing (HPDC) in Portland, Oregon.
 
 Haiyan Meng presented her work on
-  <a href="http://ccl.cse.nd.edu/software/umbrella">
-   Umbrella
-  </a>
-  , a system for specifying and materializing execution environments in a portable and reproducible way.  Umbrella accepts a declarative specification for an application, and then determines the minimum technology needed to deploy it.   The application will be run natively if the local execution environment is compatible, but if not, Umbrella will deploy a container, a virtual machine, or make use of a public cloud if necessary.
+<a href="http://ccl.cse.nd.edu/software/umbrella">
+Umbrella
+</a>
+, a system for specifying and materializing execution environments in a portable and reproducible way.  Umbrella accepts a declarative specification for an application, and then determines the minimum technology needed to deploy it.   The application will be run natively if the local execution environment is compatible, but if not, Umbrella will deploy a container, a virtual machine, or make use of a public cloud if necessary.
+
   <table>
    <tbody>
     <tr>

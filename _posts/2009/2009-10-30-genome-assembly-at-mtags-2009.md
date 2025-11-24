@@ -8,20 +8,22 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Christopher Moretti and Michael Olson will present their most recent work on
-  <a href="http://www.cse.nd.edu/~ccl/research/papers/assembly-mtags09.pdf">
-   Scalable Genome Assembly
-  </a>
-  at the
-  <a href="http://dsl.cs.uchicago.edu/MTAGS09/">
-   MTAGS Workshop
-  </a>
-  held at
-  <a href="http://www.sc09.org">
-   Supercomputing 2009
-  </a>
-  .
-  <br/>
+<a href="http://www.cse.nd.edu/~ccl/research/papers/assembly-mtags09.pdf">
+Scalable Genome Assembly
+</a>
+at the
+<a href="http://dsl.cs.uchicago.edu/MTAGS09/">
+MTAGS Workshop
+</a>
+held at
+<a href="http://www.sc09.org">
+Supercomputing 2009
+</a>
+.
+<br/>
+
   <p>
    Their (unnamed) scalable assembler allows the end user to plug in a variety of custom algorithms for the computationally intensive phase of sequence alignment, using the
    <a href="http://www.cse.nd.edu/~ccl/software/workqueue">

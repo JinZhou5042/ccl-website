@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body><div class="MsoNormal" style="text-indent: .5in;">
 We have created a new Makeflow visualization module which exports a workflow into an <i>xgmml</i> file compatible with Cytoscape.  Cytoscape is a powerful network graphing
 application with support for custom styles, layouts, annotations, and more. While
@@ -19,6 +20,7 @@ visualization module was designed for and tested on Cytoscape 3.2. The following
 
 <br/></div>
 <span id="goog_785988800"></span><br/>
+
 <div class="MsoNormal" style="text-indent: .5in;">
 To generate a Cytoscape graph from
 your makeflow script, simply run:<br/>
@@ -103,10 +105,10 @@ Time to layout nodes</div>
 <div class="MsoNormal" style="text-indent: .5in;">
 <br/>
 
-
 After the layout completes, the
 graph should be visible in a clean fashion, and you can customize the display
 further to your liking with the various options available in Cytoscape.  For more information about Cytoscape, visit <a href="http://cytoscape.org/">http://cytoscape.org</a></div>
+
 <div class="MsoNormal" style="text-indent: .5in;">
 </div>
 <div class="MsoNormal" style="text-indent: .5in;">

@@ -8,13 +8,15 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 The Cooperative Computing Lab is pleased to announce the release of version 7.0.17 of the Cooperative Computing Tools including Parrot, Chirp, JX, Makeflow, WorkQueue, SAND, All-Pairs, Weaver, and other software.
 
 The software may be downloaded
-  <a href="http://ccl.cse.nd.edu/software/download">
-   here.
-  </a>
-  This is a minor release which adds some bug fixes. Among them:
+<a href="http://ccl.cse.nd.edu/software/download">
+here.
+</a>
+This is a minor release which adds some bug fixes. Among them:
+
   <ul>
    <li>
     [General] Fix for linking issue when using a conda environment. (Tim Shaffer)

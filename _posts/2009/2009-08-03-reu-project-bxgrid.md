@@ -9,21 +9,23 @@ toc: false
 related_posts: true
 tags: [bxgrid, condor, makeflow, allpairs]
 ---
+
 This post continues last week's subject of summer REU projects.
 
 Rachel Witty and Kameron Srimoungchanh worked on
-  <a href="http://dthain.blogspot.com/2008/12/bxgrid-biometrics-research-grid.html">
-   BXGrid
-  </a>
-  , our web portal and computing system for biometrics research. This project is a collaboration between the
-  <a href="http://www.cse.nd.edu/%7Eccl">
-   Cooperative Computing Lab
-  </a>
-  and the
-  <a href="http://www.cse.nd.edu/%7Ecvrl">
-   Computer Vision Research Lab
-  </a>
-  at Notre Dame. Hoang Bui is the lead graduate student on the project.  Rachel and Kameron added a bunch of new capabilities to the system; I'll show three examples today.
+<a href="http://dthain.blogspot.com/2008/12/bxgrid-biometrics-research-grid.html">
+BXGrid
+</a>
+, our web portal and computing system for biometrics research. This project is a collaboration between the
+<a href="http://www.cse.nd.edu/%7Eccl">
+Cooperative Computing Lab
+</a>
+and the
+<a href="http://www.cse.nd.edu/%7Ecvrl">
+Computer Vision Research Lab
+</a>
+at Notre Dame. Hoang Bui is the lead graduate student on the project. Rachel and Kameron added a bunch of new capabilities to the system; I'll show three examples today.
+
   <div>
    <div>
     <br/>

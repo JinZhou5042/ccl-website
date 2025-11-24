@@ -9,8 +9,10 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Two of our CCL grad students are off to internships this summer:
-  <br/>
+<br/>
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2018/ccl-internships-at-cern-and-alibaba/nhazekam-15ff2e32a5.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

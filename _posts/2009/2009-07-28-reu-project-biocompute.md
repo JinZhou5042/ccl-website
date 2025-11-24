@@ -9,8 +9,10 @@ toc: false
 related_posts: true
 tags: [condor, bxgrid, makeflow, biocompute]
 ---
+
 This summer, we hosted four REU students who contributed to two web portals for distributed computing: Biocompute and BXGrid. I'll write about one this week and the other next week.
-  <br/>
+<br/>
+
   <div>
   </div>
   <div>
@@ -25,10 +27,11 @@ This summer, we hosted four REU students who contributed to two web portals for 
    at Notre Dame.
 
 Biocompute allows researchers at Notre Dame to run standard bioinformatics tools like BLAST, and then share and manage the results. The new twist is that we transparently parallelize the tasks and run them on our campus
-   <a href="http://www.cs.wisc.edu/condor">
-    Condor
-   </a>
-   pool. This allows people to run tasks that were previously impossible: we routinely run workloads that would take months on a single machine, but get completed in hours on Biocompute.
+<a href="http://www.cs.wisc.edu/condor">
+Condor
+</a>
+pool. This allows people to run tasks that were previously impossible: we routinely run workloads that would take months on a single machine, but get completed in hours on Biocompute.
+
   </div>
   <br/>
   <div>

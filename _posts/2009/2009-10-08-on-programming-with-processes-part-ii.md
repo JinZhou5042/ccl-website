@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: [web browsers, threads, processes]
 ---
+
 <div>
    One of the biggest challenges in building computer systems is finding a way to make things
    <strong>
@@ -55,6 +56,7 @@ tags: [web browsers, threads, processes]
    , where the user of the machine works for an organization that keeps important documents on a central server.
 
 Apparently, Firefox uses an embedded database to store your preferences, bookmarks, cache, etc, and it cannot tolerate multiple simultaneous access. So, if you try to run multiple instances at once, it has to be clever enough to find the running copy and tell it to open a new window. If it cannot find it because the other copy is running in another console or on another machine, you get this ridiculous message:
+
   </div>
   <br/>
   <div>

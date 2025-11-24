@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body>Nate Kremer-Herman presented the paper <i><a href="http://ccl.cse.nd.edu/research/papers/capacity-sc-2018.pdf"><b>A Lightweight Model for Right-Sizing Master-Worker Applications</b></a></i> at the ACM/IEEE International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing) on November 14, 2018 in Dallas, Texas. This year marked the 30th anniversary of the Supercomputing conference.<br/>
 <br/>
 <!--[if gte mso 9]><xml>

@@ -9,11 +9,13 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 An Huynh will be presenting a paper on the visualization of task-parallel programs at the
-  <a href="http://cedmav.com/events/vpa-2015.html">
-   Visual Performance Analysis
-  </a>
-  workshop at Supercomputing 2015.  (He is a student of Kenjiro Taura at the University of Tokyo who spent a semester working with us in the Cooperative Computing Lab.)
+<a href="http://cedmav.com/events/vpa-2015.html">
+Visual Performance Analysis
+</a>
+workshop at Supercomputing 2015.  (He is a student of Kenjiro Taura at the University of Tokyo who spent a semester working with us in the Cooperative Computing Lab.)
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2015/dagvz-paper-at-visual-performance-analysis-workshop/dagviz-e198acb204.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

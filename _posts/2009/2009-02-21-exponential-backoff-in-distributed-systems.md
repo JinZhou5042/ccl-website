@@ -9,8 +9,10 @@ toc: false
 related_posts: true
 tags: [ethernet, fault tolerance]
 ---
+
 In response to my previous article, a commenter asked:
-  <br/>
+<br/>
+
   <div>
    <br/>
    <span style="font-size: 85%;">

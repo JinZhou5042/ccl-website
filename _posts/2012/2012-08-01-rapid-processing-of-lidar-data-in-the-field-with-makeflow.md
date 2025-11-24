@@ -10,6 +10,7 @@ related_posts: true
 tags: [highlights, lidar, makeflow]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2012/rapid-processing-of-lidar-data-in-the-field-with-makeflow/eaarl-b2f00c8d6c.gif" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -34,14 +35,13 @@ is critical that the field crew can process the data rapidly and take a
 look at it for obvious problems so they can be corrected before the next
  flight.
 
-Using Makeflow, the data can be processed quickly on a 
-portable 32-core cluster in the field in about 20 minutes.  The data can
- be processed fast enough to do some cursory analysis and also 
-re-process it a few times if needed to troubleshoot issues.  Using 
-Makeflow, it is easy to run the exactly same workflow in the field on 
+Using Makeflow, the data can be processed quickly on a
+portable 32-core cluster in the field in about 20 minutes. The data can
+be processed fast enough to do some cursory analysis and also
+re-process it a few times if needed to troubleshoot issues. Using
+Makeflow, it is easy to run the exactly same workflow in the field on
 the portable cluster or back in the office on a multi-core system.
 
--
-  <i>
+- <i>
    David Nagle, US Geological Survey
   </i>

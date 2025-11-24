@@ -7,8 +7,17 @@ image: "/assets/blog/2008/the-wavefront-abstraction/abstr-wavefront-56dc534178.g
 description: "This is the third in a series of posts on the idea of abstractions for distributed computing on clusters, clouds, and grids. An abstraction is a simple inter…"
 toc: false
 related_posts: true
-tags: [condor, wavefront, multicore, distributed computing, abstractions, archived-blog]
+tags:
+  [
+    condor,
+    wavefront,
+    multicore,
+    distributed computing,
+    abstractions,
+    archived-blog,
+  ]
 ---
+
 <html><body>This is the third in a series of posts on the idea of abstractions for distributed computing on clusters, clouds, and grids. An abstraction is a simple interface that allows you to scale up well-structured problems to run on hundreds or thousands of computers at once.<br/><br/>The Wavefront abstraction came up in a discussion with several economists.  You want to compute a recurrence relation where each result depends on one or more previous results. The user provides initial conditions along the edges of a matrix, and then you can compute F at position (1,1). Once you do that, then you can compute F at (1,2) and (2,1), and so on. The work progresses like a wave across the matrix, hence the name Wavefront.  Here is what it looks like:<br/><br/><div class="row justify-content-sm-center">
   <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2008/the-wavefront-abstraction/abstr-wavefront-56dc534178.gif" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

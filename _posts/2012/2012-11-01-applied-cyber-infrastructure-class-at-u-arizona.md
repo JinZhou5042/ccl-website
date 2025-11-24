@@ -11,6 +11,7 @@ related_posts: true
 tags: [work queue, highlights, makeflow]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2012/applied-cyber-infrastructure-class-at-u-arizona/acic-a329dea6b9.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

@@ -4,12 +4,14 @@ title: "REU Project: Integrating Serverless and Task Computation in Work Queue"
 date: 2022-08-01T15:08:00+00:00
 author: "Douglas Thain"
 image: "/assets/blog/2022/reu-project-integrating-serverless-and-task-computation-in-work-queue/Coprocess_Serverless-Poster-2022-9bc340b85a.png"
-description: "David Simonetti, a junior undergraduate at Notre Dame, recently completed a summer REU project in which he added \"serverless\" computing capabilities to the W…"
+description: 'David Simonetti, a junior undergraduate at Notre Dame, recently completed a summer REU project in which he added "serverless" computing capabilities to the W…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 David Simonetti, a junior undergraduate at Notre Dame, recently completed a summer REU project in which he added "serverless" computing capabilities to the Work Queue distributed computing framework.
+
   <div>
   </div>
   <div>

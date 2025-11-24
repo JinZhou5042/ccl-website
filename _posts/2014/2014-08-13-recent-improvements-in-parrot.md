@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: [parrot, ptrace]
 ---
+
 <div dir="ltr" style="color: #222222; font-family: arial; font-size: small;">
    There have been several exciting modifications to Parrot in the last two months which should help stabilize Parrot in many aspects. But first, what is Parrot?
   </div>

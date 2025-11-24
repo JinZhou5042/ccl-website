@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div style="text-align: center;">
    Check out the new CCL swag!
    <a href="https://docs.google.com/forms/d/1S7PqBEb_rC9e4GQHp0136YkuN7GjwsoWjTInSJB6Vco/edit">

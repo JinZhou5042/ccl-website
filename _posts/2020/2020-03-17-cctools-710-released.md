@@ -10,16 +10,18 @@ toc: false
 related_posts: true
 tags: []
 ---
-The Cooperative Computing Lab is pleased to announce the release of 
-version 7.1.0 of the Cooperative Computing Tools including Parrot, 
+
+The Cooperative Computing Lab is pleased to announce the release of
+version 7.1.0 of the Cooperative Computing Tools including Parrot,
 Chirp, JX, Makeflow, WorkQueue, and other software.
 
 The software may be downloaded here:
-  <br/>
-  <a href="http://ccl.cse.nd.edu/software/download" rel="nofollow" target="_blank">
-   http://ccl.cse.nd.edu/software/download
-  </a>
-  This is a minor release with some new features and bug fixes. Among them:
+<br/>
+<a href="http://ccl.cse.nd.edu/software/download" rel="nofollow" target="_blank">
+http://ccl.cse.nd.edu/software/download
+</a>
+This is a minor release with some new features and bug fixes. Among them:
+
   <ul>
    <li>
     [General]   Documentation available in
@@ -72,29 +74,29 @@ The software may be downloaded here:
   Thanks goes to the contributors for many features, bug fixes, and tests:
 
 Cami Carballo
-  <br/>
-  T.J. Dasso
-  <br/>
-  Nathaniel Kremer-Herman
-  <br/>
-  Nicholas Hazekamp
-  <br/>
-  Tanner Juedeman
-  <br/>
-  Tim Shaffer
-  <br/>
-  Emily Strout
-  <br/>
-  Zoe Surma
-  <br/>
-  Douglas Thain
-  <br/>
-  Ben Tovar
-  <br/>
-  Yifan Yu
+<br/>
+T.J. Dasso
+<br/>
+Nathaniel Kremer-Herman
+<br/>
+Nicholas Hazekamp
+<br/>
+Tanner Juedeman
+<br/>
+Tim Shaffer
+<br/>
+Emily Strout
+<br/>
+Zoe Surma
+<br/>
+Douglas Thain
+<br/>
+Ben Tovar
+<br/>
+Yifan Yu
 
 Please send any feedback to the CCTools discussion mailing list:
-  <a href="http://ccl.cse.nd.edu/community/forum" rel="nofollow" target="_blank">
-   http://ccl.cse.nd.edu/community/forum
-  </a>
-  Enjoy!
+<a href="http://ccl.cse.nd.edu/community/forum" rel="nofollow" target="_blank">
+http://ccl.cse.nd.edu/community/forum
+</a>
+Enjoy!

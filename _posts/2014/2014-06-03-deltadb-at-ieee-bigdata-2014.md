@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: [deltadb, bigdata]
 ---
+
 <br/>
   Peter Ivie will be presenting his work on the
   <a href="http://www.nd.edu/~ccl/research/papers/pivie-deltadb-2014.pdf">

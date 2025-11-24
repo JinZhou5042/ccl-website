@@ -9,7 +9,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 CCL grad student Kyle Sweeney is presenting two papers at the ScienceCloud/IWAC workshop at HPDC 2018.
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2018/papers-at-sciencecloud-workshop/Screen-Shot-2018-06-11-at-1.13.34-PM-61daf62a91.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

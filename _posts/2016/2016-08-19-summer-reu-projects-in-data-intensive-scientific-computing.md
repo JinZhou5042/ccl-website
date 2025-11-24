@@ -9,13 +9,15 @@ toc: false
 related_posts: true
 tags: [disc, reu, highlights]
 ---
+
 We recently wrapped up the first edition of the summer REU in
-  <a href="http://disc.crc.nd.edu/">
-   Data Intensive Scientific Computing
-  </a>
-  at the University of Notre Dame.  Ten undergraduate students came to ND from around the country and worked on projects encompassing physics, astronomy, bioinformatics, network sciences, molecular dynamics, and data visualization with faculty at Notre Dame.
+<a href="http://disc.crc.nd.edu/">
+Data Intensive Scientific Computing
+</a>
+at the University of Notre Dame.  Ten undergraduate students came to ND from around the country and worked on projects encompassing physics, astronomy, bioinformatics, network sciences, molecular dynamics, and data visualization with faculty at Notre Dame.
 
 To learn more, see these videos and posters produced by the students:
+
   <div class="separator" style="clear: both; text-align: center;">
    <div class="row justify-content-sm-center">
     <div class="col-sm-12">

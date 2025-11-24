@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: [work queue, makeflow]
 ---
+
 <div>
    In past
    <a href="http://dthain.blogspot.com/2009/07/make-as-abstraction-for-distributed.html">
@@ -20,9 +21,10 @@ tags: [work queue, makeflow]
    </a>
    , which is a large scale workflow engine that we have created at Notre Dame.
 
-Of course, Makeflow is certainly not the first or only workflow engine out there.  But, Makeflow does have several unique properties that make it an interesting platform for bringing new people into the world of distributed computing.  And, it is the right level of abstraction that allows us to address some fundamental computer science problems that result.
+Of course, Makeflow is certainly not the first or only workflow engine out there. But, Makeflow does have several unique properties that make it an interesting platform for bringing new people into the world of distributed computing. And, it is the right level of abstraction that allows us to address some fundamental computer science problems that result.
 
-Briefly, Makeflow is a tool that lets the user express a large number of tasks by writing them down as a conventional makefile.  You can see an example on our web page.  A Makeflow can be just a few rules long, or it can consist of hundreds to thousands of tasks, like this EST pipeline workflow:
+Briefly, Makeflow is a tool that lets the user express a large number of tasks by writing them down as a conventional makefile. You can see an example on our web page. A Makeflow can be just a few rules long, or it can consist of hundreds to thousands of tasks, like this EST pipeline workflow:
+
   </div>
   <div>
    <div class="row justify-content-sm-center">
@@ -40,7 +42,8 @@ Briefly, Makeflow is a tool that lets the user express a large number of tasks b
    </a>
    system on a few machines that you happen to have handy, and Makeflow will run the jobs there.
 
-Over the last few years, we have had very good experience getting new users to adopt Makeflow, ranging from highly sophisticated computational scientists all the way to college sophomores learning the first principles of distributed computing.  There are a couple of reasons why this is so:
+Over the last few years, we have had very good experience getting new users to adopt Makeflow, ranging from highly sophisticated computational scientists all the way to college sophomores learning the first principles of distributed computing. There are a couple of reasons why this is so:
+
   </div>
   <ul>
    <li>

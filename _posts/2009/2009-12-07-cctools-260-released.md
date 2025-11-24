@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   We are pleased to announce the release of version 2.6.0 of the Cooperative Computing Tools, including Parrot, Chirp, Makeflow, Work Queue, and other software.  The software may be downloaded here:
   <br/>

@@ -8,9 +8,10 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Our work on the Biometrics Research Grid (BXGrid), was the feature story in
-  <a href="http://www.isgtw.org/?pid=1001629">
-   this week's issue
-  </a>
-  of International Science Grid This Week.
-  <br/>
+<a href="http://www.isgtw.org/?pid=1001629">
+this week's issue
+</a>
+of International Science Grid This Week.
+<br/>

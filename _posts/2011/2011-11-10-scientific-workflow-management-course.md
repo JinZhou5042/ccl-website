@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Michael Albrecht will be teaching
   <a href="http://nd.edu/~malbrec2/courses/workflows_sp12/">

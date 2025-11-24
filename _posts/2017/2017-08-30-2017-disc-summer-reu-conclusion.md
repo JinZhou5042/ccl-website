@@ -9,7 +9,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 This summer, we hosted 9 outstanding undergraduate students in our summer REU program in Data Intensive Scientific Computing (DISC).  Our guests spent the summer working with faculty in labs across campus in fields such as astronomy, high energy physics, bioinformatics, data visualization, and distributed systems.  And, they enjoyed some summer fun around South Bend.
+
   <div>
    <div>
    </div>

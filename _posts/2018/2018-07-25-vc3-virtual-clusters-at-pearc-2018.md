@@ -9,18 +9,20 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   The VC3 project (virtualclusters.org) allows end users to dynamically create virtual clusters with custom software and middleware, running on top of existing national computing facilities.  Using only standard login access to computing facilities, you can deploy a computing environment specialized for a complex application, and share it with your collaborators.
 
 Today, Prof Thain is
-  <a href="http://ccl.cse.nd.edu/research/papers/vc3-pearc-2018.pdf" target="_blank">
-   presenting
-  </a>
-  the VC3 project at the
-  <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiEoJriwrrcAhWpmOAKHRzfCOwQFjAAegQIARAB&amp;url=https%3A%2F%2Fwww.pearc18.pearc.org%2F&amp;usg=AOvVaw1T1j9yOUNBy5cddLhi9WEL">
-   PEARC 2018
-  </a>
-  conference, on behalf of the entire VC3 team:
+<a href="http://ccl.cse.nd.edu/research/papers/vc3-pearc-2018.pdf" target="_blank">
+presenting
+</a>
+the VC3 project at the
+<a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiEoJriwrrcAhWpmOAKHRzfCOwQFjAAegQIARAB&amp;url=https%3A%2F%2Fwww.pearc18.pearc.org%2F&amp;usg=AOvVaw1T1j9yOUNBy5cddLhi9WEL">
+PEARC 2018
+</a>
+conference, on behalf of the entire VC3 team:
+
   <ul style="margin-left: 5px; padding-left: 5px;">
    <li style="margin-left: 5px;">
     <span style="font-family: inherit;">

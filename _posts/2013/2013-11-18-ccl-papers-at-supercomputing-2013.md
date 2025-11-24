@@ -8,7 +8,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Members of the CCL team presented several papers at Supercomputing 2013 in Denver, Colorado:
+
   <ul>
    <li>
     Casey Robinson presented

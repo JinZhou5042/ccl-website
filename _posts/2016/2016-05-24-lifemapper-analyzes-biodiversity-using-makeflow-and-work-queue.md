@@ -10,6 +10,7 @@ related_posts: true
 tags: [work queue, highlights, biodiversity, makeflow, biocompute]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2016/lifemapper-analyzes-biodiversity-using-makeflow-and-work-queue/lm_owl-281-29-d5908bf7b5.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -23,7 +24,7 @@ categories: [highlights]
 Lifemapper has had difficulty scaling recently as our projects and analyses are growing exponentially.  For a large proof-of-concept project we deployed on the XSEDE resource Stampede at TACC, we integrated Makeflow and Work Queue into the job workflow.  Makeflow simplified job dependency management and reduced job-scheduling overhead, while Work Queue scaled our computation capacity from hundreds of simultaneous CPU cores to thousands.  This allowed us to perform a sweep of computations with various parameters and high-resolution inputs producing a plethora of outputs to be analyzed and compared.  The experiment worked so well that we are now integrating Makeflow and Work Queue into our core infrastructure.  Lifemapper benefits not only from the increased speed and efficiency of computations, but the reduced complexity of the data management code, allowing developers to focus on new analyses and leaving the logistics of job dependencies and resource allocation to these tools.
 
 Information from
-  <a href="https://biodiversity.ku.edu/informatics/people/cj-grady">
-   C.J. Grady
-  </a>
-  , Biodiversity Institute and Natural History Museum, University of Kansas.
+<a href="https://biodiversity.ku.edu/informatics/people/cj-grady">
+C.J. Grady
+</a>
+, Biodiversity Institute and Natural History Museum, University of Kansas.

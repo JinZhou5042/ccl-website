@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: [chirp, map-reduce, visualizing, condor, hadoop, distributed computing]
 ---
+
 <div>
    The end of the semester is nearing, so activity in our distributed system really shoots up as undergraduates finish their semester projects and graduate students hurry to generate those last few research results. You can see this activity reflected in a number of visual displays that we have created to track activity in the system.
   </div>
@@ -71,4 +72,4 @@ tags: [chirp, map-reduce, visualizing, condor, hadoop, distributed computing]
   <br/>
   All of these displays rotate automatically on our "scoreboard", which is a monitor in a public hallway of the Engineering building at Notre Dame. It's not unusual for me to step out of my office only to find a few students checking to see who scored the highest over the last week! We ought to give a yearly award for the students who makes the best use of the system.
 
-On a more philosophical note, the displays really help to make our work more concrete to outsiders.  Because we work with intangible software instead of test tubes or fissile material, we don't have a "lab" to show visitors or prospective students.  A live picture draws people in: random people from other departments stop in the hallway to look at the scoreboard and ask what is going on.  A little effort put into "advertising" goes a long way.
+On a more philosophical note, the displays really help to make our work more concrete to outsiders. Because we work with intangible software instead of test tubes or fissile material, we don't have a "lab" to show visitors or prospective students. A live picture draws people in: random people from other departments stop in the hallway to look at the scoreboard and ask what is going on. A little effort put into "advertising" goes a long way.

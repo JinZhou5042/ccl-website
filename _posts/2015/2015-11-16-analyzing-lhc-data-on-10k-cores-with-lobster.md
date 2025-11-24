@@ -9,11 +9,13 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Prof. Thain gave a talk titled Analyzing LHC Data on 10K Cores with Lobster at the
-  <a href="http://datasys.cs.iit.edu/events/DataCloud2015/">
-   Workshop on Data Intensive Computing in the Clouds
-  </a>
-  at Supercomputing 2015.  The talk gave an overview of our collaboration with members of the CMS experiment at Notre Dame.  Together, we have built a data analysis system which can deploy the complex CMS computing environment on large clusters of non-dedicated machines.
+<a href="http://datasys.cs.iit.edu/events/DataCloud2015/">
+Workshop on Data Intensive Computing in the Clouds
+</a>
+at Supercomputing 2015.  The talk gave an overview of our collaboration with members of the CMS experiment at Notre Dame.  Together, we have built a data analysis system which can deploy the complex CMS computing environment on large clusters of non-dedicated machines.
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2015/analyzing-lhc-data-on-10k-cores-with-lobster/lobster-datacloud-2015-de54e5b214.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

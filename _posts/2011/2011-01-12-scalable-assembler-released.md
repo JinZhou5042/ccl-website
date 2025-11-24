@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   We are pleased to announce the release of version 3.2.0 of SAND -- the Scalable Assembler at Notre Dame.
   <br/>

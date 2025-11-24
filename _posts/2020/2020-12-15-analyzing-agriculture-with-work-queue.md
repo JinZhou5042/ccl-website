@@ -11,6 +11,7 @@ tags: [highlights]
 categories: [highlights]
 carousel: true
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2020/analyzing-agriculture-with-work-queue/field-fece0ce672.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

@@ -8,12 +8,13 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 At IPDPS 2008 in Miami, Chris Moretti presented
-  <a href="http://www.cse.nd.edu/~ccl/research/pubs/allpairs-ipdps08.pdf">
-   All-Pairs: An Abstraction for Data Intensive Cloud Computing
-  </a>
-  , and Kyle Wheeler presented
-  <a href="http://www.cse.nd.edu/~dthain/papers/qthreads-ipdps08.pdf">
-   QThreads: An API for Programming with millions of Lightweight Threads
-  </a>
-  .
+<a href="http://www.cse.nd.edu/~ccl/research/pubs/allpairs-ipdps08.pdf">
+All-Pairs: An Abstraction for Data Intensive Cloud Computing
+</a>
+, and Kyle Wheeler presented
+<a href="http://www.cse.nd.edu/~dthain/papers/qthreads-ipdps08.pdf">
+QThreads: An API for Programming with millions of Lightweight Threads
+</a>
+.

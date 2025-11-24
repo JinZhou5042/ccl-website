@@ -8,13 +8,15 @@ toc: false
 related_posts: true
 tags: []
 ---
-Michael Albrecht and Dinesh Rajan will present their latest work titled
-  <a href="http://www.nd.edu/~ccl/research/papers/wqh-cluster13.pdf">
-   Making Work Queue Cluster Friendly for Data Intensive Scientific Applications
-  </a>
-  .
 
-In the original design of Work Queue, each worker was a sequential process that executed one task at a time.  This paper describes the extension of Work Queue into two respects:
+Michael Albrecht and Dinesh Rajan will present their latest work titled
+<a href="http://www.nd.edu/~ccl/research/papers/wqh-cluster13.pdf">
+Making Work Queue Cluster Friendly for Data Intensive Scientific Applications
+</a>
+.
+
+In the original design of Work Queue, each worker was a sequential process that executed one task at a time. This paper describes the extension of Work Queue into two respects:
+
   <ul>
    <li>
     Workers can now run multiple tasks simultaneously, each sharing a local cache directory.

@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   We are doing a guest lecture and tutorial titled
   <a href="http://www.nd.edu/~ccl/software/tutorials/acic12/index.php">

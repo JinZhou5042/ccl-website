@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    On September 16 graduate student Colin Thomas presented the paper titled:
    <i>

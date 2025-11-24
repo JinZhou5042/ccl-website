@@ -11,6 +11,7 @@ tags: [highlights]
 categories: [highlights]
 carousel: true
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2020/opentopography-eemt-makeflow/Screen-Shot-2020-12-15-at-12.37.40-PM-3bec5726a5.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

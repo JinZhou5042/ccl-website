@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body>Ben Tovar presented the paper
 <a href="http://ccl.cse.nd.edu/research/papers/tovar-vc3builder-ic2e2018.pdf">Automatic Dependency Management for Scientific Applications on Clusters</a>
 and Nick Hazekamp presented the paper
@@ -22,7 +23,6 @@ This tool, called the vc3-builder, has minimal dependencies and  a lightbootstra
 The vc3-builder then install any missing software using only user-privileges (e.g., no sudo) so that the actual user payload can be executed. 
 The vc3-builder is being developed as part of the DOE funded Virtual Clusters for Community Computation (VC3) project, 
 in which users can construct custom short-lived virtual clusters across different computational sites.
-
 
 </p><p>In MAKER as a Service: Moving HPC applications to Jetstream Cloud
 (<a href="http://ccl.cse.nd.edu/research/papers/maker-service-ic2e2018.pdf">paper</a>

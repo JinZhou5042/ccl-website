@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <a href="https://www.blogger.com/blogger.g?blogID=5169926515402298799" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;">
   </a>
   <a href="https://www.blogger.com/blogger.g?blogID=5169926515402298799" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;">
@@ -31,6 +32,7 @@ tags: []
   .
 
 The Umbrella tool created by Haiyan Meng allows for a simple, compact, archival representation of a computation, taking into account hardware, operating system, software, and data dependencies.  This allows one to accurately perform computational experiments and give each one a DOI that can be shared, downloaded, and executed.
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2016/containers-workflows-and-reproducibility/Slide1-ffbd642a77.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

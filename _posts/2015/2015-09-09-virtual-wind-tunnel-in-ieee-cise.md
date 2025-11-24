@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2015/virtual-wind-tunnel-in-ieee-cise/cover-08461014e1.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -27,6 +28,7 @@ tags: []
   CCL grad student Peter Sempolinski led the design and implementation of an online service enabling collaborative design and evaluation of structures, known as the "Virtual Wind Tunnel".  This service enables structural designs to be uploaded and shared, then evaluated for performance via the OpenFOAM CFD package.  The entire process is similar to that of collaborative code development, where the source (i.e. a building design) is kept in a versioned repository, automated builds (i.e. building simulation) are performed in a consistent and reproducible way, and test results (i.e. simulation metrics) are used to evaluate the initial design.  Designs and results can be shared, annotated, and re-used, making it easy for one engineer to build upon the work of another.
 
 The prototype system has been used in a variety of contexts, most notably to demonstrate the feasibility of crowdsourcing design and evaluation work via Amazon Turk.
+
   <ul>
    <li>
     <span style="font-family: times; font-size: 16px;">

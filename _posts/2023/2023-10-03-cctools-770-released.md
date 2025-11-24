@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    <span>
     We are pleased to announce the release of version 7.7.

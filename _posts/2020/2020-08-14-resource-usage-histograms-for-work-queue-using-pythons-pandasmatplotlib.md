@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <blockquote>
    <p>
     <a href="https://cctools.readthedocs.io/en/latest/work_queue/">
@@ -21,6 +22,7 @@ tags: []
     .
 
 Work Queue can automatically measure the resources, such as cores, memory, disk, and network bandwidth, used by each task. In python, this is enabled as:
+
    </p>
   </blockquote>
   <pre style="line-height: 125%; margin: 0;"><span style="color: #008800; font-weight: bold;"><span></span>import</span> <span style="color: #0e84b5; font-weight: bold;">work_queue</span> <span style="color: #008800; font-weight: bold;">as</span> <span style="color: #0e84b5; font-weight: bold;">wq</span>
@@ -78,8 +80,9 @@ df <span style="color: #333333;">=</span> pd<span style="color: #333333;">.</spa
 input_file <span style="color: #333333;">=</span> <span style="background-color: #fff0f0;">'my_wq_trans.log'</span>
 
 <span style="color: #008800; font-weight: bold;">with</span> <span style="color: #007020;">open</span>(input_file) <span style="color: #008800; font-weight: bold;">as</span> <span style="color: #007020;">input</span>:
-    <span style="color: #008800; font-weight: bold;">for</span> line <span style="color: black; font-weight: bold;">in</span> <span style="color: #007020;">input</span>:
-        <span style="color: #888888;"># timestamp master-pid TASK id (continue next line)</span></pre>
+<span style="color: #008800; font-weight: bold;">for</span> line <span style="color: black; font-weight: bold;">in</span> <span style="color: #007020;">input</span>:
+<span style="color: #888888;"># timestamp master-pid TASK id (continue next line)</span></pre>
+
   <pre style="line-height: 125%; margin: 0;"><span style="color: #888888;">        # DONE SUCCESS exit-code exceeded measured</span>
         m <span style="color: #333333;">=</span> re<span style="color: #333333;">.</span>match(<span style="background-color: #fff0f0;">'\d+\s+\d+\s+TASK\s+\d+\s+'</span></pre>
   <pre style="line-height: 125%; margin: 0;"><span style="background-color: #fff0f0;">                     'DONE\s+SUCCESS\s+0\s+{}\s+({.*})\s*$'</span>, line)
@@ -128,6 +131,7 @@ mbp<span style="color: #333333;">.</span>set_title(<span style="background-color
 mbp<span style="color: #333333;">.</span>hist(df[<span style="background-color: #fff0f0;">'bandwidth'</span>], <span style="color: #007020;">range</span><span style="color: #333333;">=</span>(<span style="color: #0000dd; font-weight: bold;">0</span>,<span style="color: #0000dd; font-weight: bold;">1200</span>))
 
 fig<span style="color: #333333;">.</span>savefig(input_file <span style="color: #333333;">+</span> <span style="background-color: #fff0f0;">'.png'</span>) </pre>
+
   <pre style="line-height: 125%; margin: 0;"> </pre>
   <pre style="line-height: 125%; margin: 0;"><div class="row justify-content-sm-center">
   <div class="col-sm-12">

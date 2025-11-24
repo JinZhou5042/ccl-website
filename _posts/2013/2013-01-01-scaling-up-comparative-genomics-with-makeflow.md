@@ -11,6 +11,7 @@ related_posts: true
 tags: [highlights, makeflow, bioinformatics]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2013/scaling-up-comparative-genomics-with-makeflow/coge-86f77a1231.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -35,7 +36,6 @@ complex.  Using
 monitoring/restarting workflows, and is now starting to work on 
 distributing computation across multiple types of compute resources.
 
--
-  <i>
+- <i>
    Eric Lyons, University of Arizona
   </i>

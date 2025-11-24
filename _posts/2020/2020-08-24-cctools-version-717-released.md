@@ -12,6 +12,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="ii gt" id=":3w3">
    <div class="a3s aXjCH" id=":3w2">
     <div dir="ltr">
@@ -22,62 +23,64 @@ tags: []
 Makeflow, WorkQueue, and other software.
 
 The software may be downloaded here:
-      <br/>
-      <a href="http://ccl.cse.nd.edu/community/forum">
-       http://ccl.cse.nd.edu/community/forum
-      </a>
-      This is a bug release with some new features and bug fixes. Among them:
-      <ul style="text-align: left;">
-       <li>
-        [Batch] Set number of MPI processes for SLURM. (Ben Tovar)
-       </li>
-       <li>
-        [General] Use the right signature when overriding gettimeofday. (Tim Shaffer)
-       </li>
-       <li>
-        [Resource Monitor] Add context-switch count to final summary. (Ben Tovar)
-       </li>
-       <li>
-        [Resource Monitor] Fix kbps to Mbps typo in final summary. (Ben Tovar)
-       </li>
-       <li>
-        [WorkQueue] Update example apps to python3. (Douglas Thain)
-       </li>
-      </ul>
-      <br/>
-      Thanks goes to the contributors for many features, bug fixes, and tests:
-      <ul style="text-align: left;">
-       <li>
-        Ben Tovar
-       </li>
-       <li>
-        Cami Carballo
-       </li>
-       <li>
-        Douglas Thain
-       </li>
-       <li>
-        Nathaniel Kremer-Herman
-       </li>
-       <li>
-        Tanner Juedeman
-       </li>
-       <li>
-        Tim Shaffer
-       </li>
-      </ul>
-      <br/>
-      Please send any feedback to the CCTools discussion mailing list:
-      <a href="http://ccl.cse.nd.edu/community/forum">
-       http://ccl.cse.nd.edu/community/forum
-      </a>
-      Enjoy!
-      <div class="adL">
-      </div>
-     </div>
-    </div>
-    <div class="adL">
-    </div>
+<br/>
+<a href="http://ccl.cse.nd.edu/community/forum">
+http://ccl.cse.nd.edu/community/forum
+</a>
+This is a bug release with some new features and bug fixes. Among them:
+
+<ul style="text-align: left;">
+<li>
+[Batch] Set number of MPI processes for SLURM. (Ben Tovar)
+</li>
+<li>
+[General] Use the right signature when overriding gettimeofday. (Tim Shaffer)
+</li>
+<li>
+[Resource Monitor] Add context-switch count to final summary. (Ben Tovar)
+</li>
+<li>
+[Resource Monitor] Fix kbps to Mbps typo in final summary. (Ben Tovar)
+</li>
+<li>
+[WorkQueue] Update example apps to python3. (Douglas Thain)
+</li>
+</ul>
+<br/>
+Thanks goes to the contributors for many features, bug fixes, and tests:
+<ul style="text-align: left;">
+<li>
+Ben Tovar
+</li>
+<li>
+Cami Carballo
+</li>
+<li>
+Douglas Thain
+</li>
+<li>
+Nathaniel Kremer-Herman
+</li>
+<li>
+Tanner Juedeman
+</li>
+<li>
+Tim Shaffer
+</li>
+</ul>
+<br/>
+Please send any feedback to the CCTools discussion mailing list:
+<a href="http://ccl.cse.nd.edu/community/forum">
+http://ccl.cse.nd.edu/community/forum
+</a>
+Enjoy!
+<div class="adL">
+</div>
+</div>
+</div>
+<div class="adL">
+</div>
+
    </div>
   </div>
   <div class="gA gt acV">

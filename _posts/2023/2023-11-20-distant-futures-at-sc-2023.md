@@ -4,11 +4,12 @@ title: "Distant Futures at SC 2023"
 date: 2023-11-20T19:56:00+00:00
 author: "Douglas Thain"
 image: "/assets/blog/2023/distant-futures-at-sc-2023/SC-2023-Poster_-Minimizing-Data-movement-Using-Distant-Futur-b7a8b0d22b.png"
-description: "Grad student Barry Sly-Delgado presented his recent work on \" Minimizing Data Movement Using Distant Futures \" at the research poster session at Supercomputi…"
+description: 'Grad student Barry Sly-Delgado presented his recent work on " Minimizing Data Movement Using Distant Futures " at the research poster session at Supercomputi…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    Grad student Barry Sly-Delgado presented his recent work on "
    <a href="http://ccl.cse.nd.edu/research/papers/futures-sc-2023.pdf">

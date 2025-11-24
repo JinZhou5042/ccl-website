@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Peter Bui will be presenting
   <a href="http://www.cse.nd.edu/~ccl/research/papers/wq-python-pyhpc2011.pdf">

@@ -9,16 +9,18 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 When submitting jobs for execution to a computing facility, a user must make a critical decision: how many resources (such as cores, memory and disk) should be requested for each job?
-  <br/>
-  Broadly speaking, if the initial job size selected is too small, it is more likely that the job will fail and be returned, thus wasting resources on a failed run that must be retried. On the other hand, if the initial job size selected is too large, the job will succeed on the first try, but waste resources that go unused inside the job's allocation.  If the waste is large enough, throughput will be reduced because those resources could have been used to run another job.
-  <br/>
-  If the resources consumed by a collection of jobs were known and constant, then the solution would be easy: run one job at a large size, measure its consumption, and then use that smaller measured size for the remainder of the jobs.  However, experience shows that real jobs have non-trivial distributions.  For example, the figure shows the histogram of memory consumption for a set of jobs in a high energy physics workflow run on an
-  <a href="https://research.cs.wisc.edu/htcondor/">
-   HTCondor
-  </a>
-  batch system at the University of Notre Dame.
-  <br/>
+<br/>
+Broadly speaking, if the initial job size selected is too small, it is more likely that the job will fail and be returned, thus wasting resources on a failed run that must be retried. On the other hand, if the initial job size selected is too large, the job will succeed on the first try, but waste resources that go unused inside the job's allocation. If the waste is large enough, throughput will be reduced because those resources could have been used to run another job.
+<br/>
+If the resources consumed by a collection of jobs were known and constant, then the solution would be easy: run one job at a large size, measure its consumption, and then use that smaller measured size for the remainder of the jobs. However, experience shows that real jobs have non-trivial distributions. For example, the figure shows the histogram of memory consumption for a set of jobs in a high energy physics workflow run on an
+<a href="https://research.cs.wisc.edu/htcondor/">
+HTCondor
+</a>
+batch system at the University of Notre Dame.
+<br/>
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2017/tpds-paper-job-sizing/all_memory_first_example-a5df574950.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -42,19 +44,19 @@ When submitting jobs for execution to a computing facility, a user must make a c
 .MAKEFLOW MODE MAX_THROUGHPUT
 
 output_1: input_1
-    cmdline input_1 -o output_1
+cmdline input_1 -o output_1
 
 output_2: input_2
-    cmdline input_2 -o output_2
+cmdline input_2 -o output_2
 
 .MAKEFLOW CATEGORY myothercategory
 .MAKEFLOW MODE MAX_THROUGHPUT
 
 output_3: input_3
-    cmdline input_3 -o output_3
+cmdline input_3 -o output_3
 
 output_4: input_4
-    cmdline input_4 -o output_4
+cmdline input_4 -o output_4
 
 </code>
 </pre>
@@ -78,6 +80,7 @@ q.specify_category_mode('myfirstcategory', WORK_QUEUE_ALLOCATION_MODE_MAX_THROUG
 t = Task(...)
 t.specify_category('myfirstcategory')
 </code>
+
 </pre>
   Additionally, we have made available a pure python implementation at:
   <br/>

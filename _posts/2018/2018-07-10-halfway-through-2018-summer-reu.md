@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2018/halfway-through-2018-summer-reu/disc-group-2018-810f7c8e14.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

@@ -8,14 +8,16 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 The Cooperative Computing Lab is pleased to announce the release of version 7.1.6 of the Cooperative Computing Tools including Parrot, Chirp, JX, Makeflow, WorkQueue, and other software.
 
 The software may be downloaded here:
-  <br/>
-  <a href="http://ccl.cse.nd.edu/software/download">
-   http://ccl.cse.nd.edu/software/download
-  </a>
-  This is a bug release with some new features and bug fixes. Among them:
+<br/>
+<a href="http://ccl.cse.nd.edu/software/download">
+http://ccl.cse.nd.edu/software/download
+</a>
+This is a bug release with some new features and bug fixes. Among them:
+
   <ul>
    <li>
     [Resource Monitor] Fix race condition that caused an overhead for very short running processes. (Ben Tovar)

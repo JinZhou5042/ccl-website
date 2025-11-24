@@ -10,12 +10,14 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 The Cooperative Computing Lab is pleased to announce the release of
 version 4.3.0 of the Cooperative Computing Tools, including Parrot,
 Chirp, Makeflow, WorkQueue, Weaver, DeltaDB, SAND, All-Pairs, and
 other software.
 
 This release has some important changes:
+
   <ul>
    <li>
     Peter Bui's Weaver is included. Weaver is a high level interface to
@@ -116,6 +118,7 @@ Lee-Ping Wang,
 Matthias Wolf,
 Anna Woodard, and
 Charles Zheng
+
   </p>
   <p>
    Enjoy!

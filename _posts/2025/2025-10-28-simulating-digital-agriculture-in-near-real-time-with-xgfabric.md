@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    Advanced scientific applications in digital agriculture require coupling distributed sensor networks with high-performance computing facilities, but this integration faces significant challenges. Sensor networks provide low-performance, unreliable data access from remote locations, while HPC facilities offer enormous computing power through high-latency batch processing systems. For example, the Citrus Under Protective Screening (CUPS) project monitors environmental conditions in agricultural facilities to detect protective screening damage and requires real-time computational fluid dynamics simulations to guide interventions. Traditional networking approaches struggle to bridge these contrasting computing domains with the low latency and high reliability needed for near real-time decision making.
   </p>

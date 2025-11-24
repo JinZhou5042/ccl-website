@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Three graduate students from the CCL -- Dinesh Rajan, Peter Sempolinksi, and Li Yu - presented their ongoing work at the Cloud Computing and Applications workshop:
   <br/>

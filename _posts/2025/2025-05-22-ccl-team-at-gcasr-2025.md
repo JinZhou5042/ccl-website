@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2025/ccl-team-at-gcasr-2025/gcasr-26fd44b7f7.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

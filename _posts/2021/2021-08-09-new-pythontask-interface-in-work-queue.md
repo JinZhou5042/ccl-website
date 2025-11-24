@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    The most recent version of Work Queue supports two different categories of tasks.
    <b>

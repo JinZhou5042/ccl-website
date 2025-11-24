@@ -7,14 +7,16 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Haiyan Meng will present her case study work in preserving a CMS application with Parrot at
-  <a href="http://chep2015.kek.jp/">
-   CHEP 2015
-  </a>
-  in Japan:
+<a href="http://chep2015.kek.jp/">
+CHEP 2015
+</a>
+in Japan:
 
 Haiyan Meng, Matthias Wolf, Peter Ivie, Anna Woodard, Michael Hildreth, Douglas Thain
-  <br/>
+<br/>
+
   <div>
   </div>
   <div style="color: #555555; font-family: Georgia, Garamond, 'Droid serif', 'Linux Libertine', Palatino, serif; font-size: 14.3000001907349px;">

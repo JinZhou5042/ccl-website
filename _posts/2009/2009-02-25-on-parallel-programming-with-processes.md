@@ -8,15 +8,17 @@ toc: false
 related_posts: true
 tags: [threads, processes, parallel, abstractions]
 ---
+
 About once a week, a well-meaning person stops by my office to ask a question like this:
-  <span style="font-style: italic; font-weight: bold;">
-   I need to run about 1000 simulations that take about an hour each.  I can't wait a thousand hours for the results, so I need to parallelize my simulation.  So, should I re-write my application using threads, MPI, or something else?
-  </span>
-  For some reason, they are always disappointed by my response:
-  <span style="font-style: italic; font-weight: bold;">
-   Just run multiple copies of your program at once.
-  </span>
-  <br/>
+<span style="font-style: italic; font-weight: bold;">
+I need to run about 1000 simulations that take about an hour each. I can't wait a thousand hours for the results, so I need to parallelize my simulation. So, should I re-write my application using threads, MPI, or something else?
+</span>
+For some reason, they are always disappointed by my response:
+<span style="font-style: italic; font-weight: bold;">
+Just run multiple copies of your program at once.
+</span>
+<br/>
+
   <p>
    The reasoning is very simple.  You already have a complete, debugged program.  You have multiple processors, and your operating system knows how to use them.  Running four processes at once on a four CPU machine will give you four times the number of results in the same amount of time.  Your work will be down in 250 hours instead of 1000.  In fact, you can take the same sequential program and submit it to a large batch system that can run on 100 different processors at once and complete one hundred simulations in one hour.  If you only get 99 hosts, that's ok, you will still get a 99x improvement.
   </p>

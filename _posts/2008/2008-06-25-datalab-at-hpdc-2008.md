@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Brandon Rich presented a poster on
   <a href="http://www.cse.nd.edu/~ccl/software/datalab">

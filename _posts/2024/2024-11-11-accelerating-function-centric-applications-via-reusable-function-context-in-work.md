@@ -9,7 +9,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Modern applications are increasingly being written in high-level programming languages (e.g., Python) via popular parallel frameworks (e.g., Parsl, TaskVine, Ray) as they help users quickly translate an experiment or idea into working code that is easily executable and parallelizable on HPC clusters or supercomputers. Figure 1 shows the typical software stack of these frameworks, where users wrap computations into functions, which are sent to and managed by a parallel library as a DAG of tasks, and these tasks eventually are scheduled by an execution engine to execute on a remote worker node.
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2024/accelerating-function-centric-applications-via-reusable-function-context-in-work/AD_4nXdfSSMfXfohwD8ezyox5mQQPprk6j25Nu0ONSnshzvFhVLFupNhtdMd-325406d18c.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -18,6 +20,7 @@ Modern applications are increasingly being written in high-level programming lan
   A traditional way to execute functions remotely is to translate them into executable tasks by serializing functions and their associated arguments into input files, such that these functions and arguments are later reconstructed on remote nodes for execution. While this way fits function-centric applications naturally into well understood task-based workflow systems, it brings a hefty penalty to short-running functions. A function now takes extra time for its states to be sent and reconstructed on a remote node which are then unnecessarily destroyed at the end of that function’s execution.
 
 At HPDC 2024, graduate students Thanh Son Phung and Colin Thomas proposed the idea that function contexts, or states, should be decoupled from function’s actual execution code. This removes the overhead of repeatedly sending and reconstructing a function’s state for execution, and allows functions of the same type to share the same context. The rest of the work then addresses how a workflow system can treat a function as a first-class citizen by discovering, distributing, and retaining such context from a function. Figure below shows the execution time of the Large-Scale Neural Network Inference application, totaling 1.6 million inferences separated into 100k tasks, with increasing levels of context sharing (L1 is no sharing, L3 is maximum sharing). Decoupling the inference function’s context from the inference massively reduces the execution time of the entire workflow by 94.5%, from around 2 hours to approximately 7 minutes.
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2024/accelerating-function-centric-applications-via-reusable-function-context-in-work/AD_4nXc5F_h-hsV7Iwzt_WlCjVLG980_zRi20NEPLsf8J4eLOub4RfkGvhQD-7ee323f1f8.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

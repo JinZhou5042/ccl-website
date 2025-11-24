@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: [chirp, active storage, confuga, archived-blog]
 ---
+
 <html><body><br/>
 Patrick Donnely will present his work on the Confuga distributed filesystem at  <a href="http://cloud.siat.ac.cn/ccgrid2015/program.html" target="_blank">CCGrid 2015</a> in China:<br/><br/>
 <blockquote class="tr_bq">

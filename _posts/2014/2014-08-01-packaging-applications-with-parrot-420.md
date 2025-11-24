@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: [parrot, reproducibility, archived-blog]
 ---
+
 <html><body><span style="font-family: inherit;">CCTools 4.2.0 includes a new feature in <a href="http://ccl.cse.nd.edu/software/parrot">Parrot</a> that allows you to automatically observe all of the files used by a given application, and then collect them up into a self-contained package.  The package can then be moved to another machine -- even a different variant of Linux -- and then run correctly with all of its dependencies present. The created package does not depend upon Parrot and can be re-run in a variety of ways.</span><br/>
 <span style="font-family: inherit;"><b> </b> </span><br/>
 <span style="font-family: inherit;">This article explains how to generate a self-contained package and then share it so that others can verify can repeat your applications. The whole process involves three steps: running the original application, creating the self-contained package, and the running the package itself.</span><br/>

@@ -11,6 +11,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2015/cctools-500-released/version-289d951216.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -105,10 +106,10 @@ Chirp, Makeflow, WorkQueue, SAND, All-Pairs, Weaver, and other software.
   Thanks goes to the contributors for many features and bug fixes:
 
 Matthew Astley, Jakob Blomer, Ryan Boccabella, Peter Bui, Patrick Donnelly, Nathaniel Kremer-Herman, Victor Hawley, Nicholas Hazekamp, Peter Ivie, Kangkang Li, Haiyan Meng, Douglas Thain, Ben Tovar, Andrey Tovchigrechko, and Charles Zheng.
-  <br/>
-  Please send any feedback to the CCTools discussion mailing list:
-  <a href="http://ccl.cse.nd.edu/software/help">
-   mailing list
-  </a>
-  <br/>
-  Enjoy!
+<br/>
+Please send any feedback to the CCTools discussion mailing list:
+<a href="http://ccl.cse.nd.edu/software/help">
+mailing list
+</a>
+<br/>
+Enjoy!

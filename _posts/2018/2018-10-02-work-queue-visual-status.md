@@ -9,12 +9,14 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Check out the new
-  <a href="http://ccl.cse.nd.edu/software/workqueue/status/" target="_blank">
-   Work Queue Status
-  </a>
-  page by Nate Kremer-Herman.  This reveals a whole lot of information that was already reported to the global catalog in raw JSON, but was previously hard to interpret.  For any WQ application reporting itself to the global catalog (use the -N option)  you get a nice display of workers and tasks running and the total resources consumed across the application:
-  <br/>
+<a href="http://ccl.cse.nd.edu/software/workqueue/status/" target="_blank">
+Work Queue Status
+</a>
+page by Nate Kremer-Herman.  This reveals a whole lot of information that was already reported to the global catalog in raw JSON, but was previously hard to interpret.  For any WQ application reporting itself to the global catalog (use the -N option)  you get a nice display of workers and tasks running and the total resources consumed across the application:
+<br/>
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2018/work-queue-visual-status/Screen-Shot-2018-10-02-at-12.34.27-PM-9ff37a5f44.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -29,7 +31,8 @@ Check out the new
   What's more, a pie chart shows a breakdown of the master is spending its time: sending data to workers, receiving data from workers, and polling (waiting) for workers to report are the main categories.  This tells you at a glance what the bottleneck of the system is.
 
 This WQ master is spending most of its time sending data out to workers, so it's close to the limit of its scalability:
-  <br/>
+<br/>
+
   <div style="text-align: center;">
    <div class="row justify-content-sm-center">
     <div class="col-sm-12">

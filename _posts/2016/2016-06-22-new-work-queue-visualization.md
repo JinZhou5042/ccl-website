@@ -8,15 +8,14 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body>Nate Kremer-Herman has created a new, convenient way to lookup information of <a href="http://ccl.cse.nd.edu/software/workqueue">Work Queue</a> masters. This new <a href="http://ccl.cse.nd.edu/software/workqueue/status">visualization tool</a> provides real-time updates on the status of each Work Queue master that contacts our catalog server. We hope that this new tool will serve to both facilitate our users' understanding of what their Work Queue masters are doing <i>and</i> assist the user in determining when it may be time to take corrective action.<br/>
 <br/>
-
 
 <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
 <tr><td style="text-align: center;"></td></tr>
 <tr><td class="tr-caption" style="text-align: center;">A Comparative View</td></tr>
 </tbody></table>
-
 
 <table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody>
 <tr><td style="text-align: center;"></td></tr>

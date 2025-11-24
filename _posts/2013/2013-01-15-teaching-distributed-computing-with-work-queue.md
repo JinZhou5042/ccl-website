@@ -12,6 +12,7 @@ related_posts: true
 tags: [work queue, highlights]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2013/teaching-distributed-computing-with-work-queue/planets-4c175dfd2f.gif" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -37,7 +38,6 @@ animating the movement of the camera.  The students really enjoyed the
 assignment while learning about the advantages and pitfalls
 of distributed computing.
 
--
-  <i>
+- <i>
    Ronald J. Nowling and Jesus A. Izaguirre, University of Notre Dame
   </i>

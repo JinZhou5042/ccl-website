@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Mike Hildreth, Professor of Physics, Jarek Nabrzyski, Director of the Center for Research Computing and Concurrent Associate Professor of Computer Science and Engineering, and Douglas Thain, Associate Professor of Computer Science and Engineering, are the lead investigators on a project that will explore solutions to the problems of preserving data, analysis software, and how these relate to results obtained from the analysis of large datasets.
   <br/>

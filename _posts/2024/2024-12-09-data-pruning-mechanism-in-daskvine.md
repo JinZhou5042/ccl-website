@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    In our recent work, we introduced a file pruning technique into DaskVine to address challenges in managing intermediate files in DAG-based task graphs. This technique systematically identifies and removes intermediate stale files—those no longer needed by downstream tasks—directly from worker nodes. By freeing up storage in real time, file pruning not only enables workers to process more computational tasks with limited disk space but also makes applications feasible that were previously constrained by storage limitations.
   </p>

@@ -9,7 +9,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Our latest paper, in collaboration with Jakob Blomer and the CVMFS team at CERN, describes the evolution of global-scale filesystems to serve the needs of the world-wide LHC experiment collaborations:
+
   <ul>
    <li>
     Jakob Blomer, Predrag Buncic, Rene Meusel, Gerardo Ganis, Igor Sfiligoi and Douglas Thain,

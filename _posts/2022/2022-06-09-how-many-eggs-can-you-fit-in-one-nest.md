@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p style="text-align: center;">
    Prof. Thain gave a talk at HTCondor Week 2022, giving an overview of some of our recent work on resource management in high throughput scientific workflows.  An HTCondor talk requires a "bird" metaphor, so I proposed the following question:
   </p>

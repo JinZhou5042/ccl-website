@@ -8,16 +8,18 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 We invite outstanding undergraduates to apply for summer research
-  <br/>
-  positions in scientific and cloud computing at the University of Notre Dame.
-  <br/>
-  Students will build and operate systems that harness hundreds of
-  <br/>
-  machines at once to attack large problems in science and engineering.
+<br/>
+positions in scientific and cloud computing at the University of Notre Dame.
+<br/>
+Students will build and operate systems that harness hundreds of
+<br/>
+machines at once to attack large problems in science and engineering.
 
 Research topics include:
-  <br/>
+<br/>
+
   <ul>
    <li>
     Green Cloud Computing

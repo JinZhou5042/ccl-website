@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Prof. Thain gave the opening talk,
   <a href="http://www.nd.edu/~dthain/talks/thain-geoclouds09.ppt">

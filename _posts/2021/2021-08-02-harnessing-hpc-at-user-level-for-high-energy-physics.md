@@ -4,11 +4,12 @@ title: "Harnessing HPC at User Level for High Energy Physics"
 date: 2021-08-02T19:57:00+00:00
 author: "Douglas Thain"
 image: "/assets/blog/2021/harnessing-hpc-at-user-level-for-high-energy-physics/image-27bc409feb.png"
-description: "Ben Tovar presented some recent work at the (virtual) CHEP 2021 conference: \"Harnessing HPC Resources for CMS Jobs Using a Virtual Private Network\" . The fut…"
+description: 'Ben Tovar presented some recent work at the (virtual) CHEP 2021 conference: "Harnessing HPC Resources for CMS Jobs Using a Virtual Private Network" . The fut…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    Ben Tovar presented some recent work at the (virtual) CHEP 2021 conference:
    <a href="http://ccl.cse.nd.edu/research/papers/tovar-vpn-ns-chep2021.pdf">

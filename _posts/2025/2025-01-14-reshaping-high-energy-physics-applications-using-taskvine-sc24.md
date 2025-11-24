@@ -4,11 +4,12 @@ title: "Reshaping High Energy Physics Applications Using TaskVine  @ SC24"
 date: 2025-01-14T15:47:00+00:00
 author: "Barry Sly-Delgado"
 image: "/assets/blog/2025/reshaping-high-energy-physics-applications-using-taskvine-sc24/AGV_vUfBotGGPZtiJm1_9ZZOexiiQotBHzeq6YDr3dSAa0itaYiVpev9oGdD-5676230a1f.png"
-description: "Barry Sly-Delgado presented our paper titled: \" Reshaping High Energy Physics Applications for Near-Interactive Execution Using TaskVine \" at the 2024 Superc…"
+description: 'Barry Sly-Delgado presented our paper titled: " Reshaping High Energy Physics Applications for Near-Interactive Execution Using TaskVine " at the 2024 Superc…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    <a href="https://barryslydelgado.github.io/">
     Barry Sly-Delgado

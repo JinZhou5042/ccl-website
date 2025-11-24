@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body>This spring, undergraduate researchers Zoe Surma and Emily Strout worked to integrate the <a href="https://coffeateam.github.io/coffea/" target="_blank">Coffea data analysis framework</a> for high energy physics with the <a href="http://ccl.cse.nd.edu/software/workqueue" target="_blank">Work Queue</a> distributed execution framework from the CCL.  Zoe <a href="https://docs.google.com/presentation/d/1Jdh87XvCvpkc-VJ1KI-UxtGJSKKv-dXrTxYglxWBbCA/edit?usp=sharing" target="_blank">presented initial results</a> from testing at the Coffea user's meeting last week.  We are seeing some good scaling behavior, but there is still some tuning needed to go to large scale.  Many thanks to Lindsay Grey and the Coffea team for help and support.  The next step is to get this up and running on the CMS HTCondor cluster at Notre Dame!<br/>
 <br/>
 <div class="separator" style="clear: both; text-align: center;">

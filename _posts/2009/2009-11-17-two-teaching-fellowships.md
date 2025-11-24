@@ -8,7 +8,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Two graduate students in the CCL have received competitive teaching fellowships for the coming year:
+
   <dir>
    <br/>
    <li>

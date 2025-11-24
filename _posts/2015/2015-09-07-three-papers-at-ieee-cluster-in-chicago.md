@@ -9,11 +9,13 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 This week, at the
-  <a href="http://www.mcs.anl.gov/ieeecluster2015/">
-   IEEE Cluster Computing
-  </a>
-  conference in Chicago, Ben Tovar will present some of our work on automated application monitoring:
+<a href="http://www.mcs.anl.gov/ieeecluster2015/">
+IEEE Cluster Computing
+</a>
+conference in Chicago, Ben Tovar will present some of our work on automated application monitoring:
+
   <table>
    <tbody>
     <tr>

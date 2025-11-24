@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Recent graduate Michael Lammie presented his work on managing energy in multicore clusters at the IEEE Grid conference in Banff, Canada.  His paper titled
   <a href="http://www.cse.nd.edu/~ccl/research/pubs/multicore-grid09.pdf">

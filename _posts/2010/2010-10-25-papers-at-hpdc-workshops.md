@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Three graduate students from the CCL presented papers at workshops co-located with High Performance Distributed Computing this summer in Chicago:
   <br/>

@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2015/cctools-510-released/version-08932ecfe9.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -17,13 +18,14 @@ tags: []
   The Cooperative Computing Lab is pleased to announce the release of version 5.1.0 of the Cooperative Computing Tools including Parrot, Chirp, Makeflow, WorkQueue, SAND, All-Pairs, Weaver, and other software.
 
 The software may be downloaded here:
-  <br/>
-  <a href="http://www.cse.nd.edu/~ccl/software/download">
-   download
-  </a>
-  This minor release adds a couple of small features, and fixes the following
-  <br/>
-  issues of version 5.0.0:
+<br/>
+<a href="http://www.cse.nd.edu/~ccl/software/download">
+download
+</a>
+This minor release adds a couple of small features, and fixes the following
+<br/>
+issues of version 5.0.0:
+
   <ul>
    <li>
     [Prune]     Fix installation issue. (Haiyan Meng)
@@ -54,17 +56,17 @@ The software may be downloaded here:
   Thanks goes to our contributors:
 
 Nicholas Hazekamp
-  <br/>
-  Haiyan Meng
-  <br/>
-  Ben Tovar
-  <br/>
-  Andrey Tovchigrechko
+<br/>
+Haiyan Meng
+<br/>
+Ben Tovar
+<br/>
+Andrey Tovchigrechko
 
 Please send any feedback to the CCTools discussion mailing list:
-  <a href="http://ccl.cse.nd.edu/software/help/">
-   mailing list
-  </a>
-  Enjoy!
+<a href="http://ccl.cse.nd.edu/software/help/">
+mailing list
+</a>
+Enjoy!
 
 ~

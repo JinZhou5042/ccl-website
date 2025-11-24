@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div style="text-align: justify;">
    CCL grad student Cami Carballo gave an interactive notebook talk on scaling up data analysis workloads at the
    <a href="https://indico.cern.ch/event/882824/" target="_blank">

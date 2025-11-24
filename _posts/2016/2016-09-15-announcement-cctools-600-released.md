@@ -8,14 +8,16 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 The Cooperative Computing Lab is pleased to announce the release of version 6.0.0 of the Cooperative Computing Tools including Parrot, Chirp, Makeflow, WorkQueue, Umbrella, Prune, SAND, All-Pairs, Weaver, and other software.
 
 The software may be downloaded here:
-  <br/>
-  <a href="http://ccl.cse.nd.edu/software/download">
-   http://ccl.cse.nd.edu/software/download
-  </a>
-  This is a major which adds several features and bug fixes. Among them:
+<br/>
+<a href="http://ccl.cse.nd.edu/software/download">
+http://ccl.cse.nd.edu/software/download
+</a>
+This is a major which adds several features and bug fixes. Among them:
+
   <ul>
    <li>
     [Catalog]   Automatic fallback to a backup catalog server. (Tim Shaffer)
@@ -98,6 +100,7 @@ The software may be downloaded here:
   for more information. We hope you can join us!
 
 Thanks goes to the contributors for many features, bug fixes, and tests:
+
   <ul>
    <li>
     Jakob Blomer

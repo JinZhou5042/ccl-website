@@ -8,12 +8,13 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Andrew Thrasher will present
-  <a href="http://www.cse.nd.edu/~ccl/research/papers/taming-works10.pdf">
-   Taming Complex Bioinformatics Workflows with Weaver, Makeflow, and Starch
-  </a>
-  at the
-  <a href="http://www.isi.edu/works10">
-   Fifth Workshop on Workflows in Support of Large Scale Science
-  </a>
-  held with Supercomputing 2010 in New Orleans.
+<a href="http://www.cse.nd.edu/~ccl/research/papers/taming-works10.pdf">
+Taming Complex Bioinformatics Workflows with Weaver, Makeflow, and Starch
+</a>
+at the
+<a href="http://www.isi.edu/works10">
+Fifth Workshop on Workflows in Support of Large Scale Science
+</a>
+held with Supercomputing 2010 in New Orleans.

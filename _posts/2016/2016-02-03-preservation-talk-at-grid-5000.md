@@ -9,32 +9,34 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Prof. Thain gave a talk titled
-  <a href="http://www.nd.edu/~dthain/talks/preservation-grid5k.pdf">
-   Preservation and Portability in Distributed Scientific Applications
-  </a>
-  at the
-  <a href="http://www.grid5000.org/">
-   Grid-5000 Winter School
-  </a>
-  on distributed computing in Grenoble, France.  I gave a broad overview of our recent efforts, including
-  <a href="http://dx.doi.org/10.1109/MCSE.2015.111">
-   distributing software
-  </a>
-  with Parrot and CVMFS,
-  <a href="http://ccl.cse.nd.edu/research/papers/tauroast-casestudy-jpcs2015.pdf">
-   preserving
-  </a>
-  high energy physics applications with Parrot, specifying environments with
-  <a href="http://ccl.cse.nd.edu/software/umbrella">
-   Umbrella
-  </a>
-  , and preserving workflows with
-  <a href="http://dx.doi.org/10.7274/R0CZ353M">
-   PRUNE
-  </a>
-  .
-  <br/>
+<a href="http://www.nd.edu/~dthain/talks/preservation-grid5k.pdf">
+Preservation and Portability in Distributed Scientific Applications
+</a>
+at the
+<a href="http://www.grid5000.org/">
+Grid-5000 Winter School
+</a>
+on distributed computing in Grenoble, France.  I gave a broad overview of our recent efforts, including
+<a href="http://dx.doi.org/10.1109/MCSE.2015.111">
+distributing software
+</a>
+with Parrot and CVMFS,
+<a href="http://ccl.cse.nd.edu/research/papers/tauroast-casestudy-jpcs2015.pdf">
+preserving
+</a>
+high energy physics applications with Parrot, specifying environments with
+<a href="http://ccl.cse.nd.edu/software/umbrella">
+Umbrella
+</a>
+, and preserving workflows with
+<a href="http://dx.doi.org/10.7274/R0CZ353M">
+PRUNE
+</a>
+.
+<br/>
+
   <div class="separator" style="clear: both; text-align: center;">
    <div class="row justify-content-sm-center">
     <div class="col-sm-12">

@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body><a href="http://www.nd.edu/~pdonnel3/" target="_blank">Patrick Donnelly</a> has published a journal article in <i><a href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1532-0634" target="_blank">Concurrency and Computation: Practice and Experience</a> </i>on the <a href="http://ccl.cse.nd.edu/software/confuga" target="_blank">Confuga</a> active cluster file system. The journal article presents the use of controlled transfers to distribute data within the cluster without destabilizing the resources of storage nodes:<br/>
 <span style="font-family: inherit;"><br/></span>
 <br/>

@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <a href="https://pods.iplantcollaborative.org/wiki/display/ACIC2015/Class+Schedule">
    Students at the University of Arizona
   </a>
@@ -30,16 +31,16 @@ tags: []
   .
 
 The course project was to build an image processing pipeline to accelerate the research of astronomer
-  <a href="http://makana.as.arizona.edu/">
-   Jared Males
-  </a>
-  , who designs instruments to search for exo-planets by observing the changes in appearance of a star.  This results in hundreds of thousands of images of a single star, which must then be processed in batch to eliminate noise and align the images.
+<a href="http://makana.as.arizona.edu/">
+Jared Males
+</a>
+, who designs instruments to search for exo-planets by observing the changes in appearance of a star.  This results in hundreds of thousands of images of a single star, which must then be processed in batch to eliminate noise and align the images.
 
-The students built a solution (Find-R) which consumed over 100K CPU-hours on Chameleon, distributed using Makeflow and Work Queue. 
+The students built a solution (Find-R) which consumed over 100K CPU-hours on Chameleon, distributed using Makeflow and Work Queue.
 
 Read more here:
-  <br/>
-  <a href="https://www.tacc.utexas.edu/-/in-search-of-a-planet">
-   https://www.tacc.utexas.edu/-/in-search-of-a-planet
-  </a>
-  <br/>
+<br/>
+<a href="https://www.tacc.utexas.edu/-/in-search-of-a-planet">
+https://www.tacc.utexas.edu/-/in-search-of-a-planet
+</a>
+<br/>

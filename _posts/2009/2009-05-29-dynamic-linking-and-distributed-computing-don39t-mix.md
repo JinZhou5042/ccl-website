@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: [linking, distributed computing]
 ---
+
 <div>
   </div>
   <br/>
@@ -20,24 +21,25 @@ tags: [linking, distributed computing]
    For those of you who don't remember, here is a brief primer on linking:
 
 Back in the good old days, programmers would group commonly used functions (like printf and strlen) into a common module, otherwise known as a
-   <span style="FONT-WEIGHT: bold;">
-    library
-   </span>
-   . However, managing the library was difficult. If you simply compiled your library into the program, it would work, but your program would be full of unused code. The alternative was to cut-and-paste the needed routines into your program, but this was time consuming, and led to many copies of the code that were difficult to synchronize. Frustration was the result.
+<span style="FONT-WEIGHT: bold;">
+library
+</span>
+. However, managing the library was difficult. If you simply compiled your library into the program, it would work, but your program would be full of unused code. The alternative was to cut-and-paste the needed routines into your program, but this was time consuming, and led to many copies of the code that were difficult to synchronize. Frustration was the result.
 
 The solution to this is a tool known as a
-   <span style="FONT-WEIGHT: bold;">
-    link editor
-   </span>
-   or just
-   <span style="FONT-WEIGHT: bold;">
-    linker
-   </span>
-   . A linker looks at a program and a set of libraries, figures out all the pieces that are needed, and then constructs a complete executable program with only the routines that are actually needed. In the example below, suppose that main.o needs to use the functions printf.o and baz.o. The linker figures out that those reside in libc.a and libstrange.a, and puts the whole thing together in prog.exe. This program can be copied to any other machine, and will run correctly. This is now known as
-   <span style="FONT-WEIGHT: bold;">
-    static linking
-   </span>
-   .
+<span style="FONT-WEIGHT: bold;">
+link editor
+</span>
+or just
+<span style="FONT-WEIGHT: bold;">
+linker
+</span>
+. A linker looks at a program and a set of libraries, figures out all the pieces that are needed, and then constructs a complete executable program with only the routines that are actually needed. In the example below, suppose that main.o needs to use the functions printf.o and baz.o. The linker figures out that those reside in libc.a and libstrange.a, and puts the whole thing together in prog.exe. This program can be copied to any other machine, and will run correctly. This is now known as
+<span style="FONT-WEIGHT: bold;">
+static linking
+</span>
+.
+
   </div>
   <br/>
   <div>
@@ -49,14 +51,15 @@ The solution to this is a tool known as a
    As machines grew larger, and had ever more programs and libraries installed, someone clever observed an inefficiency. Nearly every program requires printf, so a copy of the printf code was present in nearly every single program, wasting space in both the filesystem and virtual memory. Further, if someone fixed a bug or security flaw in printf, it was necessary to recompile everything.
 
 To address these problems,
-   <span style="FONT-WEIGHT: bold;">
-    dynamic linking
-   </span>
-   was invented. In this model, the linker does not copy routines into the executable, it simply makes a note that the program depends upon a certainly library. When the program is actually run, the
-   <span style="FONT-WEIGHT: bold;">
-    loader
-   </span>
-   binds the function calls in the program to the shared libraries on disk. Often, the executable program is very small, and simply consists of a few calls to a large number of libraries.
+<span style="FONT-WEIGHT: bold;">
+dynamic linking
+</span>
+was invented. In this model, the linker does not copy routines into the executable, it simply makes a note that the program depends upon a certainly library. When the program is actually run, the
+<span style="FONT-WEIGHT: bold;">
+loader
+</span>
+binds the function calls in the program to the shared libraries on disk. Often, the executable program is very small, and simply consists of a few calls to a large number of libraries.
+
   </div>
   <br/>
   <div class="row justify-content-sm-center">
@@ -71,16 +74,17 @@ To address these problems,
 Ironically, dynamic linking is less efficient than static linking in several ways. First, it actually ends up using more disk space, virtual memory, and network traffic, because you have to copy over the entire libraries, not just the parts that your program needs. (Of course, you can break the dynamic library up into smaller libraries, but then you are just making it harder on the programmer and user to identify the right libraries.) Second, it makes program startup very slow, especially on a distributed filesystem, because the loader must search for every single library in the search path.
 
 For a nice example of how this can make a simple program ridiculously complicated, try the following two commands on Linux:
-   <span style="FONT-WEIGHT: bold;">
-    ldd /bin/ls
-   </span>
-   and
-   <span style="FONT-WEIGHT: bold;">
-    strace /bin/ls
-   </span>
-   . The former shows the libraries required to run the ls command, and the latter shows the hundreds of system calls needed to just start the program. Of course, a few hundred system calls isn't much by itself, but when you think of hundreds of users sharing a common file server, and ever call to exec() results in this traffic, you can start to see why this might not be a good idea.
+<span style="FONT-WEIGHT: bold;">
+ldd /bin/ls
+</span>
+and
+<span style="FONT-WEIGHT: bold;">
+strace /bin/ls
+</span>
+. The former shows the libraries required to run the ls command, and the latter shows the hundreds of system calls needed to just start the program. Of course, a few hundred system calls isn't much by itself, but when you think of hundreds of users sharing a common file server, and ever call to exec() results in this traffic, you can start to see why this might not be a good idea.
 
 So, to sum up:
+
   </p>
   <table>
    <tbody>

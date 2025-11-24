@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <br/>
   Prof. Thain gave a talk titled
   <a href="http://www.nd.edu/~dthain/talks/unsolved-grid12.pptx">

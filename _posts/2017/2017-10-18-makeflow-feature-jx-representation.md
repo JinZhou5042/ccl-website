@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <div style="background-color: white; color: #222222; font-family: arial, sans-serif;">
    There are a number of neat new features in the latest versions of our software that I would like to highlight through some occasional blog posts.  If these sound interesting, please give them a try and send us your feedback.
   </div>

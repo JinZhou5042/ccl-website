@@ -3,11 +3,12 @@ layout: "post"
 title: "Autoscaling HTC at CLUSTER 2020"
 date: 2020-09-22T16:48:00+00:00
 author: "Douglas Thain"
-description: "Recent CCL graduate Charles Zheng, Ph.D., presented his paper \"Autoscaling High Throughput Workloads on Container Orchestrators\" at the CLUSTER 2020 conferen…"
+description: 'Recent CCL graduate Charles Zheng, Ph.D., presented his paper "Autoscaling High Throughput Workloads on Container Orchestrators" at the CLUSTER 2020 conferen…'
 toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    Recent CCL graduate Charles Zheng, Ph.D., presented his paper "Autoscaling High Throughput Workloads on Container Orchestrators" at the CLUSTER 2020 conference in September 2020.
   </p>

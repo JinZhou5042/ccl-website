@@ -9,6 +9,7 @@ toc: false
 related_posts: true
 tags: [archived-blog]
 ---
+
 <html><body><a href="http://www.nd.edu/~pbui">Peter Bui</a> is returning to Notre Dame this fall, where he will be a member of the teaching faculty and will be teaching undergraduate core classes like data structures, discrete math, and more.  Welcome back, Prof. Bui!<br/>
 <br/>
 <br/>

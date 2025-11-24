@@ -8,8 +8,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Chris Moretti and Karsten Steinhauser recently had a paper
-  <a href="http://www.cse.nd.edu/~ccl/research/pubs/classify-icdm08.pdf">
-   Scaling Up Classifiers to Cloud Computers
-  </a>
-  accepted at the International Conference on Data Mining in Pisa, Italy.  This paper describes a high level abstractions for running stanrdard data mining algorithms on systems of hundreds of CPUs.
+<a href="http://www.cse.nd.edu/~ccl/research/pubs/classify-icdm08.pdf">
+Scaling Up Classifiers to Cloud Computers
+</a>
+accepted at the International Conference on Data Mining in Pisa, Italy. This paper describes a high level abstractions for running stanrdard data mining algorithms on systems of hundreds of CPUs.

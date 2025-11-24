@@ -7,6 +7,7 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 <p>
    <span style="font-size: small;">
     Undergraduate student Jack Rundle has been making improvements to the JX language used throughout the CCTools package for expressing workflows, database queries, and other structured information.
@@ -64,17 +65,18 @@ tags: []
     <span style="font-size: small;">
      BEFORE: len([1,2,3,4])    # 4
      <br/>
-     AFTER:  [1,2,3,4].len()   # 4 
+     AFTER:  [1,2,3,4].len()   # 4
 
-BEFORE: like("abc", "a.+")   # true
-     <br/>
-     AFTER:  "abc".like("a.+")    # true 
+BEFORE: like("abc", "a.+") # true
+<br/>
+AFTER: "abc".like("a.+") # true
 
-BEFORE: format("ceil(%f) -&gt; %d", 9.1, 10)   # "ceil(9.1) -&gt; 10"
-     <br/>
-     AFTER:  "ceil(%f) -&gt; %d".format(9.1, 10)    # "ceil(9.1) -&gt; 10"
-    </span>
-   </span>
+BEFORE: format("ceil(%f) -&gt; %d", 9.1, 10) # "ceil(9.1) -&gt; 10"
+<br/>
+AFTER: "ceil(%f) -&gt; %d".format(9.1, 10) # "ceil(9.1) -&gt; 10"
+</span>
+</span>
+
   </p>
   <p>
    <span style="font-size: small;">

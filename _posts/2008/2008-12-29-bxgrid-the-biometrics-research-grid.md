@@ -9,17 +9,19 @@ toc: false
 related_posts: true
 tags: [bxgrid, allpairs, distributed computing, abstractions]
 ---
-One of our graduate students, Hoang Bui, presented a poster on the Biometrics Research Grid (BXGrid) at the IEEE e-Science conference in Indianapolis a few weeks ago. BXGrid is a large data repository that we have built to support both production research in biometrics and to provide a platform for research in large scale data intensive computing. It provides another example of the idea of
-  <a href="http://dthain.blogspot.com/2008/10/abstractions-for-distributed-computing.html">
-   abstractions
-  </a>
-  for distributed computing.  This project is a collaboration between
-  <a href="http://www.nd.edu/~flynn">
-   Dr. Patrick Flynn
-  </a>
-  and my research group at Notre Dame.
 
-The Computer Vision Research Lab studies methods for identifying people via biometrics such as fingerprints, iris scans, and surveillance videos. The group collects hundreds of thousands of images and movies from hundreds of volunteers on campus, and uses them to test clever new identification algorithms.  For example, here is an atlas of photos from one particular subject (our department chair):
+One of our graduate students, Hoang Bui, presented a poster on the Biometrics Research Grid (BXGrid) at the IEEE e-Science conference in Indianapolis a few weeks ago. BXGrid is a large data repository that we have built to support both production research in biometrics and to provide a platform for research in large scale data intensive computing. It provides another example of the idea of
+<a href="http://dthain.blogspot.com/2008/10/abstractions-for-distributed-computing.html">
+abstractions
+</a>
+for distributed computing. This project is a collaboration between
+<a href="http://www.nd.edu/~flynn">
+Dr. Patrick Flynn
+</a>
+and my research group at Notre Dame.
+
+The Computer Vision Research Lab studies methods for identifying people via biometrics such as fingerprints, iris scans, and surveillance videos. The group collects hundreds of thousands of images and movies from hundreds of volunteers on campus, and uses them to test clever new identification algorithms. For example, here is an atlas of photos from one particular subject (our department chair):
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2008/bxgrid-the-biometrics-research-grid/bxgrid-atlas-44eb87c7a7.gif" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
@@ -40,6 +42,7 @@ The Computer Vision Research Lab studies methods for identifying people via biom
 So, we designed BXGrid to be a filesystem-database hybrid that can store large amounts of data reliably, but enable new modes of exploration. The system consists of one central database that indexes all of the metadata, and sixteen active storage servers that provide storage that scales in both capacity and performance. Each item in the system is replicated three times across the cluster for reliability, so you can continue to operate even with several storage servers offline. A nice web interface on the front makes it easy to search, download, and process data from your desktop.
 
 What's more is that the database really simplifies tasks that were previously arduous. For example, when ingesting new data into the system, a human needs to manually verify that each image really is of the intended person. BXGrid can simply pop up a screen that shows newly images alongside a selection of known good images of the old subject, and the user can quickly scan them and press a button if there is a problem. What used to be a Sisyphean task for one poor graduate student can now be accomplished by ten people working together in a few hours. Here is what it looks like:
+
   <p>
    The next step is to automate research tasks using abstractions. Many research problems in biometrics can be answered using the following formula:
   </p>

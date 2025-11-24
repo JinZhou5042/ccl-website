@@ -8,10 +8,12 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 The Cooperative Computing Lab is pleased to announce the release of version 4.0 of the Cooperative Computing Tools, including Parrot, Chirp, Makeflow, WorkQueue, SAND, All-Pairs, and other software.
 
 This is the first release of the 4.0 series, with some major changes:
-  <br/>
+<br/>
+
   <ul>
    <li>
     To support new features on WorkQueue, backwards compatibility of master and workers pre-4.0 is broken.  Specifically, workers from 4.0 cannot connect to masters pre-4.0, and masters from 4.0 will not accept connection from workers pre-4.0. The API did not change, thus unless you want to take advantage of new features, you should not need to modify your code.

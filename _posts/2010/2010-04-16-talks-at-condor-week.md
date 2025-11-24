@@ -8,21 +8,22 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Graduate students
-  <a href="http://www.nd.edu/~lyu2">
-   Li Yu
-  </a>
-  and
-  <a href="http://www.nd.edu/~pbui">
-   Peter Bui
-  </a>
-  each gave talks at Condor Week in Madison, WI:
-  <a href="http://www.cs.wisc.edu/condor/CondorWeek2010/condor-presentations/yu-makeflow.pdf">
-   Scaling Up Scientific Workflows with Makeflow
-  </a>
-  , and
-  <a href="http://www.cs.wisc.edu/condor/CondorWeek2010/condor-presentations/bui_weaving_workflows.pdf">
-   Weaving Abstractions into Workflows
-  </a>
-  .
-  <br/>
+<a href="http://www.nd.edu/~lyu2">
+Li Yu
+</a>
+and
+<a href="http://www.nd.edu/~pbui">
+Peter Bui
+</a>
+each gave talks at Condor Week in Madison, WI:
+<a href="http://www.cs.wisc.edu/condor/CondorWeek2010/condor-presentations/yu-makeflow.pdf">
+Scaling Up Scientific Workflows with Makeflow
+</a>
+, and
+<a href="http://www.cs.wisc.edu/condor/CondorWeek2010/condor-presentations/bui_weaving_workflows.pdf">
+Weaving Abstractions into Workflows
+</a>
+.
+<br/>

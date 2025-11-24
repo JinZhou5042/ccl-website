@@ -8,6 +8,7 @@ toc: false
 related_posts: true
 tags: [assembly language, condor, allpairs, distributed computing, abstractions]
 ---
+
 <p>
    My current research revolves around the idea of
    <strong>

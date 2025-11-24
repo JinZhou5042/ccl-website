@@ -8,8 +8,10 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 As has been a tradition for several years, the CCL has had the opportunity to teach about the CCTools and distributed computing as part of Applied Cyberinfrastructure Concepts(ACIC) course at University of Arizona and taught by Dr. Nirav Merchant and Dr. Eric Lyons. Due to the number of features that have been added as of recently, this year primarily focused on Makeflow and how we use it on the Cloud and with containers. The topics we talk about were:
-  <br/>
+<br/>
+
   <ul>
    <li>
     Thinking opportunistically

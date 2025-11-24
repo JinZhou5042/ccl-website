@@ -9,8 +9,10 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 Two CCL graduate students will be off on internships in summer 2016:
-  <br/>
+<br/>
+
   <div>
    <br/>
    <div class="row justify-content-sm-center">

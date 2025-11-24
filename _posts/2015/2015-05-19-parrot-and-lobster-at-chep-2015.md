@@ -9,7 +9,9 @@ toc: false
 related_posts: true
 tags: []
 ---
+
 CCL students gave two poster presentations at the annual Computing in High Energy Physics (CHEP) conference in Japan.  Both represent our close collaboration with the CMS HEP group at Notre Dame:
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2015/parrot-and-lobster-at-chep-2015/casestudy-poster-chep-2015-6873b467dd.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

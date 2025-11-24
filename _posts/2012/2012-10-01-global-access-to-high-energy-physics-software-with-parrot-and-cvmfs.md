@@ -10,6 +10,7 @@ related_posts: true
 tags: [hep, osg, highlights, cms, cvmfs, parrot]
 categories: [highlights]
 ---
+
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2012/global-access-to-high-energy-physics-software-with-parrot-and-cvmfs/cms-717ba43dc6.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
