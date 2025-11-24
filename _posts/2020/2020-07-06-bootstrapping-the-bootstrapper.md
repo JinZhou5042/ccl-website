@@ -1,0 +1,545 @@
+---
+layout: "post"
+title: "Bootstrapping the Bootstrapper"
+date: 2020-07-06T23:25:00+00:00
+description: "Much of our recent work has involved running Python applications at scale.
+While Python itself has pretty mediocre performance,
+it does make a convenient lan…"
+toc: false
+related_posts: true
+tags: []
+---
+<p>Much of our recent work has involved running Python applications at scale.
+While Python itself has pretty mediocre performance,
+it does make a convenient language for directing operations that use high-performance implementations.
+<a href="https://numpy.org/">Numpy</a> is a good example of this paradigm:
+the user might write high-level Python code, try things out interactively, and keep everything in a <a href="https://jupyter.org/">Jupyter Notebook</a>.
+But Numpy is implemented using highly-optimized C code to carry out the actual operations,
+so users can work in a friendly Python environment while still taking advantage of fast compiled code.
+One can take a similar approach for remote and parallel execution:
+<a href="https://parsl-project.org/">Parsl</a>
+allows users to write their applications using decorated Python functions.
+Behind the scenes, the runtime can send these functions to nodes in a cluster, cloud, etc. to execute and bring the results back.
+The user doesn't have to know that their Python function actually ran on a supercomputer,
+and the runtime uses futures to make it seem like a simple asynchronous function call.</p>
+
+<p>To make that seamless execution work,
+we need to be able to run user-provided Python code on remote nodes.
+Those nodes, however, are often not set up the same way as the node where the application is running;
+maybe the node only has Python 2 but the app Python 3,
+maybe some libraries are missing,
+or maybe Python isn't installed at all.
+Any of these differences would prevent the user's code from running.
+To be able to seamlessly send code and data back and forth,
+we need to have a consistent Python environment on all the nodes.
+In a cluster a shared filesystem can help with this,
+with all nodes working from a common Python installation.
+If a shared filesystem isn't available,
+we need some other means to set up a common Python environment.
+We could simply require that users manually configure all nodes,
+but this is tedious and error prone.
+It also breaks the abstraction:
+a user should be able to write and run Python code on their laptop,
+flip a switch, and run that same code on a cluster.
+We need a way to <strong>bootstrap</strong> a working Python environment on remote nodes.
+Our goal then will be to take a packaged Python environment
+(created using
+<a href="https://docs.conda.io/en/latest/">Conda</a> and
+<a href="https://conda.github.io/conda-pack/"><code>conda-pack</code></a>)
+and get up and running on nodes where dependencies (or even Python itself) may not be available.</p>
+
+<p>But what are the exact requirements for our packaging setup?
+<code>conda-pack</code> includes Python code, as well as some <code>sh</code>.
+Python packages with embedded C libraries are supported,
+so do we need to include anything for those?
+And the whole package needs to be uncompressed and extracted.
+At a minimum, we'll need <code>tar</code> to be available and support compression
+(<code>conda-pack</code> generates <code>.tar.gz</code> files by default).
+Which brings us to the main question of this piece:
+what do we need to <strong>bootstrap the bootstrapper</strong>?
+The absolute minimum would be a kernel and nothing else.
+Based on knowing a bit about <code>conda-pack</code> and Python applications,
+we'll need more than just a kernel.</p>
+
+<p>So, what exactly do we need on nodes to be able to execute Python in a packaged environment?
+Rather than enumerating a list of Linux distros that work,
+let's take a fun approach:
+start from nothing and figure out the minimal requirements.
+We can use Linux namespace magic
+(the same stuff that container systems like <a href="https://www.docker.com/">Docker</a> are built on)
+to create a sandbox containing only a kernel and an <code>init</code> process.
+Then we can add in the exact pieces required to get to a working Python setup.</p>
+
+<h2 id="the-plan">The Plan</h2>
+
+<p>For a minimum environment,
+our sandbox should contain as close to nothing as possible.
+With a container system Docker ,
+the details of setting up a sandboxed environment are handled automatically.
+That's a bad fit here, though;
+Docker isn't set up for starting from scratch (i.e. completely empty environment),
+and even minimal pre-configured containers like <a href="https://alpinelinux.org/">Alpine Linux</a> come with a lot of stuff that's necessary for a normal, working system.
+We don't need most of the features of a full container runtime,
+and this isn't going to be a normal, working system!</p>
+
+<p>So instead, we'll hand-roll our own minimal container environment.
+Our first goal will be to get a new (empty) root filesystem and a shell in our "container".
+We could just copy in the shell itself
+(and later on we'll do just that),
+but we won't get very far with only <code>/bin/sh</code>.
+Some capabilities are provided by the shell itself,
+but a lot of the basic functionality used in shell scripts is actually provided by external programs
+(e.g.  <code>echo</code>, <code>printf</code>,  <code>true</code>, <code>false</code>, and <code>[</code> used in conditionals are all real executables).
+We'll need the shell itself plus a set of basic utilities for something resembling a sane system.
+We don't really want to pull in a full GNU stack,
+as one of our goals is to figure out if there are any weird GNU-related dependencies.</p>
+
+<p>Fortunately for us, a solution already exists.
+<a href="https://busybox.net/">BusyBox</a> is a single-binary toolkit that provides the basic functionality we need.
+It's often used in routers, low-memory systems, or other minimal environments as it consists of one statically linked executable,
+with symlinks for everything else.</p>
+
+<p>After we have a minimal working sandbox,
+we'll try unpacking and running the environment.
+The sandbox won't even include libc to start,
+so we'll certainly see errors.
+But those errors will tell us about the hidden dependencies we're looking for.
+We can incrementally copy necessary bits from the host system into the sandbox until we have a working Python environment.
+Doing this for a normal application would be quite a headache
+(Ever use <code>strace</code> to watch dynamic library loading?
+Even simple programs do a <em>lot</em> behind the scenes).
+But this is a bootstrap package,
+and given that we can successfully run across distros,
+those requirements must be fairly limited.</p>
+
+<h2 id="preparation">Preparation</h2>
+
+<p>We'll start from the ground up: an empty directory.</p>
+
+<pre><code>[x@localhost ~]$ mkdir /tmp/sandbox &amp;&amp; cd /tmp/sandbox
+</code></pre>
+
+<p>Since we're planning to copy in pieces from the host system,
+the sandbox will need to look at least somewhat like a real system.
+First, let's add a few directories and symlinks.
+I'm going to skip the <code>mkdir</code> and <code>ln</code> commands here and go straight to the finished result.</p>
+
+<pre><code>[x@localhost sandbox]$ tree .
+.
+├── bin -&gt; usr/bin
+├── dev
+├── lib -&gt; usr/lib
+├── lib64 -&gt; usr/lib
+├── proc
+├── sbin -&gt; usr/bin
+├── sys
+├── tmp
+└── usr
+    ├── bin
+    ├── lib
+    └── sbin -&gt; bin
+</code></pre>
+
+<p>The symlinks here are a little weird.
+If you look at the <a href="https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html">Filesystem Hierarchy Standard</a>,
+a standard Linux filesystem needs <code>/bin</code>, <code>/sbin</code>, <code>/usr/bin</code>, <code>/usr/sbin</code>, <code>/lib</code>, <code>/lib64</code>, <code>/usr/lib</code>, <code>/usr/lib64</code> among other things.
+Since we're planning to pull in pieces from the host system,
+some of these locations are hard-coded so we can't just leave them out.
+(We <em>are</em> leaving out a whole lot of other pieces like <code>/etc</code> and <code>/home</code>,
+but we can get by without those.
+This is not a normal system, remember!)
+My host system uses Arch Linux,
+which along with several other distros <a href="https://www.freedesktop.org/wiki/Software/systemd/TheCaseForTheUsrMerge/">merged the various system directories</a>.
+Arch only uses <code>/usr/bin</code> and <code>/usr/lib</code>;
+all the rest are just symlinks to those two.</p>
+
+<p>I also included a few other things.
+Some libc implementations use special device files like <code>/dev/null</code>,
+and bash isn't happy if it can't mess around with the terminal,
+so we'll plan to just bring <code>/dev</code> over from the host system.
+It's possible to get by without all the devices,
+but we're not going for security or resource control
+so isolating devices is more trouble than it's worth.
+Likewise a lot of basic functionality involves looking around in <code>/proc</code> to get info on running processes,
+or digging around in <code>/sys</code> to get info on the system, CPU, etc.
+We'll just bring those from the host system as well.
+I also added <code>/tmp</code>, since lots of things expect to be able to stash stuff somewhere.
+Since everything will be running as one user,
+there's no need to set the sticky bit and everything.</p>
+
+<p>The last bit of setup is to add BusyBox.
+There's no installation required;
+you can just download a binary from the website and start using it.
+Since <code>busybox</code> is statically linked,
+we don't even need to add libc.</p>
+
+<pre><code>[x@localhost sandbox]$ wget -O bin/busybox https://busybox.net/downloads/binaries/1.30.0-i686/busybox
+[x@localhost sandbox]$ chmod +x bin/busybox
+</code></pre>
+
+<p>We now have a usable sandbox!</p>
+
+<h2 id="container-setup">Container Setup</h2>
+
+<p>On newer kernels, we can take advantage of unprivileged user namespaces to do our container setup without being root.
+The first step will be to call <code>unshare</code> to set up the required namespaces.
+We aren't looking for full system isolation,
+so we only need a new mount namespace
+(for binding directories from the host system)
+and a new user namespace
+(so we can become pseudo-root and use privileged operations like <code>chroot</code>).
+If you're running an older kernel or can't use namespace tricks,
+you can skip the <code>unshare</code> step and do the rest as <em>actual</em> root.
+Just be careful not to overwrite anything outside the sandbox and break your system.</p>
+
+<pre><code>[x@localhost sandbox]$ unshare --user --map-root-user --mount sh
+sh-5.0#
+</code></pre>
+
+<p>In this shell we're running as pseudo-root and can make changes to the filesystem layout!
+Let's grab those special directories from the host system.</p>
+
+<pre><code>sh-5.0# mount --rbind /dev ./dev
+sh-5.0# mount --rbind /proc ./proc
+sh-5.0# mount --rbind /sys ./sys
+</code></pre>
+
+<p>These sandbox directories now have the same contents as the host system.</p>
+
+<pre><code>sh-5.0# ls -l ./proc/self/cwd
+lrwxrwxrwx 1 root root 0 May 26 16:00 ./proc/self/cwd -&gt; /tmp/sandbox
+</code></pre>
+
+<p>If we wanted to do stuff with the network, run graphical applications, etc. there would be extra steps to make things work
+(see here for <a href="https://wiki.archlinux.org/index.php/Chroot">more</a>),
+but this is sufficient for our purposes.
+Let's enter the sandbox!</p>
+
+<pre><code>sh-5.0# env -i PATH=/usr/bin chroot /tmp/sandbox/ /usr/bin/busybox sh
+/ #
+</code></pre>
+
+<p>We clear the environment to make sure the host system's config doesn't leak into the sandboxed shell.
+Note that things might not work correctly if <code>$PATH</code> isn't set,
+so I added a generic default.
+So now in this BusyBox shell,
+<code>/</code> is our sandbox directory.
+Let's look around:</p>
+
+<pre><code>/ # ls -l
+sh: ls: not found
+/ #
+</code></pre>
+
+<p>Uh oh.... We don't have <code>ls</code> in the sandbox.
+We can still invoke BusyBox's implementation:</p>
+
+<pre><code>/ # busybox ls -l /bin/
+total 956
+-rwxr-xr-x    1 0        0           975004 Jan  1  2019 busybox
+</code></pre>
+
+<p>Looks like our sandbox is indeed empty.
+To get all the other executables needed,
+we can have BusyBox make symlinks for us.</p>
+
+<pre><code>/ # /usr/bin/busybox --install -s
+/ # ls -l /bin/ls
+lrwxrwxrwx    1 0        0               12 May 26 20:33 /bin/ls -&gt; /usr/bin/busybox
+</code></pre>
+
+<p>We have a number of shell utilities as symlinks to <code>busybox</code>,
+which should give us a basic shell environment with nothing in our sandbox but BusyBox.
+We now have a sandboxed (container-lite) environment where we can try things out.
+The next step will be to bring in the packed Conda environment and see what happens!</p>
+
+<h2 id="preparing-the-python-environment">Preparing the Python Environment</h2>
+
+<p>We're using Conda and <code>conda-pack</code> to manage Python environments,
+so let's set up a test Python environment.
+Use a different shell for this section,
+since you'll need to use the host system and your <code>rc</code> files.
+In this example,
+I'll be using a different machine running RHEL.
+You'll need Conda installed and set up
+(see <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/">here</a> for instructions).
+Make sure you've also installed <code>conda-pack</code> in your base environment.
+So now we need to create a Conda environment to pack up.
+A Python interpreter plus <a href="https://numpy.org/">Numpy</a> should work.</p>
+
+<pre><code>(base) -bash-4.2$ conda create -y -p /tmp/bootstrap python=3.6 numpy
+</code></pre>
+
+<p>Since the target system (sandbox) doesn't have much of anything,
+we'll need to be sure to include Python itself as part of the environment.
+I also chose Numpy as it includes C extensions,
+which should give <code>conda-pack</code> some more work.
+We're now be ready to create a self-contained package for our new Python environment.</p>
+
+<pre><code>(base) -bash-4.2$ conda pack -p /tmp/bootstrap
+</code></pre>
+
+<p>Which will give us a package in <code>bootstrap.tar.gz</code>.
+So now let's copy this into the sandbox!</p>
+
+<pre><code>(base) -bash-4.2$ cp bootstrap.tar.gz /tmp/sandbox
+</code></pre>
+
+<p>You could also prepare the Conda environment on another machine
+(as I did here),
+in which case you would probably use <code>scp</code> instead.</p>
+
+<h2 id="getting-a-shell">Getting a Shell</h2>
+
+<p>Back in the previous shell
+(<code>chroot</code>ed into the sandbox),
+we now extract the tarball package.
+(You can imagine the <code>conda-pack</code> parts happening on the head node or on your laptop,
+while this part is on the worker nodes that might have little/nothing installed.)
+Fortunately for us, BusyBox includes an implementation of both <code>tar</code> and <code>gzip</code>,
+so we can extract as usual.</p>
+
+<pre><code>/ # mkdir /bootstrap
+/ # tar -C /bootstrap -xzf bootstrap.tar.gz
+</code></pre>
+
+<p>This will give us a full Conda environment under <code>/bootstrap</code>.</p>
+
+<pre><code>/ # ls -l /bootstrap
+total 0
+drwxr-xr-x    2 0        0             1460 May 26 21:43 bin
+drwxr-xr-x    2 0        0               80 May 26 21:43 compiler_compat
+drwxr-xr-x    2 0        0              620 May 26 21:43 conda-meta
+drwxr-xr-x    9 0        0             2240 May 26 21:43 include
+drwxr-xr-x   15 0        0             2820 May 26 21:43 lib
+drwxr-xr-x   10 0        0              200 May 26 21:43 share
+drwxr-xr-x    3 0        0              180 May 26 21:43 ssl
+drwxr-xr-x    3 0        0               60 May 26 21:43 x86_64-conda_cos6-linux-gnu
+</code></pre>
+
+<p>We now need to <strong>activate</strong>  the environment to use it.
+From the <a href="https://conda.github.io/conda-pack/"><code>conda-pack</code> docs</a>,
+we need to run the <code>activate</code> script included in the package to fix up prefixes and such.
+But that won't work yet....</p>
+
+<pre><code>/ # source /bootstrap/bin/activate
+Unrecognized shell.
+</code></pre>
+
+<p>Looks like <code>conda-pack</code> is trying to detect the shell.
+From the source code,
+<code>bash</code> and <code>dash</code> should be supported;
+I initially tried using BusyBox <code>sh</code> and adding <code>dash</code> to the sandbox.
+Unfortunately, <code>conda-pack</code> still didn't detect <code>dash</code>.
+We'll therefore skip that digression and start by adding <code>bash</code> to the sandbox.
+Let's do the obvious thing:
+copy the <code>bash</code> executable from the host system!
+From another shell:</p>
+
+<pre><code>[x@localhost ~]$ cp /usr/bin/bash /tmp/sandbox/usr/bin/
+</code></pre>
+
+<p>Now, let's try starting <code>bash</code> in the container.</p>
+
+<pre><code>/ # bash 
+sh: bash: not found
+</code></pre>
+
+<p>Hmmm.... the executable is definitely there....
+This error message isn't very helpful....</p>
+
+<p>The issue here is that <code>bash</code> is a dynamically linked executable.
+We haven't included <code>ld.so</code> in the sandbox,
+so the <code>execve()</code> syscall is failing and BusyBox is telling us all it knows: (dynamic linker) not found.
+There's not a separate <code>errno</code> for dynamic linker not found versus executable not found.
+(For more info on how programs get run, see <a href="https://lwn.net/Articles/631631/">here</a>)
+We can verify this using <code>ldd</code> on the host machine to show the libraries <code>bash</code> links against.</p>
+
+<pre><code>[x@localhost ~]$ ldd /usr/bin/bash
+linux-vdso.so.1 (0x00007fff9d1ac000)
+libreadline.so.8 =&gt; /usr/lib/libreadline.so.8 (0x00007fde76bb8000)
+libdl.so.2 =&gt; /usr/lib/libdl.so.2 (0x00007fde76bb2000)
+libc.so.6 =&gt; /usr/lib/libc.so.6 (0x00007fde769eb000)
+libncursesw.so.6 =&gt; /usr/lib/libncursesw.so.6 (0x00007fde7697a000)
+/lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007fde76d3e000)
+</code></pre>
+
+<p>Of particular interest:</p>
+
+<ul>
+<li><code>linux-vdso.so.1</code> isn't a real library. Certain syscalls (e.g. getting the time) don't require any work from the kernel, and impose significant overhead due to context switching. Linux therefore provides some basic info as a special memory area that's mapped into every process. Thus to get the time, a call to <code>libc</code>'s <code>clock_gettime()</code> will simply read a special VDSO memory location, no syscall required.</li>
+<li><code>/lib64/ld-linux-x86-64.so.2</code> is the dynamic linker. This is a hard-coded absolute path (which is one of the difficulties in making portable ELF files). We can take this directly from the host system to enable dynamically linked executables. (This is the reason we needed to duplicate the filesystem layout from the host system. Hard-coded paths are always trouble....)</li>
+</ul>
+
+<p>So now let's copy in the <code>ld.so</code> from the host system into the sandbox.</p>
+
+<pre><code>[x@localhost ~]$ cp /lib64/ld-linux-x86-64.so.2 /tmp/sandbox/lib64/
+</code></pre>
+
+<p>Now we can try running <code>bash</code> again in the container.</p>
+
+<pre><code>/ # bash
+bash: error while loading shared libraries: libreadline.so.8: cannot open shared object file: No such file or directory
+</code></pre>
+
+<p>Now the dynamic linker is working,
+so we get more detailed error messages.
+As expected, we need the other libraries <code>ldd</code> listed.
+So as a first pass, let's copy in those libraries.
+On Linux, a library might have different <code>soname</code> versions, symlinks, or <code>.a</code> files that <code>ld.so</code> will resolve.
+We don't want to pay attention to that, so let's just resolve symlinks and copy everything for the libraries <code>ldd</code> gave.</p>
+
+<pre><code>[x@localhost ~]$ cp /usr/lib/libreadline.* /tmp/sandbox/usr/lib/
+[x@localhost ~]$ cp /usr/lib/libdl.* /tmp/sandbox/usr/lib/
+[x@localhost ~]$ cp /usr/lib/libc.* /tmp/sandbox/usr/lib/
+[x@localhost ~]$ cp /usr/lib/libncursesw.* /tmp/sandbox/usr/lib/
+</code></pre>
+
+<p>We now have some basic libraries available in the sandbox.
+Pretty much every program (including Python itself) will need some of these libraries, anyway.
+Now let's try <code>bash</code> again in the sandbox.</p>
+
+<pre><code>/ # bash
+bash-5.0#
+</code></pre>
+
+<p>Looks like <code>bash</code> is working in the sandbox!</p>
+
+<h2 id="activating-the-packaged-environment">Activating the Packaged Environment</h2>
+
+<p>Now we can try running the <code>activate</code> script from within our freshly copied <code>bash</code> shell.</p>
+
+<pre><code>bash-5.0# source /bootstrap/bin/activate
+(bootstrap) bash-5.0#
+</code></pre>
+
+<p>So far so good. Now let's try running <code>python</code>,
+which should work before running <code>conda-unpack</code>.</p>
+
+<pre><code>(bootstrap) bash-5.0# python
+python: error while loading shared libraries: libpthread.so.0: cannot open shared object file: No such file or directory
+</code></pre>
+
+<p>Looks like we're missing some dependencies for Python.
+Let's use <code>ldd</code> on the Python that <code>conda-pack</code> provided.
+From the host system:</p>
+
+<pre><code>[x@localhost ~]$ ldd /tmp/sandbox/bootstrap/bin/python
+linux-vdso.so.1 (0x00007ffee4ffd000)
+libpthread.so.0 =&gt; /usr/lib/libpthread.so.0 (0x00007f6421635000)
+libc.so.6 =&gt; /usr/lib/libc.so.6 (0x00007f642146e000)
+libdl.so.2 =&gt; /usr/lib/libdl.so.2 (0x00007f6421468000)
+libutil.so.1 =&gt; /usr/lib/libutil.so.1 (0x00007f6421463000)
+librt.so.1 =&gt; /usr/lib/librt.so.1 (0x00007f6421458000)
+libm.so.6 =&gt; /usr/lib/libm.so.6 (0x00007f6421313000)
+/lib64/ld-linux-x86-64.so.2 =&gt; /usr/lib64/ld-linux-x86-64.so.2 (0x00007f64219ee000)
+</code></pre>
+
+<p>Looks like we need a few more libraries for Python.</p>
+
+<pre><code>[x@localhost ~]$ cp /usr/lib/libpthread.* /tmp/sandbox/usr/lib/
+[x@localhost ~]$ cp /usr/lib/libutil.* /tmp/sandbox/usr/lib/
+[x@localhost ~]$ cp /usr/lib/librt.* /tmp/sandbox/usr/lib/
+[x@localhost ~]$ cp /usr/lib/libm.* /tmp/sandbox/usr/lib/
+</code></pre>
+
+<p>OK, let's try this again.</p>
+
+<pre><code>(bootstrap) bash-5.0# python
+Python 3.6.10 |Anaconda, Inc.| (default, May  8 2020, 02:54:21) 
+[GCC 7.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; 
+</code></pre>
+
+<p>Success! We have a Python interpreter running in our sandbox.
+Since that works, we can exit out of the Python interpreter and try unpacking the environment.</p>
+
+<pre><code>(bootstrap) bash-5.0# conda-unpack
+</code></pre>
+
+<p>No errors here.
+If all went well, we should now have Python plus any libraries available in the environment
+(Numpy in this example).
+Let's start Python again and see if Numpy works.</p>
+
+<pre><code>(bootstrap) bash-5.0# python
+Python 3.6.10 |Anaconda, Inc.| (default, May  8 2020, 02:54:21) 
+[GCC 7.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; import numpy
+&gt;&gt;&gt; numpy.version.version
+'1.18.5'
+</code></pre>
+
+<p>It works! We've transferred a Python interpreter and libraries,
+including both Python and C components,
+from a host system using a different distro into our minimal sandbox.
+So it would seem the absolute minimum required for using <code>conda-pack</code> in a container is:</p>
+
+<ul>
+<li>basic shell utilities (<code>busybox</code>)</li>
+<li><code>bash</code></li>
+<li><code>ld-linux-x86-64.so.2</code></li>
+<li><code>libc</code></li>
+<li><code>libdl</code></li>
+<li><code>libm</code></li>
+<li><code>libncursesw</code></li>
+<li><code>libpthread</code></li>
+<li><code>libreadline</code></li>
+<li><code>librt</code></li>
+<li><code>libutil</code></li>
+</ul>
+
+<p>Everything else can be provided via the tarball that <code>conda-pack</code> produced.
+Our sandbox is still much smaller than any fully-functional Linux container,
+but we know the exact set of requirements for bootstrapping Python environments.</p>
+
+<h2 id="epilogue-why-did-that-work">Epilogue: Why did that work?</h2>
+
+<p>Given the pieces taken from different Linux distros and the general austerity of the sandbox environment,
+I was surprised when things more or less just worked.
+Much of the troubleshooting was getting Bash working and adding a few basic libraries,
+which for real users would be handled by a package manager.
+Once the base libraries were in place, Python and <code>conda-unpack</code> just started right up.</p>
+
+<p>The requirements to start a Python interpreter were fairly small:
+a few C libraries from the host system
+(several of which were already required by <code>bash</code>),
+and the dynamic linker.
+Much of the rest of Python's functionality is implemented in Python,
+so we could get by with only a few pieces from the host system.
+Despite creating the environment on a machine with a different distro than where it executed,
+we could simply copy over the files.
+The dependencies shown by <code>ldd</code> happened to have matching sonames,
+so despite different minor versions across distros
+the dynamic linker could figure things out.
+The core libraries Python links against provide a pretty stable ABI,
+so libraries providing these sonames should generally be available on any modern machine.
+The dynamic linker itself is another potential source of trouble:
+the absolute path is hard-coded into the ELF header.
+Since this is such a critical component,
+distros are careful to ensure compatibility.
+Hence the weird symlinks Arch uses to make the filesystem follow convention.
+The authors of these core dynamic linking/libc components take great pains to make things as stable as possible,
+which allowed us to relocate the environment to another host without too much trouble.</p>
+
+<p>Python itself does quite a bit to make itself relocatable.
+Rather than relying on hard-coded paths to its libraries
+(which would break on copying to a new directory),
+Python has some <a href="https://github.com/python/cpython/blob/master/Modules/getpath.c">complicated logic</a>
+to figure out where it's currently running,
+and finds its base libraries by searching nearby directories for landmarks.
+Thus right after un-tarring the Conda environment,
+Python can find its base installation based on the location of its executable.
+The main reason we needed <code>bash</code> was for the <code>activate</code> script,
+which sets <code>$PATH</code> and plays with the shell prompt.
+If we use an absolute path (<code>/bootstrap/bin/python</code> in the sandbox),
+it's possible to start Python directly from the BusyBox <code>sh</code>,
+straight out of the tarball.</p>
+
+<p>The real work of relocating the installation falls to <code>conda-unpack</code>.
+This script is generated with instructions on how to fix up all the hard-coded paths scattered around the environment.
+As it turns out, <code>conda-unpack</code> is itself written in Python.
+Thus since the base Python installation is naturally relocatable,
+it can serve as a fixed starting point for bootstrapping everything else.</p>

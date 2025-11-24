@@ -1,0 +1,37 @@
+---
+layout: "post"
+title: "Visualizing a Large Distributed System with Enavis"
+date: 2008-11-30T22:00:00+00:00
+author: "Douglas Thain"
+description: "Two students at Notre Dame, Qi Liao and Andrew Blaich, recently received the Best Paper award at USENIX LISA for their work on Enavis, a tool that gives a vi…"
+toc: false
+related_posts: true
+tags: [lockdown, visualizing, enavis, distributed computing]
+---
+<p>Two students at Notre Dame, Qi Liao and Andrew Blaich, recently received the Best Paper award at <a href="http://www.usenix.org/events/lisa08/">USENIX LISA </a>for their work on Enavis, a tool that gives a visual display of network traffic collected by the <a href="http://netscale.cse.nd.edu/twiki/bin/view/Main/LockDown">Lockdown</a> network administration tool. Enavis gives the administrator of a large network a way to browse all of the users, programs, hosts, and network connections in a system of hundreds or thousands of machines. Here is what it looks like:<br/><br/><br/></p>
+
+<p>The picture doesn't really do it justice: you can grab, twist, and scroll the view, and the graph reacts in real-time. It's really quite fun to play around with.  You can use it to debug performance problems, chase down intruders, or just observe system behavior over time.</p>
+
+<p>The challenge with any visualization is deciding what small part of the available data to display. Lockdown collects an enormous amount of data: anytime a program makes a network connection, we record the host, user, program, and port numbers. This data has been recorded continuously across hundreds of machines for about a year now. Even if you pick one moment in time, you cannot possible display all of the active data in any reasonable way.</p>
+
+<p>Instead, you begin by a known starting location and a point in time, say user 33 last Thursday.  What you get is a graph with user 33 at the center, out to a radius of one.  If you want to see more, increase the radius, and the view expands:</p>
+
+<img alt="" border="0" src="http://netscale.cse.nd.edu/twiki/pub/Main/LockDown/all_usr33_hop1.png" style="margin: 0px auto 10px; display: block; width: 306px; height: 206px; text-align: center;"/>
+
+There are many different ways to slice and filter the data.  In the simplest case, you might be interested in known which hosts are talking to each other, or which programs or talking to each other, or which users are talking to each other.  Or, you might want a mix: show what users are talking to each other, via which programs.  To control all of these possibilities, Enavas has a
+
+<strong>meta-visualization</strong>
+
+: a graph that controls which data to display:
+
+<br/>
+
+<img alt="" border="0" src="http://netscale.cse.nd.edu/twiki/pub/Main/LockDown/meta_graph.png" style="margin: 0px auto 10px; display: block; width: 226px; height: 162px; text-align: center;"/>
+
+<br/>
+
+The meta-visualization represents hosts (H), users (U), and applications (A).  You simply click on the graph to add or remove edges and modify the main display.  For example,  if the user adds an edge between H and U, then the main graph will show the relationship between hosts and users.  If H has a circular link, then the main graph will show which hosts are talking to each other.  The meta-visualization is a nice compact way of representing all 63 possible slices of the data.
+
+<br/>
+
+<p>For more information, you can read the <a href="http://www.usenix.org/events/lisa08/tech/full_papers/liao/liao_html/">paper about Enavis </a>or visit the <a href="http://netscale.cse.nd.edu/twiki/bin/view/Main/LockDown">Lockdown</a> website.</p>

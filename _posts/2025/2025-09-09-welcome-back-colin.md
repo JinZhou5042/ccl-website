@@ -9,7 +9,6 @@ toc: false
 related_posts: true
 tags: []
 ---
-
 <p>This past summer, 4th year PhD student Colin Thomas completed an internship at the National Energy Research Scientific Computing Center (NERSC) located at the Lawrence Berkeley National Laboratory.</p>
 
 <p>Colin worked with a team of researchers and fellow interns to develop and deploy an Inference-as-a-Service (IaaS) platform for particle physics experiments including DUNE and ATLAS. Colin organized a network of services deployed on Kubernetes and the Perlmutter supercomputer which enabled remote scientists to run their applications and perform analysis of their data. The IaaS deployment consisted of metrics collection capabilities used to profile the system, identify bottlenecks, and inform the system about the need to scale the compute resources to meet the demands of users in real-time. The team profiled multiple inference-serving technologies such as Ray Serve and NVIDIA Triton. The team effort resulted in a number of successes including tests with scientists from multiple institutions, the gathering of valuable data from the profiles of Ray and Triton, and the system prototype which can serve as an example for future work in scientific inference serving.</p>
