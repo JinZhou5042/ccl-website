@@ -8,6 +8,7 @@ description: "Makeflow is used to manage the data processing workflow of the Air
 toc: false
 related_posts: true
 tags: [highlights, lidar, makeflow]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

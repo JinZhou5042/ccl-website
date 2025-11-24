@@ -3,18 +3,20 @@ layout: "post"
 title: "IceCube Flies with Parrot and CVMFS"
 date: 2017-02-02T21:25:00+00:00
 author: "Douglas Thain"
-image: "/assets/blog/2017/icecube-flies-with-parrot-and-cvmfs/.png-55a799640d.png"
+image: "/assets/blog/2017/icecube-flies-with-parrot-and-cvmfs/55a799640d.png"
 description: "IceCube is a neutrino detector built at the South Pole by instrumenting about a cubic kilometer of ice with 5160 light sensors. The IceCube data is analyzed …"
 toc: false
 related_posts: true
 tags: [highlights, icecube, parrot, cvmfs]
+categories: [highlights]
+carousel: true
 ---
 <span>
   </span>
   <br/>
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
-    {% include figure.liquid path="/assets/blog/2017/icecube-flies-with-parrot-and-cvmfs/.png-55a799640d.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+    {% include figure.liquid path="/assets/blog/2017/icecube-flies-with-parrot-and-cvmfs/55a799640d.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
    </div>
   </div>
   <span style="background-color: white; color: #222222; font-family: inherit;">

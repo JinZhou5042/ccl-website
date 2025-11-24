@@ -8,6 +8,8 @@ description: "The OpenTopography service provides online access to geospatial da
 toc: false
 related_posts: true
 tags: [highlights]
+categories: [highlights]
+carousel: true
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

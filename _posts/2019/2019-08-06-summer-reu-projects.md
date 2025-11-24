@@ -7,7 +7,9 @@ image: "/assets/blog/2019/summer-reu-projects/2019-summer-reu-ca199664de.jpg"
 description: "In summer 2019, REU students TJ Dasso and Eamon Marmion worked at the CCL on large scale distributed applications.  They completed the integration between th…"
 toc: false
 related_posts: true
-tags: []
+tags: [highlights]
+categories: [highlights]
+carousel: true
 ---
 In summer 2019, REU students TJ Dasso and Eamon Marmion worked at the CCL on large scale distributed applications.  They completed the integration between the
   <a href="http://parsl-project.org/">

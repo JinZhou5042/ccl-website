@@ -9,6 +9,7 @@ principles of large scale…"
 toc: false
 related_posts: true
 tags: [work queue, highlights, makeflow]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

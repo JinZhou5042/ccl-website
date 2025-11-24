@@ -8,6 +8,7 @@ description: "Lifemapper is a high-throughput, webservice-based, single- and mul
 toc: false
 related_posts: true
 tags: [work queue, highlights, biodiversity, makeflow, biocompute]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

@@ -8,6 +8,7 @@ description: "The CMS physics group at Notre Dame has created Lobster , a data a
 toc: false
 related_posts: true
 tags: [hep, highlights, physics, lobster, cms, parrot, cvmfs, workqueue]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

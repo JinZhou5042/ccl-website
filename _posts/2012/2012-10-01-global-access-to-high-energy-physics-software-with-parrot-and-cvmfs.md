@@ -8,6 +8,7 @@ description: "Scientists searching for the Higgs boson have profited from Parrot
 toc: false
 related_posts: true
 tags: [hep, osg, highlights, cms, cvmfs, parrot]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

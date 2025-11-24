@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Highlights
+title: Community Highlights
 permalink: /highlights/
 nav: false
 ---

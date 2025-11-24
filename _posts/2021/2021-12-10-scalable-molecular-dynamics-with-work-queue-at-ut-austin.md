@@ -8,6 +8,7 @@ description: "The Biomolecular Engineering Lab at UT-Austin routinely requires l
 toc: false
 related_posts: true
 tags: [highlights]
+categories: [highlights]
 ---
 <p>
    The
@@ -36,13 +37,7 @@ tags: [highlights]
    </a>
    application built on Work Queue for liquid property fitting for Van der Waals parameter refinement.
   </p>
-  <div class="separator" style="clear: both; text-align: center;">
-   <a href="https://blogger.googleusercontent.com/img/a/AVvXsEiWD_ncw5sFinI9ARUmuCtMF9D1xUMh6Np7kgYz7Zd5bkgVW2wspvC5PA8WunmdnhITv7qfU_jWyQDgLCYKFV0yLpwH-iH-Ot-obXTGHVDlPoYsW6unSeaERLmrO09CMzcJRtkGc-Z72I149ZtqCOts6UDv3x8r2FfL89Gb0xVJjHIfB9ausrS4li2g=s787" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em; text-align: center;">
-    <span style="text-align: left;">
-     Credit: Brandon Walker, UT-Austin
-    </span>
-   </a>
-  </div>
+
   <div class="row justify-content-sm-center">
    <div class="col-sm-12">
     {% include figure.liquid path="/assets/blog/2021/scalable-molecular-dynamics-with-work-queue-at-ut-austin/AVvXsEiWD_ncw5sFinI9ARUmuCtMF9D1xUMh6Np7kgYz7Zd5bkgVW2wspvC5-7322a2a7c3.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}

@@ -10,6 +10,7 @@ description: "Computational protein folding has historically relied on long-runn
 toc: false
 related_posts: true
 tags: [work queue, highlights, molecular dynamics]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

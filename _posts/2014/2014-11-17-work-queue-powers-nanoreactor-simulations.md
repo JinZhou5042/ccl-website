@@ -8,6 +8,7 @@ description: "Lee-Ping Wang at Stanford University, recently published a paper i
 toc: false
 related_posts: true
 tags: [work queue, highlights, molecular dynamics]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

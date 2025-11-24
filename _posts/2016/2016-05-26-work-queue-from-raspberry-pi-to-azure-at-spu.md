@@ -27,9 +27,10 @@ Cloud Computing” unit for the course.  Work Queue was chosen because it
 is easy to deploy, and undergraduate students can quickly get started 
 working on projects that harness the power
  of distributed resources."
-  </span>
-  <span>
-   The main project in this unit had the 
+</span>
+
+<span>
+The main project in this unit had the 
 students obtain benchmark results for three systems: a high performance workstation; a cluster of 12 Raspberry Pi 2 boards, and a cluster of A1 instances in 
 Microsoft Azure.  The task for each benchmark
  used Dr. Peter Bui’s Work Queue MapReduce framework; the students 

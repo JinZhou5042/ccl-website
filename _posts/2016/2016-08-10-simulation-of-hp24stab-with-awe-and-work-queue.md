@@ -10,6 +10,7 @@ supersecondary structure that consists of two helices joined by a turn.
 toc: false
 related_posts: true
 tags: [highlights, molecular dynamics, workqueue]
+categories: [highlights]
 ---
 <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXZf1fF_CbF_3DlEfT69VB7a4E5R8NiP2rjzDBE-wqL6xppTtG29WrirYfuky2XA-Fi5QJ0UvJ6OVgmvtJcYt9EF9x_nCxbb7UE4d63Jxa18kexyEXTd9w2j_XlpoFjHQ5aJG4PF3hdAI1/s1600/hp24stab.png" style="clear: right; float: right; margin-bottom: 1em; margin-left: 1em;">
   </a>

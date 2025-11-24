@@ -8,6 +8,8 @@ description: "The Field Scanalyzer at the University of Arizona is a massive rob
 toc: false
 related_posts: true
 tags: [highlights]
+categories: [highlights]
+carousel: true
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">

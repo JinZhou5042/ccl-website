@@ -9,6 +9,7 @@ description: "The CoGe Comparative Genomics Portal provides on-the-fly genomic a
 toc: false
 related_posts: true
 tags: [highlights, makeflow, bioinformatics]
+categories: [highlights]
 ---
 <div class="row justify-content-sm-center">
    <div class="col-sm-12">
