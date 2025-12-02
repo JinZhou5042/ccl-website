@@ -14,11 +14,10 @@ First, please check out our detailed documentation:
 
 - [CCTools ReadTheDocs Manuals](https://cctools.readthedocs.io)
 
-Post questions, discussion, and general bug reports to our forum:
+Post questions, discussion, and general bug reports to GitHub discussions:
 
-- [CCTools Google Groups](https://groups.google.com/g/cctools-nd)
 - [CCTools Github Discussions](https://github.com/cooperative-computing-lab/cctools/discussions)
 
-Send code patches and highly technical issues directly to GitHub:
+And send code patches and highly technical issues directly to GitHub:
 
 - [CCTools GitHub Issues](https://github.com/cooperative-computing-lab/cctools/issues)
