@@ -7,7 +7,7 @@ image: "/assets/blog/2025/wrangling-massive-tasks-graphs-with-dynamic-hierarchic
 description: "On Thursday, Octobor 30, research engineer Ben Tovar presented our recent work on accelerating the execution of High Energy Physics (HEP) workflows at the Py…"
 toc: false
 related_posts: true
-tags: []
+tags: [taskvine, dynamic-hierarchical-composition, vine-reduce]
 ---
 
 <span id="docs-internal-guid-3d12e8d6-7fff-a6b0-5c34-13c6fd8fa884">

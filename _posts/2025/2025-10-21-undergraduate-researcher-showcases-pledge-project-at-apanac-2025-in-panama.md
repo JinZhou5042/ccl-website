@@ -7,7 +7,7 @@ image: "/assets/blog/2025/undergraduate-researcher-showcases-pledge-project-at-a
 description: "On Thursday, October 2, 2025, undergraduate student Andrés Iglesias attended APANAC 2025 , the National Congress dedicated to Science and Technology held in …"
 toc: false
 related_posts: true
-tags: []
+tags: [pledge, undergraduate-research, apanac-2025]
 ---
 
 <p>

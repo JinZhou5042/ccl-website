@@ -7,7 +7,7 @@ image: "/assets/blog/2025/escience-2025-liberating-the-data-aware-scheduler-to-a
 description: "On September 16 graduate student Colin Thomas presented the paper titled: Liberating the Data Aware Scheduler to Achieve Locality in Layered Scientific Workf…"
 toc: false
 related_posts: true
-tags: []
+tags: [taskvine, data-aware-scheduling, layered-workflow-systems]
 ---
 
 <p>

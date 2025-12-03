@@ -7,7 +7,7 @@ image: "/assets/blog/2025/shepherd-paper-at-workssc-2024/drone-wf1-33799783bd.pn
 description: "Grad student Saiful Islam presented our paper on Shepherd at the 19th Workshop on Workflows in Support of Large-Scale Science at Supercomputing 2024 in Atlan…"
 toc: false
 related_posts: true
-tags: []
+tags: [shepherd, workflows, works, sc]
 ---
 
 Grad student Saiful Islam presented our paper on Shepherd at the 19th Workshop on Workflows in Support of Large-Scale Science at Supercomputing 2024 in Atlanta, Georgia.

@@ -7,7 +7,7 @@ image: "/assets/blog/2025/scaling-sade-safety-aware-drone-ecosystem-a-hybrid-uav
 description: "Autonomous drones are moving into increasingly complex, real-world environments where safety, compliance, and reliability have to be built in from the start.…"
 toc: false
 related_posts: true
-tags: []
+tags: [sade, drone-simulation, uav, px4, gazebo, unreal-engine]
 ---
 
 <p>

@@ -7,7 +7,7 @@ image: "/assets/blog/2025/ccl-team-at-gcasr-2025/gcasr-26fd44b7f7.jpg"
 description: "Members of the CCL team traveled to Chicago, Illinois on May 8 to attend GCASR 2025 (12th Greater Chicago Area Systems Research Workshop). CCL team members p…"
 toc: false
 related_posts: true
-tags: []
+tags: [workshop, gcasr, ccl-team]
 ---
 
 <div class="row justify-content-sm-center">

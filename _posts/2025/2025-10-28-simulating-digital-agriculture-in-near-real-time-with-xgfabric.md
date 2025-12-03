@@ -8,7 +8,7 @@ description: "Advanced scientific applications in digital agriculture require co
 toc: false
 related_posts: true
 featured: true
-tags: []
+tags: [xgfabric, digital-agriculture, 5g, hpc, cspot, laminar]
 ---
 
 <p>

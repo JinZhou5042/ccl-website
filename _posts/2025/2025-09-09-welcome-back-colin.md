@@ -7,7 +7,7 @@ image: "/assets/blog/2025/welcome-back-colin/AVvXsEjoeQF0su0SFoP9LdS1r6RMYKUpg-j
 description: "This past summer, 4th year PhD student Colin Thomas completed an internship at the National Energy Research Scientific Computing Center (NERSC) located at th…"
 toc: false
 related_posts: true
-tags: []
+tags: [internship, nersc, iaas, particle-physics, colin-thomas]
 ---
 
 <p>

@@ -7,7 +7,7 @@ image: "/assets/blog/2025/floability-at-escience-2025-making-notebooks-portable-
 description: "Grad student Saiful Islam presented our paper “Backpacks for Notebooks: Enabling Containerized Notebook Workflows in Distributed Environments” at the 2025 IE…"
 toc: false
 related_posts: true
-tags: []
+tags: [floability, notebooks, backpacks, hpc, portability]
 ---
 
 <p>

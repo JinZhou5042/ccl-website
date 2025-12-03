@@ -7,7 +7,7 @@ image: "/assets/blog/2025/reshaping-high-energy-physics-applications-using-taskv
 description: 'Barry Sly-Delgado presented our paper titled: " Reshaping High Energy Physics Applications for Near-Interactive Execution Using TaskVine " at the 2024 Superc…'
 toc: false
 related_posts: true
-tags: []
+tags: [taskvine, high-energy-physics, sc, hep]
 ---
 
 <p>
