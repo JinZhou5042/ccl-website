@@ -7,6 +7,7 @@ image: "/assets/blog/2025/taskvine-insights-storage-management-disk-load-shiftin
 description: "The University of Notre Dame operates an HTCondor cluster with roughly 20,000 cores for scientific computing. The system consists of heterogeneous machines a…"
 toc: false
 related_posts: true
+featured: true
 tags: []
 ---
 

@@ -7,6 +7,7 @@ image: "/assets/blog/2025/simulating-digital-agriculture-in-near-real-time-with-
 description: "Advanced scientific applications in digital agriculture require coupling distributed sensor networks with high-performance computing facilities, but this int…"
 toc: false
 related_posts: true
+featured: true
 tags: []
 ---
 
