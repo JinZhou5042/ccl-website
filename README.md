@@ -22,3 +22,17 @@ Lab members can add themselves to the People page:
 
 - Add your photo to `assets/img/people/` (example: `assets/img/people/jane-doe.jpg`).
 - Edit `/_pages/people.md` to include your entry and reference your photo.
+
+## Formatting
+
+Use Prettier to keep Markdown and code tidy. To format only the file you changed:
+
+```bash
+npx prettier README.md --write
+```
+
+Replace `README.md` with the path to the file you modified. To format all currently staged files:
+
+```bash
+git diff --name-only --cached | xargs npx prettier --write
+```
