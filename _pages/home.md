@@ -6,7 +6,7 @@ subtitle: "" #this goes under the title on about page
 
 profile:
   align: right
-  image: ccl-fall-2023.jpg
+  image: ccl-fall-2025.jpg
   image_circular: false # crops the image to make it circular
   more_info: ""
 
