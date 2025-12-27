@@ -72,7 +72,21 @@
       {% for item in list_items %}
         <div class="col-12 mb-3">
           <div class="thumb-list-card p-3 h-100">
-            <a href="{{ item.url | relative_url }}" class="text-decoration-none d-block">
+            {%- comment -%}
+              Allow overriding the internal page link with `list_redirect` frontmatter.
+              If `list_redirect` is present we use it as the destination. External
+              URLs (starting with http) are opened in a new tab.
+            {%- endcomment -%}
+            {% if item.list_redirect %}
+              {% assign dest = item.list_redirect %}
+            {% else %}
+              {% assign dest = item.url | relative_url %}
+            {% endif %}
+            {% assign is_external = false %}
+            {% if dest | slice: 0,4 == 'http' %}
+              {% assign is_external = true %}
+            {% endif %}
+            <a href="{{ dest }}" class="text-decoration-none d-block"{% if is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
 
               {% if _show_title and item.title %}
               <h5 class="thumb-list-title mb-2">{{ item.title }}</h5>

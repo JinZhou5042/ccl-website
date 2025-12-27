@@ -9,6 +9,7 @@ order: 2
 category: work
 publication_keywords:
   - floability
+list_redirect: https://floability.github.io/
 links:
   - name: Quick Start
     url: https://github.com/floability/floability-cli/blob/main/README.md
