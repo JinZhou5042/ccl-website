@@ -22,7 +22,7 @@ The Parrot Virtual File System is a tool for attaching existing programs to remo
 % parrot_run vi /chirp/server.nd.edu/mydata
 ```
 
-Parrot "speaks" a variety of remote I/O services include HTTP, FTP, [GridFTP](http://toolkit.globus.org/toolkit/docs/latest-stable/gridftp), [iRODS](http://www.irods.org), [CVMFS](http://cernvm.cern.ch/portal/filesystem), and [Chirp](/~ccl/software/chirp) on behalf of ordinary programs. It works by trapping a program's system calls through the `ptrace` debugging interface, and replacing them with remote I/O operations as desired. Parrot can be installed and operated by any user **without special privileges or kernel changes** and can be applied to **almost any program** without re-writing, re-linking, or re-installing. 
+Parrot "speaks" a variety of remote I/O services include HTTP, FTP, [GridFTP](http://toolkit.globus.org/toolkit/docs/latest-stable/gridftp), [iRODS](http://www.irods.org), [CVMFS](http://cernvm.cern.ch/portal/filesystem), and [Chirp](/~ccl/software/chirp) on behalf of ordinary programs. It works by trapping a program's system calls through the `ptrace` debugging interface, and replacing them with remote I/O operations as desired. Parrot can be installed and operated by any user **without special privileges or kernel changes** and can be applied to **almost any program** without re-writing, re-linking, or re-installing.
 
 <div class="row justify-content-sm-center mt-3">
     <div class="col-sm-6">
@@ -30,6 +30,6 @@ Parrot "speaks" a variety of remote I/O services include HTTP, FTP, [GridFTP](ht
     </div>
 </div>
 
-Parrot is particularly useful for running batch jobs in large scale distributed systems. It is most widely used to provide access to [high energy physics](/assets/pdf/oppo-ccgrid14.pdf) (HEP) software stacks via the global [CVMFS](http://cernvm.cern.ch/portal/filesystem) filesystem developed at CERN. Because Parrot views every operation on the filesystem, it can make arbitrary changes to an application's namespace. This allows it to function as a [sandbox environment](/assets/pdf/ibox-sc05.pdf), a [dependency tracing tool](/assets/pdf/invariant-jocs-2015.pdf), [virtual machine](/assets/pdf/umbrella-vtdc15.pdf), and more. 
+Parrot is particularly useful for running batch jobs in large scale distributed systems. It is most widely used to provide access to [high energy physics](/assets/pdf/oppo-ccgrid14.pdf) (HEP) software stacks via the global [CVMFS](http://cernvm.cern.ch/portal/filesystem) filesystem developed at CERN. Because Parrot views every operation on the filesystem, it can make arbitrary changes to an application's namespace. This allows it to function as a [sandbox environment](/assets/pdf/ibox-sc05.pdf), a [dependency tracing tool](/assets/pdf/invariant-jocs-2015.pdf), [virtual machine](/assets/pdf/umbrella-vtdc15.pdf), and more.
 
 (Note that Parrot is very tightly coupled with the OS kernel. and so it is only available on Linux based operating systems.)

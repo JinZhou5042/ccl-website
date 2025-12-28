@@ -29,7 +29,6 @@ Examples include the [Parsl](http://parsl-project.org) workflow system, the [Cof
 
 The framework is easy to use, and has been used to teach courses in parallel computing, cloud computing, distributed computing, and cyberinfrastructure at the University of Notre Dame, the University of Arizona, the University of Wisconsin, and many other locations.
 
-
 ## Video Introduction to Work Queue
 
 <div class="row mt-3">

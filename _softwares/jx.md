@@ -28,6 +28,7 @@ For example, JX expressions can be used to describe jobs in a workflow:
 ```
 
 Or to write LINQ-style queries on remote data:
+
 ```
 fetch(url).select(type=="wq_master").select(tasks_submitted>100).project([name,tasks_running+tasks_waiting])
 ```
