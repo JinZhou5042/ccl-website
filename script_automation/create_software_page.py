@@ -108,28 +108,40 @@ def extract_description(soup, base_url):
     if not body:
         return ""
     
-    # Get all content after the main image and before "Publications" section
+    # Get all content after the first h2 heading and before "Publications" section
     content_parts = []
-    found_image = False
+    found_heading = False
     
     for element in body.children:
         if not element.name:
             continue
         
-        # Skip the main logo image
-        if element.name == 'img' and 'logo' in element.get('src', '').lower():
-            found_image = True
+        # Start collecting after the first h2 heading
+        if element.name == 'h2' and not found_heading:
+            found_heading = True
+            # Include the heading
+            content_parts.append(str(element))
             continue
         
-        # Stop at Publications section
-        if element.name == 'h2' and 'publication' in element.get_text().lower():
-            break
+        # Stop at More Info or Publications sections (subsequent h2s)
+        if element.name == 'h2' and found_heading:
+            h2_text = element.get_text().lower()
+            if 'more info' in h2_text or 'publication' in h2_text or 'documentation' in h2_text:
+                break
         
-        # Collect content after the image
-        if found_image:
-            # Skip small poster/thumbnail images on the side
+        # Collect content after the heading
+        if found_heading:
+            # Skip large images with links (they're usually logos)
             if element.name == 'a' and element.find('img'):
-                continue
+                img = element.find('img')
+                # Skip if it's a large image (height > 200 or width > 200)
+                height = img.get('height', '0')
+                width = img.get('width', '0')
+                try:
+                    if int(height) > 200 or int(width) > 200:
+                        continue
+                except:
+                    pass
             
             content_parts.append(str(element))
     

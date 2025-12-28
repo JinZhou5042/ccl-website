@@ -54,6 +54,16 @@
   {% assign list_items = source_items %}
 {% endif %}
 
+{% comment %} Filter out items with skip_list: true {% endcomment %}
+{% assign filtered_items = '' | split: '' %}
+{% for item in list_items %}
+  {% assign skip = item.skip_list | default: false %}
+  {% if skip == false or skip == 'false' %}
+    {% assign filtered_items = filtered_items | push: item %}
+  {% endif %}
+{% endfor %}
+{% assign list_items = filtered_items %}
+
 {% assign list_items = list_items | sort: 'order' %}
 
 {% if list_items.size > 0 %}

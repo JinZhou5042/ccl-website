@@ -11,6 +11,10 @@ layout: default
 
 <div class="post software-page">
   <header class="post-header">
+    {% if page.show_title %}
+        <h1 class="post-title">{{ page.title }}</h1>
+    {% endif %}
+
     {% assign hero_image = page.image | default: page.img %}
     {% if hero_image %}
       <div class="software-hero mb-5 text-center">
