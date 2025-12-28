@@ -36,7 +36,7 @@ Makeflow is portable. A workflow is written in a technology neutral way, and the
 
 Makeflow is powerful. Makeflow can handle workloads of millions of jobs running on thousands of machines for months at a time. Makeflow is highly fault tolerant: it can crash or be killed, and upon resuming, will reconnect to running jobs and continue where it left off. A variety of analysis tools are available to understand the performance of your jobs, measure the progress of a workflow, and visualize what is going on.
 
-## Online Introduction to Workflows
+## Video Introduction to Workflows
 
 <div class="row mt-3">
     <div class="col-sm-12">
