@@ -102,6 +102,7 @@ hero: /assets/img/software/parrot-logo.png
 ## Error Handling
 
 The script will:
+
 - Report download errors
 - Continue if image download fails
 - Use software name as keyword if none found
@@ -117,21 +118,25 @@ The script will:
 ## Troubleshooting
 
 **Missing packages error:**
+
 ```bash
 pip3 install requests beautifulsoup4 html2text
 ```
 
 **Permission denied:**
+
 ```bash
 chmod +x create_software_page.py
 ```
 
 **No papers found:**
+
 - Check if the URL has a publications section
 - The script uses the keyword from "Showing papers with tag X"
 - If no keyword found, it uses the software name
 
 **Papers not matching in bib:**
+
 - The script uses fuzzy title matching
 - Check the summary report for papers that weren't found
 - You can manually add keywords to those papers later
