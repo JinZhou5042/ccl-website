@@ -112,10 +112,12 @@ def extract_project_info(soup, base_url):
     description_parts = []
     images = []
     
-    # Find h2 for title
+    # Find h1 or h2 for title (h1 is preferred)
+    h1 = body.find('h1')
     h2 = body.find('h2')
-    if h2:
-        title = h2.get_text().strip()
+    title_tag = h1 if h1 else h2
+    if title_tag:
+        title = title_tag.get_text().strip()
     
     # Look for images (but skip thumbnails)
     for img in body.find_all('img'):
@@ -139,27 +141,35 @@ def extract_project_info(soup, base_url):
             img_url = urljoin(base_url, img_src)
             images.append(img_url)
     
-    # Extract content between h2 and publications (include everything)
+    # Extract content between title and publications (be greedy - collect everything!)
     found_title = False
     
     for element in body.children:
         if not element.name:
             continue
         
-        # Skip until we find the h2
-        if element.name == 'h2' and not found_title:
+        # Skip until we find the title tag (h1 or h2)
+        if not found_title and element.name in ['h1', 'h2']:
             found_title = True
             continue
         
         if not found_title:
             continue
         
-        # Stop at publications section
-        if element.name == 'h2' or (element.name == 'p' and 'showing papers with tag' in element.get_text().lower()):
+        # Stop only at publications section or h2 that contains "publication" text
+        if element.name == 'h2' and 'publication' in element.get_text().lower():
             break
         
-        # Collect all content (including PIs line)
-        if found_title and element.name in ['p', 'i', 'div']:
+        # For <p> tags, check if they contain ONLY the "showing papers" text (not nested content)
+        if element.name == 'p':
+            # Get direct text only (not from children)
+            direct_text = ''.join([str(s) for s in element.strings if s.parent == element]).strip().lower()
+            if 'showing papers with tag' in direct_text and len(direct_text) < 100:
+                # This is the publications marker, stop here
+                break
+        
+        # Collect ALL content after title (be greedy!)
+        if found_title:
             description_parts.append(str(element))
     
     # Convert description to markdown
@@ -430,14 +440,10 @@ Examples:
     else:
         print(f"  No images found")
     
-    # Step 5: Extract keyword
-    print(f"\n🏷️  Extracting publication keyword...")
-    keyword = extract_keyword_from_html(soup)
-    if keyword:
-        print(f"  ✓ Found keyword: '{keyword}'")
-    else:
-        print(f"  ⚠️  No keyword found, using project name: '{args.name}'")
-        keyword = args.name
+    # Step 5: Use project name as keyword
+    print(f"\n🏷️  Setting publication keyword...")
+    keyword = args.name
+    print(f"  ✓ Using keyword: '{keyword}'")
     
     # Step 6: Extract paper titles
     print(f"\n📄 Extracting paper titles...")
