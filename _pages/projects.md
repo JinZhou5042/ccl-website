@@ -37,7 +37,7 @@ horizontal: false
         <td>Filesystems for Grid Computing</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="/projects/sub-identities">Sub Identities</a></th>
+        <th scope="row"><a href="/projects/subid">Sub Identities</a></th>
         <td>Practical Containment for Distributed Systems</td>
       </tr>
   <tr style="background: none;">
