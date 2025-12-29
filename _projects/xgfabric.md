@@ -15,7 +15,7 @@ publication_keywords:
   - xgfabric
 links:
   - name: Currently Hiring
-    url: jobs
+    url: /jobs
 ---
 
 xGFabric is one of several projects recently awarded by the U.S. Department of Energy for exploratory research in extreme scale science. This project will explore the design of systems for connecting remote wireless sensor networks with high performance computing systems. The driving applications are in digital agriculture, where extensive sensors are already used to observe weather, growing conditions, and the current state of crops. However, exploiting this data to improve agriculture in a timely way is challenging, due to energy and computing limitations of remote settings. Only a high performance computing (HPC) center has the capability to run the simulations needed to predict micro-weather and recommend interventions. This project will develop XGFabric, a novel software system that will allow complex workflows to span remote 5G/6G sensor networks, edge computers, and powerful HPC facilities, enabling timely access to powerful computing capabilities from remote agricultural sites.
