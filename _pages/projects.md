@@ -33,7 +33,7 @@ horizontal: false
         <td>Data Intensive Abstractions for High End Biometric Applications</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="/projects/filesystems-for-grid-computing">Filesystems for Grid Computing</a></th>
+        <th scope="row"><a href="/projects/gridfs">Filesystems for Grid Computing</a></th>
         <td>Filesystems for Grid Computing</td>
       </tr>
   <tr style="background: none;">
