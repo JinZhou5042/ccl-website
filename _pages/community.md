@@ -13,6 +13,8 @@ children:
   - title: divider
   - title: Highlights
     permalink: /highlights/
+  - title: Submit a Highlight
+    permalink: https://docs.google.com/forms/d/1S7PqBEb_rC9e4GQHp0136YkuN7GjwsoWjTInSJB6Vco/
   - title: divider
   - title: For Developers
     permalink: /developers/
