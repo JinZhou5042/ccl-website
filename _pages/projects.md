@@ -17,35 +17,35 @@ horizontal: false
   <table class="table table-sm table-borderless">
   <tbody style="border-top: none;">
   <tr style="background: none;">
-        <th scope="row" style="width: 30%"><a href="">VC3</a></th>
+        <th scope="row" style="width: 30%"><a href="/projects/vc3">VC3</a></th>
         <td>Virtual Clusters for Community Computation</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">DASPOS</a></th>
+        <th scope="row"><a href="/projects/daspos">DASPOS</a></th>
         <td>Data and Software Preservation for Open Science</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">CAREER</a></th>
+        <th scope="row"><a href="/projects/career">CAREER</a></th>
         <td>Data Intensive Grid Computing on Active Storage Clusters</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">HECURA</a></th>
+        <th scope="row"><a href="/projects/hecura">HECURA</a></th>
         <td>Data Intensive Abstractions for High End Biometric Applications</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">Filesystems for Grid Computing</a></th>
+        <th scope="row"><a href="/projects/filesystems-for-grid-computing">Filesystems for Grid Computing</a></th>
         <td>Filesystems for Grid Computing</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">Sub Identities</a></th>
+        <th scope="row"><a href="/projects/sub-identities">Sub Identities</a></th>
         <td>Practical Containment for Distributed Systems</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">Debugging Grids</a></th>
+        <th scope="row"><a href="/projects/debugging-grids">Debugging Grids</a></th>
         <td>Debugging Grids with Machine Learning Techniques</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="">TeamTrak</a></th>
+        <th scope="row"><a href="/projects/teamtrak">TeamTrak</a></th>
         <td>A Testbed for Cooperative Mobile Computing</td>
       </tr>
     </tbody>
