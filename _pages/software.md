@@ -12,7 +12,7 @@ children:
     permalink: https://cctools.readthedocs.io/en/stable/
   - title: divider
   - title: Install
-    permalink: /install/
+    permalink: https://cctools.readthedocs.io/en/latest/install/
   - title: divider
   - title: Repositories
     permalink: https://github.com/cooperative-computing-lab
