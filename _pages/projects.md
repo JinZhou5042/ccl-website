@@ -41,7 +41,7 @@ horizontal: false
         <td>Practical Containment for Distributed Systems</td>
       </tr>
   <tr style="background: none;">
-        <th scope="row"><a href="/projects/debugging-grids">Debugging Grids</a></th>
+        <th scope="row"><a href="/projects/debug-grids">Debugging Grids</a></th>
         <td>Debugging Grids with Machine Learning Techniques</td>
       </tr>
   <tr style="background: none;">
