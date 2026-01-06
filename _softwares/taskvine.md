@@ -24,10 +24,10 @@ links:
     url: https://cctools.readthedocs.io/en/stable/taskvine/overview.html
     background-image: assets/img/software/taskvine/overview-slides.png
   - name: Python API
-    url: https://cctools.readthedocs.io/en/stable/taskvine/api/python/
+    url: https://cctools.readthedocs.io/en/stable/api/html/namespacendcctools_1_1taskvine.html
     background-image: assets/img/software/taskvine/python-api.png
   - name: C API
-    url: https://cctools.readthedocs.io/en/stable/taskvine/api/c/
+    url: https://cctools.readthedocs.io/en/stable/api/html/taskvine_8h.html
     background-image: assets/img/software/taskvine/c-api.png
   - name: Status Display (CCL)
     url: https://ccl.cse.nd.edu/software/taskvine/status/
