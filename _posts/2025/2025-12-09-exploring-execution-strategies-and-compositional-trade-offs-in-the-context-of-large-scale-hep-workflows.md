@@ -5,7 +5,7 @@ date: "2025-12-09T00:00:00"
 author: Jin Zhou
 image: /assets/blog/2025/exploring-execution-strategies-and-compositional-trade-offs-in-the-context-of-large-scale-hep-workflows/alan-fig2.png
 tags:
-- hep
+  - hep
 description: The European Organization for Nuclear Research (CERN) has four main High Energy Physics experiments, the Compact Muon Solenoid (CMS) being one of them. These experiments are already approaching the Ex
 toc: false
 related_posts: true

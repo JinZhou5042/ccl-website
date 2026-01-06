@@ -4,13 +4,14 @@ title: "TaskVine Insights - Storage Management: Depth-Aware Pruning"
 date: "2025-12-02T00:00:00"
 author: Jin Zhou
 tags:
-- taskvine
-- tech
-- insights
+  - taskvine
+  - tech
+  - insights
 description: Modern scientific workflows often span tens or hundreds of thousands of tasks, forming deep DAGs (directed acyclic graphs) that handle large volumes of intermediate data. The large number of tasks pri
 toc: false
 related_posts: true
 ---
+
 Modern scientific workflows often span tens or hundreds of thousands of tasks, forming deep DAGs (directed acyclic graphs) that handle large volumes of intermediate data. The large number of tasks primarily results from ever-growing experimental datasets and their partitioning into various data chunks. Each data chunk is applied to a subgraph to form a branch, and different branches typically have an identical graph structure. Collectively, these form a gigantic computing graph. This graph is then fed into a WMS (workflow management system) which manages task dependencies, distributes the tasks across a HPC (high performance computing) cluster, and retrieves outputs when they are available. Below is the general architecture of the data partitioning and workflow computation process.
 
 <div class="row justify-content-sm-center">
@@ -41,9 +42,6 @@ For example, the following figure shows the aggressive pruning for a given graph
 </div>
 </div>
 
-
-
-
 However, things become complicated when we consider worker failures at runtime. In an HPC environment, there is no guarantee that your allocated workers can sustain until your computation finishes, and worker failures or evictions are not rare. When workers exit at runtime, their carried data are lost as well. If pruning is too aggressive, a single worker eviction may force a long-chain recomputation.
 
 Below is an example of this behavior. At the time of T, Worker 2 is suddenly evicted. Task 9 and Task 10 are interrupted and collected back to the manager. Meanwhile, the intermediates stored on Worker 2, namely File e, f, g, and h, are also lost. Some of them have additional replicas on other workers, but File f does not, so it is completely lost because of the eviction. Due to the data loss, Task 9 cannot run until its input File f is recreated. To regenerate File f, we must rerun Task 7. However, Task 7 cannot run because its input File c has been pruned. Thus, we are forced to work all the way back to the top of the graph to regenerate the lost file. Worse yet, we may ultimately end up having the longest path in the graph recomputed, prolonging the graph makespan and undermining the scientific outcome.
@@ -53,7 +51,6 @@ Below is an example of this behavior. At the time of T, Worker 2 is suddenly evi
 {% include figure.liquid path="/assets/blog/2025/taskvine-insights-storage-management-depth-aware-pruning/AVvXsEg09ziwTI-KOkL8hlN4AeQ1l54fhDLrIGeEbSWUcjOL6fxu-phu2cus2ONHi8ga40akE6e-YWwrx9SU_dhGg4Ca8rezecmYZPA4J-Osy8dcLcWlDGdlvQdT6ZKl-teijlGO7aUnu1j8fGQ-OSSxrWjbRR7QLFIUZKfPjuOrFTItOmX_ZglTYI7YiG11fAj8" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
-
 
 However, things become complicated when we consider worker failures at runtime. In an HPC environment, there is no guarantee that your allocated workers can sustain until your computation finishes, and worker failures or evictions are not rare. When workers exit at runtime, their carried data are lost as well. If pruning is too aggressive, a single worker eviction may force a long-chain recomputation.
 
