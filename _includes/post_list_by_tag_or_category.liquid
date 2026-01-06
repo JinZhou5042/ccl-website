@@ -1,0 +1,91 @@
+{% comment %}
+  Lists blog posts by tag or category with thumbnails and pagination.
+  Parameters:
+  - tag: optional tag name to filter posts
+  - category: optional category name to filter posts
+  - limit: optional integer for posts per page (default: 16)
+  - page: optional page number (default: 1)
+  - more_url: optional link to "See all" page
+  - more_label: optional label for the more link (default: See all)
+{% endcomment %}
+
+{%- assign _tag = include.tag | default: '' -%}
+{%- assign _category = include.category | default: '' -%}
+{%- assign _limit = include.limit | default: 16 | plus: 0 -%}
+{%- assign _page = include.page | default: 1 | plus: 0 -%}
+
+{%- if _tag == '' and _category == '' -%}
+  {%- comment -%} No tag or category passed; nothing to render {%- endcomment -%}
+{%- else -%}
+  {%- assign _posts = site.posts -%}
+  {%- if _tag != '' -%}
+    {%- assign _posts = _posts | where_exp: 'p', 'p.tags contains _tag' -%}
+  {%- endif -%}
+  {%- if _category != '' -%}
+    {%- assign _posts = _posts | where_exp: 'p', 'p.categories contains _category' -%}
+  {%- endif -%}
+  {%- assign _sorted = _posts | sort: 'date' | reverse -%}
+
+  {%- assign _total_posts = _sorted | size -%}
+  {%- assign _total_pages = _total_posts | divided_by: _limit -%}
+  {%- assign _temp = _total_pages | times: _limit -%}
+  {%- if _temp < _total_posts -%}
+    {%- assign _total_pages = _total_pages | plus: 1 -%}
+  {%- endif -%}
+  {%- assign _temp = nil -%}
+
+  <div class="lab-thumb-list mb-5" data-posts-per-page="{{ _limit }}" data-total-pages="{{ _total_pages }}">
+    <div class="row" data-post-container>
+      {%- for p in _sorted -%}
+        {%- assign post_image = p.image | default: p.img -%}
+        {%- assign _post_index = forloop.index0 -%}
+        {%- assign _post_page = _post_index | divided_by: _limit | plus: 1 -%}
+        <div class="col-12 mb-3 post-item" data-page="{{ _post_page }}">
+          <div class="thumb-list-card p-3 h-100">
+            <a href="{{ p.url | relative_url }}" class="text-decoration-none d-block">
+              <div class="thumb-list-content" style="padding-top: 0.25rem;">
+                  <div class="thumb-list-thumb">
+                    {% if post_image %}
+                      <img src="{{ post_image | relative_url }}" alt="{{ p.title }}" class="img-fluid rounded">
+                    {% else %}
+                      <div class="thumb-placeholder" aria-hidden="true"></div>
+                    {% endif %}
+                  </div>
+                <div>
+                  <h5 class="thumb-list-title mb-1">{{ p.title }}</h5>
+                  {% if p.description %}
+                    <p class="thumb-list-desc mb-0">{{ p.description }}</p>
+                  {% endif %}
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if _total_pages > 1 -%}
+      <nav aria-label="Page navigation" class="mt-3" data-pagination-nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item" data-pagination-prev>
+            <a class="page-link" href="#page=1" tabindex="-1">Previous</a>
+          </li>
+          {%- for i in (1.._total_pages) -%}
+            <li class="page-item" data-pagination-page="{{ i }}"><a class="page-link" href="#page={{ i }}">{{ i }}</a></li>
+          {%- endfor -%}
+          <li class="page-item" data-pagination-next>
+            <a class="page-link" href="#page=2">Next</a>
+          </li>
+        </ul>
+      </nav>
+    {%- endif -%}
+
+    {% if include.more_url %}
+      <div class="mt-3">
+        <a class="btn btn-sm btn-primary" href="{{ include.more_url | relative_url }}">
+          {{- include.more_label | default: 'See all' -}}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+{%- endif -%}
