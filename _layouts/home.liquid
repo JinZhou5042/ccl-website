@@ -44,17 +44,12 @@ layout: default
     {% assign pinned_posts = site.posts | where: "pinned_to_home", true %}
     {% if pinned_posts.size > 0 %}
       {% assign pinned_post = pinned_posts.first %}
-      <div class="alert" role="alert" style="margin-top: 2rem; margin-bottom: 2rem; border: 1px solid var(--global-theme-color); background-color: transparent;">
-        <i class="fa-solid fa-thumbtack" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>
-        {% if pinned_post.redirect == blank %}
-          <a href="{{ pinned_post.url | relative_url }}" style="font-weight: bold;">{{ pinned_post.title }}</a>
-        {% elsif pinned_post.redirect contains '://' %}
-          <a href="{{ pinned_post.redirect }}" style="font-weight: bold;" target="_blank">{{ pinned_post.title }}</a>
-        {% else %}
-          <a href="{{ pinned_post.redirect | relative_url }}" style="font-weight: bold;">{{ pinned_post.title }}</a>
-        {% endif %}
-        <span class="text-muted ms-2">({{ pinned_post.date | date: '%b %d, %Y' }})</span>
-      </div>
+      {% assign pinned_url = pinned_post.redirect | default: pinned_post.url %}
+      {% assign is_external = false %}
+      {% if pinned_post.redirect contains '://' %}
+        {% assign is_external = true %}
+      {% endif %}
+      {% include notice.liquid icon="fa-solid fa-thumbtack" link_url=pinned_url link_text=pinned_post.title date=pinned_post.date external=is_external %}
     {% endif %}
     
     <!-- Lab Carousels -->

@@ -1,0 +1,29 @@
+{% comment %}
+  Display a notice/alert box with border styling.
+  Parameters:
+  - text: optional text content to display before link
+  - link_url: optional URL for a link
+  - link_text: optional text for the link
+  - icon: optional Font Awesome icon class (e.g., "fa-solid fa-info-circle")
+  - date: optional date to display after link
+  - external: optional boolean, set to true for external links (default: false)
+{% endcomment %}
+
+<div class="alert" role="alert" style="margin-top: 2rem; margin-bottom: 2rem; border: 1px solid var(--global-theme-color); background-color: transparent;">
+  {% if include.icon %}
+    <i class="{{ include.icon }}" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>
+  {% endif %}
+  {% if include.text %}
+    <strong>{{ include.text }}</strong>
+  {% endif %}
+  {% if include.link_url and include.link_text %}
+    {% if include.external %}
+      <a href="{{ include.link_url }}" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">{{ include.link_text }}</a>
+    {% else %}
+      <a href="{{ include.link_url | relative_url }}" style="font-weight: bold;">{{ include.link_text }}</a>
+    {% endif %}
+  {% endif %}
+  {% if include.date %}
+    <span class="text-muted ms-2">({{ include.date | date: '%b %d, %Y' }})</span>
+  {% endif %}
+</div>
