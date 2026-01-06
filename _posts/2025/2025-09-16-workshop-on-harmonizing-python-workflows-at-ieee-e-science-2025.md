@@ -8,7 +8,6 @@ description: "We helped host the Workshop on Harmonizing Python Workflows at IEE
 toc: false
 related_posts: true
 tags: [workshop, python-workflows, ieee-e-science-2025, harmony]
-pinned_to_home: true
 categories: [highlights]
 carousel: true
 ---
