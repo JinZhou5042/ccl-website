@@ -13,4 +13,7 @@ children:
   - title: divider
   - title: Internal Docs
     permalink: https://github.com/cooperative-computing-lab/ccl-internal-docs/blob/master/docs/index.md
+  - title: divider
+  - title: Catalog Server
+    permalink: https://catalog.cse.nd.edu/
 ---
