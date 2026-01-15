@@ -16,4 +16,7 @@ children:
   - title: divider
   - title: Catalog Server
     permalink: https://catalog.cse.nd.edu/
+  - title: divider
+  - title: TaskVine Status
+    permalink: /software/taskvine/status/
 ---
