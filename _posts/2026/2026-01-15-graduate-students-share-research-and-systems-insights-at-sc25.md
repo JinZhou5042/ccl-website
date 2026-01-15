@@ -3,7 +3,7 @@ layout: post
 title: Graduate Students Share Research and Systems Insights at SC25
 date: 2026-01-15T12:00:00-05:00
 author: Cooperative Computing Lab
-image: /assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo2.jpeg
+image: /assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo2.jpg
 categories:
   - news
 tags:
@@ -11,10 +11,15 @@ tags:
 description: Two of our graduate students participated in SC25, presenting work on inference services at NERSC and edge-to-HPC workflows.
 toc: false
 related_posts: false
-pinned_to_home: true
 ---
 
 At SC25, graduate students from our lab participated in poster sessions, workshops, panel discussions, and research demonstrations, engaging with researchers from universities, industry, and national laboratories across the HPC community.
+
+<div class="row justify-content-sm-center">
+<div class="col-sm-12">
+{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo2.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+</div>
 
 Graduate student Colin Thomas presented a poster covering his work completed over the summer at NERSC, Lawrence Berkeley National Laboratory. The poster, titled “Inference-as-a-Service Prototype at NERSC,” was previously referenced in an earlier blog post. During the poster session, Colin received a number of visitors and had the opportunity to explain the work and answer questions. Attendees were largely interested in the policy decisions made in the inference service pipeline, such as the scaling of compute resources in response to the client demand and the support of multiple users making inferences to the same server.
 
@@ -34,25 +39,19 @@ Below are some nice photos they took during the conference:
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-12">
-{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo2.jpeg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo3.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-12">
-{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo3.jpeg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo4.jpg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
 
 <div class="row justify-content-sm-center">
 <div class="col-sm-12">
-{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo4.jpeg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
-</div>
-</div>
-
-<div class="row justify-content-sm-center">
-<div class="col-sm-12">
-{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo5.jpeg" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+{% include figure.liquid path="/assets/blog/2026/graduate-students-share-research-and-systems-insights-at-sc25/sc25-photo5.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 </div>
 
