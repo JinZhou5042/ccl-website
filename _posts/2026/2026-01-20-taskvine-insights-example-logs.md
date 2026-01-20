@@ -5,9 +5,12 @@ date: 2026-01-20T12:00:00-05:00
 author: Cooperative Computing Lab
 image: /assets/blog/2026/taskvine-insights-example-logs/TaskVine-Insights.png
 categories:
-  - news
+  - taskvine-insights
 tags:
-  - news
+  - tech
+  - taskvine
+  - insights
+  - logs
 description: TaskVine users can explore these example logs and gain insights into how workflows are executed, what information TaskVine provides for developers, and which visualization tools are available.
 toc: false
 related_posts: false
