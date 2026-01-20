@@ -1,6 +1,6 @@
 ---
 layout: post
-title: TaskVine Insights - Example Logs
+title: TaskVine Insights - Example Workflow Logs
 date: 2026-01-20T12:00:00-05:00
 author: Cooperative Computing Lab
 image: /assets/blog/2026/taskvine-insights-example-logs/TaskVine-Insights.png
