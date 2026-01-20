@@ -13,6 +13,12 @@ toc: false
 related_posts: false
 ---
 
+<div class="row justify-content-sm-center">
+<div class="col-sm-12">
+{% include figure.liquid path="/assets/blog/2026/taskvine-insights-example-logs/TaskVine-Insights.png" title="" class="img-fluid rounded z-depth-1" zoomable=true %}
+</div>
+</div>
+
 Understanding a distributed runtime is much easier when you can inspect what actually happened during execution. To help users quickly learn and explore TaskVine, we introduce the TaskVine Example Logs repository:
 
 https://github.com/cooperative-computing-lab/taskvine-example-logs
