@@ -8,7 +8,7 @@ categories:
   - technical-articles
 tags:
   - taskvine
-description: How TaskVine handles intermediate files, and how temp outputs keep data on workers to avoid manager-side bottlenecks in large DAGs.
+description: Large DAGs often bottleneck on intermediate data. Here's how TaskVine's temp files keep intermediates on workers and cut manager-side transfers.
 toc: false
 related_posts: false
 ---
