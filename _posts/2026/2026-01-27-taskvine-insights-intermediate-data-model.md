@@ -25,7 +25,7 @@ If you've run large DAG workflows on a cluster, you've probably seen this patter
 
 In a small workflow, it's totally reasonable to ship every task's output back to the manager (or to some central location), then redistribute it later. In a big DAG, that approach turns the manager into a traffic jam:
 
-- every edge in the DAG starts to look like "worker → manager → worker"
+- every edge in the DAG starts to look like "worker -> manager -> worker"
 - the manager's network and disk become shared bottlenecks
 - recovery/retries multiply the same transfers
 
